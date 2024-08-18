@@ -1,0 +1,3 @@
+[submodule "3rdpty/olcPixelGameEngine"]
+	path = 3rdpty/olcPixelGameEngine
+	url = https://github.com/OneLoneCoder/olcPixelGameEngine.git
