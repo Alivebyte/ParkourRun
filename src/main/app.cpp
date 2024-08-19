@@ -25,10 +25,9 @@ bool App::OnUserUpdate(float fElapsedTime)
 	// called once per frame
 	Clear(olc::CYAN);
 
-	/*for (int x = 0; x < ScreenWidth(); x++)
-		for (int y = 0; y < ScreenHeight(); y++)
-			Draw(x, y, olc::Pixel(rand() % 256, rand() % 256, rand() % 256));*/
-	
+	// Handle collision & simple physics
+
+	// Handle controls
 	if (GetKey(olc::Key::W).bHeld)
 	{
 		playerPos.y -= 1.0f;// *fElapsedTime;
@@ -48,21 +47,29 @@ bool App::OnUserUpdate(float fElapsedTime)
 	{
 		playerPos.x += 1.0f;// *fElapsedTime;
 	}
+	
 
+	// Render background
 	SetPixelMode(olc::Pixel::NORMAL);
 
 	DrawPartialSprite({ 0,0 }, backgroundSprite, { (int)playerPos.x + 20, (int)playerPos.y - 250}, { ScreenWidth(), ScreenHeight()}, 1);
 
-	// Stoopid rendah
+
+	// Render world
 	SetPixelMode(olc::Pixel::ALPHA);
 
-	DrawSprite((olc::vi2d)playerPos, playerSprite, 2);
+	
 
 	DrawSprite({ 0,0 }, pipeHorizontalSprite, 1);
 	DrawSprite({ 32,0 }, pipeTurnSprite, 1, olc::Sprite::Flip::HORIZ);
 	DrawSprite({ 32,32 }, pipeVerticalSprite, 1, olc::Sprite::Flip::HORIZ);
 
+	// Render player
+	DrawSprite((olc::vi2d)playerPos, playerSprite, 2);
+
 	SetPixelMode(olc::Pixel::NORMAL);
+
+
 
 	return true;
 }
