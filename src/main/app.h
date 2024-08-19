@@ -1,7 +1,10 @@
 #ifndef APP_H
 #define APP_H
 
+
 #include "olcPixelGameEngine.h"
+#include "extensions/olcPGEX_Graphics2D.h"
+#include "extensions/olcPGEX_SplashScreen.h"
 
 class App : public olc::PixelGameEngine
 {
@@ -25,7 +28,7 @@ public:
 	olc::Sprite* pipeTurnSprite;
 	olc::Sprite* pipeVerticalSprite;
 	olc::Sprite* pipeHorizontalSprite;
-
+	olc::SplashScreen* splash;
 };
 
 #endif

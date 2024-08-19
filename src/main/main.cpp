@@ -1,4 +1,5 @@
 #define OLC_PGE_APPLICATION
+#define OLC_PGEX_SPLASHSCREEN
 #include "app.h"
 
 int main()

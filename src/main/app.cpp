@@ -2,6 +2,8 @@
 
 bool App::OnUserCreate()
 {
+	splash = new olc::SplashScreen();
+
 	pack = new olc::ResourcePack();
 
 	pack->LoadPack("content.pack", "TEST_KEY");
@@ -69,7 +71,7 @@ bool App::OnUserUpdate(float fElapsedTime)
 
 	SetPixelMode(olc::Pixel::NORMAL);
 
-
+	
 
 	return true;
 }
