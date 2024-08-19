@@ -1,0 +1,5 @@
+content/sprites/background_test.png
+content/sprites/player.png
+content/sprites/world_objects/industrial_pipe_horizontal.png
+content/sprites/world_objects/industrial_pipe_turn90.png
+content/sprites/world_objects/industrial_pipe_vertical.png

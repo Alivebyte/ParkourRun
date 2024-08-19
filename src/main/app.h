@@ -21,6 +21,11 @@ public:
 	olc::Sprite* backgroundSprite;
 	olc::vf2d playerPos;
 	olc::ResourcePack* pack;
+
+	olc::Sprite* pipeTurnSprite;
+	olc::Sprite* pipeVerticalSprite;
+	olc::Sprite* pipeHorizontalSprite;
+
 };
 
 #endif
