@@ -20,14 +20,35 @@ bool App::OnUserCreate()
 	//pipeVerticalSprite = new olc::Sprite("content/sprites/world_objects/industrial_pipe_vertical.png",pack);
 
 	//pipeTurnSprite = new olc::Sprite("content/sprites/world_objects/industrial_pipe_turn90.png",pack);
+	auto backgroundSize = backgroundDecal->sprite->Size() / vTileSize;
+	// Generate world
+	tiles = new Tile[backgroundSize.y*backgroundSize.x];
+	for (int y = 0; y < backgroundSize.y; y++)
+	{
+		for (int x = 0; x < backgroundSize.x; x++)
+		{
+			if (x == 0 || y == 0 || x == backgroundSize.x)
+			{
+				//tiles->at(y*24+x) = Tile("content/sprites/world_objects/industrial_pipe_vertical.png", &rm, pack);
+				//tiles->at(y* 24 + x).SetType(10);
+				tiles[y * backgroundSize.x + x].SetSprite("content/sprites/world_objects/industrial_pipe_vertical.png", &rm, pack);
+				tiles[y * backgroundSize.x + x].SetType(10);
+			}
+			else
+			{
+				tiles[y*24+x].SetType(0);
+			}
+		}
+	}
 
 	//playerPos.y = ScreenHeight() - 250.0f;
+	//printf("Background size: %d %d\n", .x / vTileSize, backgroundDecal->sprite->Size().y / vTileSize);
 
 	camera = olc::utils::Camera2D(GetScreenSize() / vTileSize, playerPos);
 
 	camera.SetTarget(playerPos);
 	camera.SetMode(olc::utils::Camera2D::Mode::Simple);
-	camera.SetWorldBoundary({ 0,0 }, {80,75});
+	camera.SetWorldBoundary({ 0,0 }, backgroundDecal->sprite->Size() / vTileSize);
 	camera.EnableWorldBoundary(true);
 
 
@@ -40,7 +61,7 @@ bool App::OnUserUpdate(float fElapsedTime)
 	Clear(olc::CYAN);
 
 	// Handle collision & simple physics
-
+	//playerPos.y += 9.8f * fElapsedTime;
 	// Handle controls
 	if (GetKey(olc::Key::W).bHeld)
 	{
@@ -61,6 +82,9 @@ bool App::OnUserUpdate(float fElapsedTime)
 	{
 		playerPos.x += 1.0f * 2.0f * fElapsedTime;
 	}
+
+	if (playerPos.x < 0.0f) playerPos.x = 0.0f;
+	if (playerPos.y < 0.0f) playerPos.y = 0.0f;
 	
 	camera.SetMode(olc::utils::Camera2D::Mode::LazyFollow);
 
@@ -73,14 +97,27 @@ bool App::OnUserUpdate(float fElapsedTime)
 	// Render background
 	SetPixelMode(olc::Pixel::NORMAL);
 
-	tv.DrawDecal({ 0,0 }, backgroundDecal, { 1.0f, 1.0f });
+	tv.DrawDecal({ 0,0 }, backgroundDecal);
 
 
 	// Render world
 	SetPixelMode(olc::Pixel::ALPHA);
 
+	auto backgroundSize = backgroundDecal->sprite->Size() / vTileSize;
 	
-
+	for (int y = 0; y < backgroundSize.y; y++)
+	{
+		for (int x = 0; x < backgroundSize.y; x++)
+		{
+			switch (tiles[y * backgroundSize.x + x].GetType())
+			{
+			case 0:
+				break;
+			case 10:
+				tv.DrawDecal(olc::vi2d( x,y ), tiles[y * backgroundSize.x + x].GetSprite());
+			}
+		}
+	}
 	//tv.DrawSprite({ 0,0 }, pipeHorizontalSprite, { 1.0f, 1.0f});
 	//tv.DrawSprite({ 32,0 }, pipeTurnSprite, {1.0f,1.0f}, olc::Sprite::Flip::HORIZ);
 	//tv.DrawSprite({ 32,32 }, pipeVerticalSprite, {1.0f,1.0f}, olc::Sprite::Flip::HORIZ);

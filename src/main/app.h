@@ -9,6 +9,7 @@
 #include "utilities/olcUTIL_Camera2D.h"
 #include "resource_manager.h"
 #include "olcPGEX_Animator2D.h"
+#include "tiles.h"
 
 class App : public olc::PixelGameEngine
 {
@@ -24,6 +25,10 @@ public:
 	bool OnUserUpdate(float fElapsedTime) override;
 	bool OnUserDestroy() override;
 
+	//void Render();
+	//void HandleUserInput();
+	//void HandleCollision();
+
 	//olc::Sprite* playerSprite;
 	olc::Decal* playerDecal;
 	//olc::Sprite* backgroundSprite;
@@ -37,6 +42,8 @@ public:
 	olc::utils::Camera2D camera;
 	olc::TileTransformedView tv;
 	olc::vi2d vTileSize;
+
+	Tile *tiles;
 };
 
 #endif
