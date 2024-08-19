@@ -2,16 +2,17 @@
 
 bool App::OnUserCreate()
 {
-	tv = olc::TileTransformedView(GetScreenSize(), { 32,32 });
+	//splash = new olc::SplashScreen();
 
-	splash = new olc::SplashScreen();
+	pack = nullptr;
 
-	pack = new olc::ResourcePack();
+	vTileSize = { 32,32 };//pack->LoadPack("content.pack", "TEST_KEY");
 
-	pack->LoadPack("content.pack", "TEST_KEY");
-
+	tv = olc::TileTransformedView(GetScreenSize(), vTileSize);
 	playerSprite = new olc::Sprite("content/sprites/player.png", pack);
+	playerDecal = new olc::Decal(playerSprite);
 	backgroundSprite = new olc::Sprite("content/sprites/background_test.png",pack);
+	backgroundDecal = new olc::Decal(backgroundSprite);
 
 	pipeHorizontalSprite = new olc::Sprite("content/sprites/world_objects/industrial_pipe_horizontal.png",pack);
 
@@ -21,12 +22,12 @@ bool App::OnUserCreate()
 
 	//playerPos.y = ScreenHeight() - 250.0f;
 
-	camera = olc::utils::Camera2D(GetScreenSize() / olc::vi2d(32, 32), playerPos);
+	camera = olc::utils::Camera2D(GetScreenSize() / vTileSize, playerPos);
 
 	camera.SetTarget(playerPos);
 	camera.SetMode(olc::utils::Camera2D::Mode::Simple);
 	camera.SetWorldBoundary({ 0,0 }, backgroundSprite->Size());
-	//camera.EnableWorldBoundary(true);
+	camera.EnableWorldBoundary(true);
 
 
 	return true;
@@ -71,7 +72,7 @@ bool App::OnUserUpdate(float fElapsedTime)
 	// Render background
 	SetPixelMode(olc::Pixel::NORMAL);
 
-	tv.DrawSprite({ 0,0 }, backgroundSprite, { 1.0f, 1.0f });
+	tv.DrawDecal({ 0,0 }, backgroundDecal, { 1.0f, 1.0f });
 
 
 	// Render world
@@ -79,12 +80,12 @@ bool App::OnUserUpdate(float fElapsedTime)
 
 	
 
-	tv.DrawSprite({ 0,0 }, pipeHorizontalSprite, { 1.0f, 1.0f});
-	tv.DrawSprite({ 32,0 }, pipeTurnSprite, {1.0f,1.0f}, olc::Sprite::Flip::HORIZ);
-	tv.DrawSprite({ 32,32 }, pipeVerticalSprite, {1.0f,1.0f}, olc::Sprite::Flip::HORIZ);
+	//tv.DrawSprite({ 0,0 }, pipeHorizontalSprite, { 1.0f, 1.0f});
+	//tv.DrawSprite({ 32,0 }, pipeTurnSprite, {1.0f,1.0f}, olc::Sprite::Flip::HORIZ);
+	//tv.DrawSprite({ 32,32 }, pipeVerticalSprite, {1.0f,1.0f}, olc::Sprite::Flip::HORIZ);
 
 	// Render player
-	tv.DrawSprite(playerPos, playerSprite, {1,1});
+	tv.DrawDecal(playerPos, playerDecal, {1,1});
 
 	SetPixelMode(olc::Pixel::NORMAL);
 

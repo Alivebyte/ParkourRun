@@ -25,16 +25,17 @@ public:
 	bool OnUserDestroy() override;
 
 	olc::Sprite* playerSprite;
+	olc::Decal* playerDecal;
 	olc::Sprite* backgroundSprite;
+	olc::Decal* backgroundDecal;
 	olc::vf2d playerPos;
 	olc::ResourcePack* pack;
 
-	olc::Sprite* pipeTurnSprite;
-	olc::Sprite* pipeVerticalSprite;
-	olc::Sprite* pipeHorizontalSprite;
+	
 	olc::SplashScreen* splash;
 	olc::utils::Camera2D camera;
 	olc::TileTransformedView tv;
+	olc::vi2d vTileSize;
 };
 
 #endif
