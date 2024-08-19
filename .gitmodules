@@ -1,3 +1,6 @@
 [submodule "3rdpty/olcPixelGameEngine"]
 	path = 3rdpty/olcPixelGameEngine
 	url = https://github.com/OneLoneCoder/olcPixelGameEngine.git
+[submodule "3rdpty/PGEv2_Extensions"]
+	path = 3rdpty/PGEv2_Extensions
+	url = https://github.com/justinrichardsmusic/PGEv2_Extensions.git
