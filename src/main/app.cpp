@@ -27,7 +27,7 @@ bool App::OnUserCreate()
 	{
 		for (int x = 0; x < backgroundSize.x; x++)
 		{
-			if (x == 0 || y == 0 || x == backgroundSize.x)
+			if (x == 0 || y == 0 || x == 23)
 			{
 				//tiles->at(y*24+x) = Tile("content/sprites/world_objects/industrial_pipe_vertical.png", &rm, pack);
 				//tiles->at(y* 24 + x).SetType(10);
@@ -36,7 +36,7 @@ bool App::OnUserCreate()
 			}
 			else
 			{
-				tiles[y*24+x].SetType(0);
+				tiles[y*backgroundSize.x+x].SetType(0);
 			}
 		}
 	}
@@ -107,7 +107,7 @@ bool App::OnUserUpdate(float fElapsedTime)
 	
 	for (int y = 0; y < backgroundSize.y; y++)
 	{
-		for (int x = 0; x < backgroundSize.y; x++)
+		for (int x = 0; x < backgroundSize.x; x++)
 		{
 			switch (tiles[y * backgroundSize.x + x].GetType())
 			{
