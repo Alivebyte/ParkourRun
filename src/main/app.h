@@ -5,6 +5,10 @@
 #include "olcPixelGameEngine.h"
 #include "extensions/olcPGEX_Graphics2D.h"
 #include "extensions/olcPGEX_SplashScreen.h"
+#include "extensions/olcPGEX_TransformedView.h"
+#include "utilities/olcUTIL_Camera2D.h"
+#include "olcPGEX_ResourceManager.h"
+#include "olcPGEX_Animator2D.h"
 
 class App : public olc::PixelGameEngine
 {
@@ -29,6 +33,8 @@ public:
 	olc::Sprite* pipeVerticalSprite;
 	olc::Sprite* pipeHorizontalSprite;
 	olc::SplashScreen* splash;
+	olc::utils::Camera2D camera;
+	olc::TileTransformedView tv;
 };
 
 #endif

@@ -2,6 +2,8 @@
 
 bool App::OnUserCreate()
 {
+	tv = olc::TileTransformedView(GetScreenSize(), { 32,32 });
+
 	splash = new olc::SplashScreen();
 
 	pack = new olc::ResourcePack();
@@ -17,7 +19,15 @@ bool App::OnUserCreate()
 
 	pipeTurnSprite = new olc::Sprite("content/sprites/world_objects/industrial_pipe_turn90.png",pack);
 
-	playerPos.y = ScreenHeight() - 250.0f;
+	//playerPos.y = ScreenHeight() - 250.0f;
+
+	camera = olc::utils::Camera2D(GetScreenSize() / olc::vi2d(32, 32), playerPos);
+
+	camera.SetTarget(playerPos);
+	camera.SetMode(olc::utils::Camera2D::Mode::Simple);
+	camera.SetWorldBoundary({ 0,0 }, backgroundSprite->Size());
+	//camera.EnableWorldBoundary(true);
+
 
 	return true;
 };
@@ -32,29 +42,36 @@ bool App::OnUserUpdate(float fElapsedTime)
 	// Handle controls
 	if (GetKey(olc::Key::W).bHeld)
 	{
-		playerPos.y -= 1.0f;// *fElapsedTime;
+		playerPos.y -= 1.0f * 2.0f * fElapsedTime;
 	}
 
 	if (GetKey(olc::Key::S).bHeld)
 	{
-		playerPos.y += 1.0f;// *fElapsedTime;
+		playerPos.y += 1.0f * 2.0f * fElapsedTime;
 	}
 
 	if (GetKey(olc::Key::A).bHeld)
 	{
-		playerPos.x -= 1.0f;// *fElapsedTime;
+		playerPos.x -= 1.0f * 2.0f * fElapsedTime;
 	}
 
 	if (GetKey(olc::Key::D).bHeld)
 	{
-		playerPos.x += 1.0f;// *fElapsedTime;
+		playerPos.x += 1.0f * 2.0f * fElapsedTime;
 	}
 	
+	camera.SetMode(olc::utils::Camera2D::Mode::LazyFollow);
+
+	bool bOnScreen = camera.Update(fElapsedTime);
+
+
+
+	tv.SetWorldOffset(camera.GetViewPosition());
 
 	// Render background
 	SetPixelMode(olc::Pixel::NORMAL);
 
-	DrawPartialSprite({ 0,0 }, backgroundSprite, { (int)playerPos.x + 20, (int)playerPos.y - 250}, { ScreenWidth(), ScreenHeight()}, 1);
+	tv.DrawSprite({ 0,0 }, backgroundSprite, { 1.0f, 1.0f });
 
 
 	// Render world
@@ -62,12 +79,12 @@ bool App::OnUserUpdate(float fElapsedTime)
 
 	
 
-	DrawSprite({ 0,0 }, pipeHorizontalSprite, 1);
-	DrawSprite({ 32,0 }, pipeTurnSprite, 1, olc::Sprite::Flip::HORIZ);
-	DrawSprite({ 32,32 }, pipeVerticalSprite, 1, olc::Sprite::Flip::HORIZ);
+	tv.DrawSprite({ 0,0 }, pipeHorizontalSprite, { 1.0f, 1.0f});
+	tv.DrawSprite({ 32,0 }, pipeTurnSprite, {1.0f,1.0f}, olc::Sprite::Flip::HORIZ);
+	tv.DrawSprite({ 32,32 }, pipeVerticalSprite, {1.0f,1.0f}, olc::Sprite::Flip::HORIZ);
 
 	// Render player
-	DrawSprite((olc::vi2d)playerPos, playerSprite, 2);
+	tv.DrawSprite(playerPos, playerSprite, {1,1});
 
 	SetPixelMode(olc::Pixel::NORMAL);
 
