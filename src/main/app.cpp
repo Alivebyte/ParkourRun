@@ -4,21 +4,22 @@ bool App::OnUserCreate()
 {
 	//splash = new olc::SplashScreen();
 
-	pack = nullptr;
+	pack = new olc::ResourcePack();
 
-	vTileSize = { 32,32 };//pack->LoadPack("content.pack", "TEST_KEY");
+	vTileSize = { 32,32 }; 
+	pack->LoadPack("content.pack", "TEST_KEY");
 
 	tv = olc::TileTransformedView(GetScreenSize(), vTileSize);
-	playerSprite = new olc::Sprite("content/sprites/player.png", pack);
-	playerDecal = new olc::Decal(playerSprite);
-	backgroundSprite = new olc::Sprite("content/sprites/background_test.png",pack);
-	backgroundDecal = new olc::Decal(backgroundSprite);
+	//playerSprite = new olc::Sprite("content/sprites/player.png", pack);
+	//playerDecal = new olc::Decal(playerSprite);
+	//backgroundSprite = new olc::Sprite("content/sprites/background_test.png",pack);
+	//backgroundDecal = new olc::Decal(backgroundSprite);
+	
+	backgroundDecal = rm.RM_Sprite("content/sprites/background_test.png", pack);//pipeHorizontalSprite = new olc::Sprite("content/sprites/world_objects/industrial_pipe_horizontal.png",pack);
+	playerDecal = rm.RM_Sprite("content/sprites/player.png", pack);
+	//pipeVerticalSprite = new olc::Sprite("content/sprites/world_objects/industrial_pipe_vertical.png",pack);
 
-	pipeHorizontalSprite = new olc::Sprite("content/sprites/world_objects/industrial_pipe_horizontal.png",pack);
-
-	pipeVerticalSprite = new olc::Sprite("content/sprites/world_objects/industrial_pipe_vertical.png",pack);
-
-	pipeTurnSprite = new olc::Sprite("content/sprites/world_objects/industrial_pipe_turn90.png",pack);
+	//pipeTurnSprite = new olc::Sprite("content/sprites/world_objects/industrial_pipe_turn90.png",pack);
 
 	//playerPos.y = ScreenHeight() - 250.0f;
 
@@ -26,7 +27,7 @@ bool App::OnUserCreate()
 
 	camera.SetTarget(playerPos);
 	camera.SetMode(olc::utils::Camera2D::Mode::Simple);
-	camera.SetWorldBoundary({ 0,0 }, backgroundSprite->Size());
+	camera.SetWorldBoundary({ 0,0 }, {80,75});
 	camera.EnableWorldBoundary(true);
 
 

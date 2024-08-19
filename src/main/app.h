@@ -7,13 +7,13 @@
 #include "extensions/olcPGEX_SplashScreen.h"
 #include "extensions/olcPGEX_TransformedView.h"
 #include "utilities/olcUTIL_Camera2D.h"
-#include "olcPGEX_ResourceManager.h"
+#include "resource_manager.h"
 #include "olcPGEX_Animator2D.h"
 
 class App : public olc::PixelGameEngine
 {
 public:
-	App(): playerSprite(nullptr), backgroundSprite(nullptr), pack(nullptr)
+	App(): pack(nullptr)
 	{
 		sAppName = "Parkour Run";
 	}
@@ -24,13 +24,14 @@ public:
 	bool OnUserUpdate(float fElapsedTime) override;
 	bool OnUserDestroy() override;
 
-	olc::Sprite* playerSprite;
+	//olc::Sprite* playerSprite;
 	olc::Decal* playerDecal;
-	olc::Sprite* backgroundSprite;
+	//olc::Sprite* backgroundSprite;
 	olc::Decal* backgroundDecal;
 	olc::vf2d playerPos;
 	olc::ResourcePack* pack;
 
+	GameResourceManager rm;
 	
 	olc::SplashScreen* splash;
 	olc::utils::Camera2D camera;
