@@ -35,6 +35,7 @@ public:
 	olc::Decal* backgroundDecal;
 	olc::vf2d playerPos;
 	olc::vf2d playerDir;
+	float playerSpeed;
 	olc::ResourcePack* pack;
 
 	GameResourceManager rm;
