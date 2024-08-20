@@ -3,6 +3,13 @@
 
 class olc::Decal;
 
+typedef enum
+{
+	TILE_AIR = 0,
+	TILE_NOCOLLIDE = 5,
+	TILE_COLLIDE = 10
+} TILE_TYPES;
+
 class Tile
 {
 public:
@@ -12,19 +19,10 @@ public:
 	olc::Decal* GetSprite();
 	void SetSprite(std::string filename, GameResourceManager* rm, olc::ResourcePack* pack);
 
-	void SetType(int type);
+	void SetType(TILE_TYPES type);
 	int GetType();
 
 private:
 	olc::Decal* m_TileSprite;
 	int m_Type;
-};
-
-// Tile with collisions
-class CollisionTile : public Tile
-{
-public:
-	CollisionTile();
-
-	bool TestCollision();
 };

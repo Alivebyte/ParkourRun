@@ -34,6 +34,7 @@ public:
 	//olc::Sprite* backgroundSprite;
 	olc::Decal* backgroundDecal;
 	olc::vf2d playerPos;
+	olc::vf2d playerDir;
 	olc::ResourcePack* pack;
 
 	GameResourceManager rm;

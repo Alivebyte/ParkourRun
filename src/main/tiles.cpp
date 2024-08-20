@@ -26,7 +26,7 @@ int Tile::GetType()
 	return m_Type;
 }
 
-void Tile::SetType(int type)
+void Tile::SetType(TILE_TYPES type)
 {
 	m_Type = type;
 }
