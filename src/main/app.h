@@ -7,6 +7,7 @@
 #include "extensions/olcPGEX_SplashScreen.h"
 #include "extensions/olcPGEX_TransformedView.h"
 #include "utilities/olcUTIL_Camera2D.h"
+#include "olcPGEX_Raycast2D.h"
 #include "resource_manager.h"
 #include "olcPGEX_Animator2D.h"
 #include "tiles.h"
@@ -44,6 +45,7 @@ public:
 	olc::utils::Camera2D camera;
 	olc::TileTransformedView tv;
 	olc::vi2d vTileSize;
+	olcPGEX_RayCast2D rayCaster2D;
 
 	Tile *tiles;
 };

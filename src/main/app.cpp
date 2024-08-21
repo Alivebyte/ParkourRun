@@ -27,7 +27,7 @@ bool App::OnUserCreate()
 	{
 		for (int x = 0; x < backgroundSize.x; x++)
 		{
-			if (x == 0 || y == 0 || x == 23 || y == 16)
+			if (x == 0 || y == 0 || x == 23)
 			{
 				//tiles->at(y*24+x) = Tile("content/sprites/world_objects/industrial_pipe_vertical.png", &rm, pack);
 				//tiles->at(y* 24 + x).SetType(10);
@@ -85,7 +85,7 @@ bool App::OnUserUpdate(float fElapsedTime)
 
 	olc::vf2d vPotentialPlayerPos = playerPos + playerDir * playerSpeed * fElapsedTime;
 
-	olc::vf2d vTilePlayerRadialDims = { 16.0f / vTileSize.x, 16.0f / vTileSize.y };
+	olc::vf2d vTilePlayerRadialDims = { 8.0f / vTileSize.x, 8.0f / vTileSize.y };
 
 	auto TestResolveCollisionPoint = [&](const olc::vf2d& point)
 	{
@@ -107,11 +107,8 @@ bool App::OnUserUpdate(float fElapsedTime)
 			if (bTileHit)
 			{
 				tv.FillRect(vTestPoint, { 1,1 }, olc::RED);
-				////Collision response
-			if (point.x == 0.0f)
-				playerDir.y *= -1.0f;
-			if (point.y == 0.0f)
-				playerDir.x *= -1.0f;
+				// Collision response
+				playerDir = { 0.0f,0.0f };
 			}
 				
 			
@@ -133,7 +130,8 @@ bool App::OnUserUpdate(float fElapsedTime)
 	bHasHitTile |= TestResolveCollisionPoint(olc::vf2d(-1, 0));
 	bHasHitTile |= TestResolveCollisionPoint(olc::vf2d(+1, 0));
 	
-	
+	// Fall physics
+	if(!bHasHitTile) playerDir = { 0.0f, 1.0f };
 	//if (bHasHitTile) return true;
 
 	//if (playerPos.x < 0.0f) playerPos.x = 0.0f;
@@ -164,7 +162,18 @@ bool App::OnUserUpdate(float fElapsedTime)
 	
 	if (GetKey(olc::Key::W).bReleased || GetKey(olc::Key::A).bReleased || GetKey(olc::Key::S).bReleased || GetKey(olc::Key::D).bReleased)
 	{
-		playerDir = { 0.0f, 0.0f };
+		if (bHasHitTile)
+		{
+			if (playerDir.x == 0)
+				playerDir.x = -1.0f;
+			if (playerDir.y == 0)
+				playerDir.y = -1.0f;
+		}
+		
+		if(!bHasHitTile)
+		{
+			playerDir = { 0.0f, 0.0f };
+		}
 	}
 	
 	playerPos += playerDir * playerSpeed * fElapsedTime;
@@ -181,7 +190,7 @@ bool App::OnUserUpdate(float fElapsedTime)
 	//playerPos += playerDir * playerSpeed * fElapsedTime;
 	// Render background
 
-	tv.DrawDecal({ 0,0 }, backgroundDecal);
+	//tv.DrawDecal({ 0,0 }, backgroundDecal);
 
 
 	// Render world
