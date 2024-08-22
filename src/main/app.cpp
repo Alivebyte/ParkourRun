@@ -27,7 +27,7 @@ bool App::OnUserCreate()
 	{
 		for (int x = 0; x < backgroundSize.x; x++)
 		{
-			if (x == 0 || y == 0 || x == 23)
+			if (x == 0 || y == 0 || y == 21)
 			{
 				//tiles->at(y*24+x) = Tile("content/sprites/world_objects/industrial_pipe_vertical.png", &rm, pack);
 				//tiles->at(y* 24 + x).SetType(10);
@@ -92,29 +92,55 @@ bool App::OnUserUpdate(float fElapsedTime)
 		}
 	}
 	
-	playerVel = { 0.0f ,0.0f };
+	//playerVel = { 0.0f ,0.0f };
 
 	// Handle user input
 	if (GetKey(olc::Key::W).bHeld)
 	{
-		playerVel = { 0.0f, -2.0f };
+		playerVel.y += -30.0f * fElapsedTime;
 	} //else playerDir = { 0.0f, 0.0f };
 	if (GetKey(olc::Key::S).bHeld)
 	{
-		playerVel = { 0.0f, 2.0f };
+		playerVel.y =  2.0f;
 	} //else playerDir = { 0.0f, 0.0f };
 	if (GetKey(olc::Key::A).bHeld)
 	{
-		playerVel = { -2.0f, 0.0f };
+		playerVel.x += (bOnGround ?  -40.0f : -5.0f) * fElapsedTime;
 
 	} //else playerDir = { 0.0f, 0.0f };
 	if (GetKey(olc::Key::D).bHeld)
 	{
-		playerVel = { 2.0f, 0.0f };
+		playerVel.x += (bOnGround ? 40.0f : 5.0f) * fElapsedTime;
 	}
+
+	// Clamp velocities
+
+	if (playerVel.x > 50.0f)
+		playerVel.x = 50.0f;
+
+	if (playerVel.x < -50.0f)
+		playerVel.x = -50.0f;
+
+	if (playerVel.y > 100.0f)
+		playerVel.y = 100.0f;
+
+	if (playerVel.y < -100.0f)
+		playerVel.y = -100.0f;
 	
 	// Handle collision & simple physics
+	// 
 	// Gravity physics
+	playerVel.y += 20.0f * fElapsedTime;
+
+	std::cout << "Player velocity: " << playerVel.x << " " << playerVel.y << std::endl;
+	// Drag
+	if (bOnGround)
+	{
+		playerVel.x += -3.0f * playerVel.x * fElapsedTime;
+		if (fabs(playerVel.x) < 0.01f)
+			playerVel.x = 0.0f;
+	}
+
 
 	olc::vf2d potentialPlayerPos = playerPos + playerVel * fElapsedTime;
 	
@@ -157,15 +183,11 @@ bool App::OnUserUpdate(float fElapsedTime)
 
 	playerPos = potentialPlayerPos;
 
-	
-	
-	//if (bHasHitTile) return true;
+
 
 	// Clamp player position on the left and upward side
 	if (playerPos.x < 0.0f) playerPos.x = 0.0f;
 	if (playerPos.y < 0.0f) playerPos.y = 0.0f;
-	
-	//playerPos += playerVel * playerSpeed * fElapsedTime;
 	
 	// Handle player camera movement
 	camera.SetMode(olc::utils::Camera2D::Mode::LazyFollow);
@@ -196,11 +218,6 @@ bool App::OnUserUpdate(float fElapsedTime)
 	//Render player
 	tv.DrawDecal({ playerPos.x, playerPos.y}, playerDecal, { 1,1 });
 	
-
-	//SetPixelMode(olc::Pixel::NORMAL);
-
-	
-
 	return true;
 }
 
