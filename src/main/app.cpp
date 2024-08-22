@@ -109,14 +109,14 @@ bool App::OnUserUpdate(float fElapsedTime)
 	} //else playerDir = { 0.0f, 0.0f };
 	if (GetKey(olc::Key::A).bHeld)
 	{
-		playerVel.x += (bOnGround ?  -50.0f : 0.0f) * fElapsedTime;
+		playerVel.x += (bOnGround ?  -50.0f : -1.0f) * fElapsedTime;
 
 	} //else playerDir = { 0.0f, 0.0f };
 	if (GetKey(olc::Key::D).bHeld)
 	{
-		playerVel.x += (bOnGround ? 50.0f : 0.0f) * fElapsedTime;
+		playerVel.x += (bOnGround ? 50.0f : 1.0f) * fElapsedTime;
 	}
-	if (GetKey(olc::Key::SPACE).bHeld)
+	if (GetKey(olc::Key::SPACE).bPressed)
 	{
 		if (playerVel.y == 0)
 		{
