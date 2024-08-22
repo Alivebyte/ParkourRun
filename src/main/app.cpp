@@ -6,6 +6,8 @@ bool App::OnUserCreate()
 
 	pack = new olc::ResourcePack();
 
+	bTouchWall = false;
+
 	vTileSize = { 32,32 }; 
 	pack->LoadPack("content.pack", "TEST_KEY");
 
@@ -21,6 +23,7 @@ bool App::OnUserCreate()
 	
 	//pipeTurnSprite = new olc::Sprite("content/sprites/world_objects/industrial_pipe_turn90.png",pack);
 	auto backgroundSize = backgroundDecal->sprite->Size() / vTileSize;
+
 	// Generate world
 	tiles = new Tile[backgroundSize.y*backgroundSize.x];
 	for (int y = 0; y < backgroundSize.y; y++)
@@ -66,17 +69,16 @@ bool App::OnUserUpdate(float fElapsedTime)
 	// called once per frame
 	Clear(olc::CYAN);
 
-	
-
 	auto backgroundSize = backgroundDecal->sprite->Size() / vTileSize;
 
 	auto GetTile = [&](int x, int y)
-		{
-			if (x >= 0 && x < backgroundSize.x && y >= 0 && y < backgroundSize.y)
-				return tiles[y * backgroundSize.x + x];
-			else
-				return Tile("content/sprites/test_wall.png", &rm, pack);
-		};
+	{
+		if (x >= 0 && x < backgroundSize.x && y >= 0 && y < backgroundSize.y)
+			return tiles[y * backgroundSize.x + x];
+		else
+			return Tile("content/sprites/test_wall.png", &rm, pack);
+	};
+
 	// Debug rendering
 
 	for (int y = 0; y < backgroundSize.y; y++)
@@ -98,7 +100,8 @@ bool App::OnUserUpdate(float fElapsedTime)
 	// Handle user input
 	if (GetKey(olc::Key::W).bHeld)
 	{
-		playerVel.y += -30.0f * fElapsedTime;
+		if(bTouchWall)
+			playerVel.y += -30.0f * fElapsedTime;
 	} //else playerDir = { 0.0f, 0.0f };
 	if (GetKey(olc::Key::S).bHeld)
 	{
@@ -158,6 +161,7 @@ bool App::OnUserUpdate(float fElapsedTime)
 	playerVel.y += 20.0f * fElapsedTime;
 
 	std::cout << "Player velocity: " << playerVel.x << " " << playerVel.y << std::endl;
+
 	// Drag
 	if (bOnGround)
 	{
@@ -168,11 +172,13 @@ bool App::OnUserUpdate(float fElapsedTime)
 
 
 	olc::vf2d potentialPlayerPos = playerPos + playerVel * fElapsedTime;
-	
+	tv.FillRect(potentialPlayerPos, { 1,1 }, olc::DARK_MAGENTA);
 	// Check for collision
+
+	bTouchWall = false;
 	if (playerVel.x <= 0) // Moving Left
 	{
-		if (GetTile(potentialPlayerPos.x + 0.0f, playerPos.y + 0.0f).GetType() != TILE_AIR || GetTile(potentialPlayerPos.x + 0.0f, playerPos.y + 0.9f).GetType() != TILE_AIR)
+ 		if (GetTile(potentialPlayerPos.x + 0.0f, playerPos.y + 0.0f).GetType() != TILE_AIR || GetTile(potentialPlayerPos.x + 0.0f, playerPos.y + 0.9f).GetType() != TILE_AIR)
 		{
 			potentialPlayerPos.x = (int)potentialPlayerPos.x + 1;
 			playerVel.x = 0;
@@ -206,6 +212,17 @@ bool App::OnUserUpdate(float fElapsedTime)
 		}
 	}
 
+	// Check for touching wall
+	if (GetTile((int)potentialPlayerPos.x, playerPos.y + 0.0f).GetType() != TILE_AIR || GetTile((int)potentialPlayerPos.x, playerPos.y + 0.9f).GetType() != TILE_AIR)
+	{
+		bTouchWall = true;
+	}
+	
+	if (GetTile(potentialPlayerPos.x + 1.0f, playerPos.y + 0.0f).GetType() != TILE_AIR || GetTile(potentialPlayerPos.x + 1.0f, playerPos.y + 0.9f).GetType() != TILE_AIR)
+	{
+		bTouchWall = true;
+	}
+
 	playerPos = potentialPlayerPos;
 
 
@@ -217,9 +234,7 @@ bool App::OnUserUpdate(float fElapsedTime)
 	tv.SetWorldOffset(camera.GetViewPosition());
 
 
-	//playerPos += playerDir * playerSpeed * fElapsedTime;
 	// Render background
-
 	tv.DrawDecal({ 0,0 }, backgroundDecal);
 
 	// Render world
@@ -229,9 +244,9 @@ bool App::OnUserUpdate(float fElapsedTime)
 		{
 			switch (tiles[y * backgroundSize.x + x].GetType())
 			{
-			case 0:
+			case TILE_AIR:
 				break;
-			case 10:
+			case TILE_COLLIDE:
 				tv.DrawDecal(olc::vi2d( x,y ), tiles[y * backgroundSize.x + x].GetSprite());
 			}
 		}

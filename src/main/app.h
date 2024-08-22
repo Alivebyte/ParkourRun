@@ -39,6 +39,7 @@ public:
 	olc::vf2d playerVel;
 	float playerSpeed;
 	bool bOnGround;
+	bool bTouchWall;
 
 	olc::ResourcePack* pack;
 
