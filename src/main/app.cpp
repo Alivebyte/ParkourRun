@@ -44,7 +44,8 @@ bool App::OnUserCreate()
 	//float fAngle = float(rand()) / float(RAND_MAX) * 2.0f * 3.14159f;
 	//fAngle = -0.4f;
 	playerVel = { 0.0f, 0.0f };
-	playerPos = { 4.0f, 10.0f };
+	playerSpawnPoint = { 4.0f, 10.0f };
+	playerPos = playerSpawnPoint;
 	playerSpeed = 3.0f;
 	//playerPos.y = ScreenHeight() - 250.0f;
 	//printf("Background size: %d %d\n", .x / vTileSize, backgroundDecal->sprite->Size().y / vTileSize);
@@ -105,12 +106,19 @@ bool App::OnUserUpdate(float fElapsedTime)
 	} //else playerDir = { 0.0f, 0.0f };
 	if (GetKey(olc::Key::A).bHeld)
 	{
-		playerVel.x += (bOnGround ?  -40.0f : -5.0f) * fElapsedTime;
+		playerVel.x += (bOnGround ?  -50.0f : 0.0f) * fElapsedTime;
 
 	} //else playerDir = { 0.0f, 0.0f };
 	if (GetKey(olc::Key::D).bHeld)
 	{
-		playerVel.x += (bOnGround ? 40.0f : 5.0f) * fElapsedTime;
+		playerVel.x += (bOnGround ? 50.0f : 0.0f) * fElapsedTime;
+	}
+	if (GetKey(olc::Key::SPACE).bHeld)
+	{
+		if (playerVel.y == 0)
+		{
+			playerVel.y = -12.0f;
+		}
 	}
 
 	// Clamp velocities
@@ -127,8 +135,25 @@ bool App::OnUserUpdate(float fElapsedTime)
 	if (playerVel.y < -100.0f)
 		playerVel.y = -100.0f;
 	
+	// Clamp player position on the left and upward side
+	if (playerPos.x < 0.0f) playerPos.x = 0.0f;
+	if (playerPos.y < 0.0f) playerPos.y = 0.0f;
+
+	// Handle player falling off the level or finishing level and respawning
+	if (playerPos.y > backgroundSize.y)
+	{
+		playerPos = playerSpawnPoint;
+		playerVel = { 0.0f, 0.0f };
+	}
+	if (playerPos.x > backgroundSize.x + 1)
+	{
+		playerPos = playerSpawnPoint;
+		playerVel = { 0.0f,0.0f };
+	}
+
+
 	// Handle collision & simple physics
-	// 
+	
 	// Gravity physics
 	playerVel.y += 20.0f * fElapsedTime;
 
@@ -136,7 +161,7 @@ bool App::OnUserUpdate(float fElapsedTime)
 	// Drag
 	if (bOnGround)
 	{
-		playerVel.x += -3.0f * playerVel.x * fElapsedTime;
+		playerVel.x += -4.0f * playerVel.x * fElapsedTime;
 		if (fabs(playerVel.x) < 0.01f)
 			playerVel.x = 0.0f;
 	}
@@ -185,9 +210,6 @@ bool App::OnUserUpdate(float fElapsedTime)
 
 
 
-	// Clamp player position on the left and upward side
-	if (playerPos.x < 0.0f) playerPos.x = 0.0f;
-	if (playerPos.y < 0.0f) playerPos.y = 0.0f;
 	
 	// Handle player camera movement
 	camera.SetMode(olc::utils::Camera2D::Mode::LazyFollow);
@@ -198,7 +220,7 @@ bool App::OnUserUpdate(float fElapsedTime)
 	//playerPos += playerDir * playerSpeed * fElapsedTime;
 	// Render background
 
-	//tv.DrawDecal({ 0,0 }, backgroundDecal);
+	tv.DrawDecal({ 0,0 }, backgroundDecal);
 
 	// Render world
 	for (int y = 0; y < backgroundSize.y; y++)

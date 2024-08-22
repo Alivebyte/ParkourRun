@@ -35,6 +35,7 @@ public:
 	//olc::Sprite* backgroundSprite;
 	olc::Decal* backgroundDecal;
 	olc::vf2d playerPos;
+	olc::vf2d playerSpawnPoint;
 	olc::vf2d playerVel;
 	float playerSpeed;
 	bool bOnGround;
