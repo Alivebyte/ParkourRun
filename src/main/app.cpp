@@ -27,7 +27,7 @@ bool App::OnUserCreate()
 	{
 		for (int x = 0; x < backgroundSize.x; x++)
 		{
-			if (x == 0 || y == 0 || y == 21)
+			if (x == 0 || y == 0 || y == 21 || (x == 23 && y >= 18))
 			{
 				//tiles->at(y*24+x) = Tile("content/sprites/world_objects/industrial_pipe_vertical.png", &rm, pack);
 				//tiles->at(y* 24 + x).SetType(10);
