@@ -15,6 +15,7 @@ class Tile
 public:
 	Tile();
 	Tile(std::string filename, GameResourceManager* rm, olc::ResourcePack* pack);
+	~Tile();
 
 	olc::Decal* GetSprite();
 	void SetSprite(std::string filename, GameResourceManager* rm, olc::ResourcePack* pack);
@@ -23,6 +24,8 @@ public:
 	int GetType();
 
 private:
+	GameResourceManager* m_rm;
+	std::string m_sprite_name;
 	olc::Decal* m_TileSprite;
 	int m_Type;
 };

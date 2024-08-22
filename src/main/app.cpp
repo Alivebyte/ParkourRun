@@ -43,7 +43,7 @@ bool App::OnUserCreate()
 
 	//float fAngle = float(rand()) / float(RAND_MAX) * 2.0f * 3.14159f;
 	//fAngle = -0.4f;
-	playerDir = { 0.0f, 0.0f };
+	playerVel = { 0.0f, 0.0f };
 	playerPos = { 4.0f, 10.0f };
 	playerSpeed = 3.0f;
 	//playerPos.y = ScreenHeight() - 250.0f;
@@ -65,8 +65,17 @@ bool App::OnUserUpdate(float fElapsedTime)
 	// called once per frame
 	Clear(olc::CYAN);
 
+	
+
 	auto backgroundSize = backgroundDecal->sprite->Size() / vTileSize;
 
+	auto GetTile = [&](int x, int y)
+		{
+			if (x >= 0 && x < backgroundSize.x && y >= 0 && y < backgroundSize.y)
+				return tiles[y * backgroundSize.x + x];
+			else
+				return Tile("content/sprites/test_wall.png", &rm, pack);
+		};
 	// Debug rendering
 
 	for (int y = 0; y < backgroundSize.y; y++)
@@ -82,108 +91,85 @@ bool App::OnUserUpdate(float fElapsedTime)
 			}
 		}
 	}
-
-	olc::vf2d vPotentialPlayerPos = playerPos + playerDir * playerSpeed * fElapsedTime;
-
-	olc::vf2d vTilePlayerRadialDims = { 8.0f / vTileSize.x, 8.0f / vTileSize.y };
-
-	auto TestResolveCollisionPoint = [&](const olc::vf2d& point)
-	{
-		olc::vi2d vTestPoint = vPotentialPlayerPos + vTilePlayerRadialDims * point;
-		tv.FillRect(vTestPoint, {1,1}, olc::DARK_BLUE);
-		tv.DrawRect({ playerPos.x - 0.25f, playerPos.y - 0.25f}, vTilePlayerRadialDims, olc::DARK_MAGENTA);
-
-		auto& tile = tiles[vTestPoint.y * backgroundSize.x + vTestPoint.x];
-		if (tile.GetType() == TILE_AIR)
-		{
-			// Do Nothing, no collision
-			return false;
-		}
-		else
-		{
-				// Player has collided with a tile
-			bool bTileHit = tile.GetType() == TILE_COLLIDE;
-				
-			if (bTileHit)
-			{
-				tv.FillRect(vTestPoint, { 1,1 }, olc::RED);
-				// Collision response
-				playerDir = { 0.0f,0.0f };
-			}
-				
-			
-			return bTileHit;
-		}
-	};
-
 	
-	
-	// Handle collision & simple physics
-	//playerPos.y += 9.8f * fElapsedTime;
-	
-	
+	playerVel = { 0.0f ,0.0f };
 
-	
-	bool bHasHitTile = false;
-	bHasHitTile |= TestResolveCollisionPoint(olc::vf2d(0, -1));
-	bHasHitTile |= TestResolveCollisionPoint(olc::vf2d(0, +1));
-	bHasHitTile |= TestResolveCollisionPoint(olc::vf2d(-1, 0));
-	bHasHitTile |= TestResolveCollisionPoint(olc::vf2d(+1, 0));
-	
-	// Fall physics
-	if(!bHasHitTile) playerDir = { 0.0f, 1.0f };
-	//if (bHasHitTile) return true;
-
-	//if (playerPos.x < 0.0f) playerPos.x = 0.0f;
-	//if (playerPos.y < 0.0f) playerPos.y = 0.0f;
-	// Handle controls
+	// Handle user input
 	if (GetKey(olc::Key::W).bHeld)
 	{
-		if(!bHasHitTile)
-			playerDir = { 0.0f, -1.0f };
+		playerVel = { 0.0f, -2.0f };
 	} //else playerDir = { 0.0f, 0.0f };
-	if (GetKey(olc::Key::S).bHeld) 
+	if (GetKey(olc::Key::S).bHeld)
 	{
-		if (!bHasHitTile)
-			playerDir = { 0.0f, 1.0f };
+		playerVel = { 0.0f, 2.0f };
 	} //else playerDir = { 0.0f, 0.0f };
 	if (GetKey(olc::Key::A).bHeld)
 	{
-		if (!bHasHitTile)
-			playerDir = { -1.0f, 0.0f };
+		playerVel = { -2.0f, 0.0f };
 
 	} //else playerDir = { 0.0f, 0.0f };
 	if (GetKey(olc::Key::D).bHeld)
-	{ 
-		if (!bHasHitTile)
-			playerDir = { 1.0f, 0.0f };
-		
-	}
-	
-	if (GetKey(olc::Key::W).bReleased || GetKey(olc::Key::A).bReleased || GetKey(olc::Key::S).bReleased || GetKey(olc::Key::D).bReleased)
 	{
-		if (bHasHitTile)
-		{
-			if (playerDir.x == 0)
-				playerDir.x = -1.0f;
-			if (playerDir.y == 0)
-				playerDir.y = -1.0f;
-		}
-		
-		if(!bHasHitTile)
-		{
-			playerDir = { 0.0f, 0.0f };
-		}
+		playerVel = { 2.0f, 0.0f };
 	}
 	
-	playerPos += playerDir * playerSpeed * fElapsedTime;
+	// Handle collision & simple physics
+	// Gravity physics
 
+	olc::vf2d potentialPlayerPos = playerPos + playerVel * fElapsedTime;
+	
+	// Check for collision
+	if (playerVel.x <= 0) // Moving Left
+	{
+		if (GetTile(potentialPlayerPos.x + 0.0f, playerPos.y + 0.0f).GetType() != TILE_AIR || GetTile(potentialPlayerPos.x + 0.0f, playerPos.y + 0.9f).GetType() != TILE_AIR)
+		{
+			potentialPlayerPos.x = (int)potentialPlayerPos.x + 1;
+			playerVel.x = 0;
+		}
+	}
+	if (playerVel.x > 0) // Moving Right
+	{
+		if (GetTile(potentialPlayerPos.x + 1.0f, playerPos.y + 0.0f).GetType() != TILE_AIR || GetTile(potentialPlayerPos.x + 1.0f, playerPos.y + 0.9f).GetType() != TILE_AIR)
+		{
+			potentialPlayerPos.x = (int)potentialPlayerPos.x;
+			playerVel.x = 0;
+		}
+	}
+
+	bOnGround = false;
+	if (playerVel.y <= 0) // Moving Up
+	{
+		if (GetTile(potentialPlayerPos.x + 0.0f, potentialPlayerPos.y).GetType() !=  TILE_AIR || GetTile(potentialPlayerPos.x + 0.9f, potentialPlayerPos.y).GetType() != TILE_AIR)
+		{
+			potentialPlayerPos.y = (int)potentialPlayerPos.y + 1;
+			playerVel.y = 0;
+		}
+	}
+	else if(playerVel.y > 0) // Moving Down
+	{
+		if (GetTile(potentialPlayerPos.x + 0.0f, potentialPlayerPos.y + 1.0f).GetType() != TILE_AIR || GetTile(potentialPlayerPos.x + 0.9f, potentialPlayerPos.y + 1.0f).GetType() != TILE_AIR)
+		{
+			potentialPlayerPos.y = (int)potentialPlayerPos.y;
+			playerVel.y = 0;
+			bOnGround = true; // Player has a solid surface underfoot
+		}
+	}
+
+	playerPos = potentialPlayerPos;
+
+	
+	
+	//if (bHasHitTile) return true;
+
+	// Clamp player position on the left and upward side
+	if (playerPos.x < 0.0f) playerPos.x = 0.0f;
+	if (playerPos.y < 0.0f) playerPos.y = 0.0f;
+	
+	//playerPos += playerVel * playerSpeed * fElapsedTime;
+	
+	// Handle player camera movement
 	camera.SetMode(olc::utils::Camera2D::Mode::LazyFollow);
-
 	bool bOnScreen = camera.Update(fElapsedTime);
-
-
-
 	tv.SetWorldOffset(camera.GetViewPosition());
 
 
@@ -192,12 +178,7 @@ bool App::OnUserUpdate(float fElapsedTime)
 
 	//tv.DrawDecal({ 0,0 }, backgroundDecal);
 
-
 	// Render world
-	//SetPixelMode(olc::Pixel::ALPHA);
-
-	
-	
 	for (int y = 0; y < backgroundSize.y; y++)
 	{
 		for (int x = 0; x < backgroundSize.x; x++)
@@ -212,28 +193,8 @@ bool App::OnUserUpdate(float fElapsedTime)
 		}
 	}
 
-	// Render "tile map", by getting visible tiles
-	/*olc::vi2d vTileTL = tv.GetTopLeftTile().max({ 0,0 });
-	olc::vi2d vTileBR = tv.GetBottomRightTile().min(backgroundSize);
-	olc::vi2d vTile;*/
-	// Then looping through them and drawing them
-	/*for (vTile.y = vTileTL.y; vTile.y < vTileBR.y; vTile.y++)
-		for (vTile.x = vTileTL.x; vTile.x < vTileBR.x; vTile.x++)
-		{
-			int idx = vTile.y * backgroundSize.x + vTile.x;
-
-			if (tiles[idx].GetType() == TILE_AIR)
-				break;
-
-			if (tiles[idx].GetType() == TILE_COLLIDE)
-				tv.DrawDecal(vTile, tiles[idx].GetSprite());
-		}*/
-	//tv.DrawSprite({ 0,0 }, pipeHorizontalSprite, { 1.0f, 1.0f});
-	//tv.DrawSprite({ 32,0 }, pipeTurnSprite, {1.0f,1.0f}, olc::Sprite::Flip::HORIZ);
-	//tv.DrawSprite({ 32,32 }, pipeVerticalSprite, {1.0f,1.0f}, olc::Sprite::Flip::HORIZ);
-
 	//Render player
-	tv.DrawDecal({ playerPos.x - 0.5f , playerPos.y - 0.5f}, playerDecal, { 1,1 });
+	tv.DrawDecal({ playerPos.x, playerPos.y}, playerDecal, { 1,1 });
 	
 
 	//SetPixelMode(olc::Pixel::NORMAL);
