@@ -6,12 +6,8 @@ bool App::OnUserCreate()
 
 	pack = new olc::ResourcePack();
 
-	bTouchWall = false;
-
 	vTileSize = { 32,32 }; 
 	pack->LoadPack("content.pack", "TEST_KEY");
-
-	
 
 	tv = olc::TileTransformedView(GetScreenSize(), vTileSize);
 	
@@ -21,9 +17,9 @@ bool App::OnUserCreate()
 	//backgroundDecal = new olc::Decal(backgroundSprite);
 	
 	backgroundDecal = rm.RM_Sprite("content/sprites/background_test.png", pack);//pipeHorizontalSprite = new olc::Sprite("content/sprites/world_objects/industrial_pipe_horizontal.png",pack);
-	playerDecal = rm.RM_Sprite("content/sprites/player.png",pack);
+	//playerDecal = rm.RM_Sprite("content/sprites/player.png",pack);
 	//pipeVerticalSprite = new olc::Sprite("content/sprites/world_objects/industrial_pipe_vertical.png",pack)
-	animator.AddAnimation("Idle", 2, 4, playerDecal,{0.0f,0.0f}, {32.0f,32.0f}, {0.0f,0.0f}, {0.0f, 0.0f}, true);
+	
 
 	//animator.ScaleAnimation("Idle", { 2.0f, 2.0f });
 	//pipeTurnSprite = new olc::Sprite("content/sprites/world_objects/industrial_pipe_turn90.png",pack);
@@ -49,20 +45,25 @@ bool App::OnUserCreate()
 		}
 	}
 
-	//float fAngle = float(rand()) / float(RAND_MAX) * 2.0f * 3.14159f;
-	//fAngle = -0.4f;
-	playerVel = { 0.0f, 0.0f };
+
+	// Create player
+	m_pPlayer = new Player("content/sprites/player.png", &rm, pack, olc::vf2d(4.0f, 10.0f));
+
+	// Initialize animations
+	m_pPlayer->InitializeAnimations(pack);
+	m_pPlayer->SetTouchedWall(false);
+	/*playerVel = { 0.0f, 0.0f };
 	playerSpawnPoint = { 4.0f, 10.0f };
 	playerPos = playerSpawnPoint;
-	playerSpeed = 3.0f;
-
+	playerSpeed = 3.0f;*/
+	olc::vf2d *playerPos = m_pPlayer->GetPlayerPosition();
 	
 	//playerPos.y = ScreenHeight() - 250.0f;
 	//printf("Background size: %d %d\n", .x / vTileSize, backgroundDecal->sprite->Size().y / vTileSize);
 
-	camera = olc::utils::Camera2D(GetScreenSize() / vTileSize, playerPos);
+	camera = olc::utils::Camera2D(GetScreenSize() / vTileSize, *playerPos);
 
-	camera.SetTarget(playerPos);
+	camera.SetTarget(*playerPos);
 	camera.SetMode(olc::utils::Camera2D::Mode::Simple);
 	camera.SetWorldBoundary({ 0,0 }, backgroundDecal->sprite->Size() / vTileSize);
 	camera.EnableWorldBoundary(true);
@@ -77,6 +78,9 @@ bool App::OnUserUpdate(float fElapsedTime)
 	Clear(olc::CYAN);
 
 	auto backgroundSize = backgroundDecal->sprite->Size() / vTileSize;
+
+	
+
 
 	auto GetTile = [&](int x, int y)
 	{
@@ -105,61 +109,52 @@ bool App::OnUserUpdate(float fElapsedTime)
 	//playerVel = { 0.0f ,0.0f };
 
 	// Handle user input
-	if (GetKey(olc::Key::W).bHeld)
-	{
-		if(bTouchWall)
-			playerVel.y += -30.0f * fElapsedTime;
-	} //else playerDir = { 0.0f, 0.0f };
-	if (GetKey(olc::Key::S).bHeld)
-	{
-		playerVel.y =  2.0f;
-	} //else playerDir = { 0.0f, 0.0f };
-	if (GetKey(olc::Key::A).bHeld)
-	{
-		playerVel.x += (bOnGround ?  -50.0f : -1.0f) * fElapsedTime;
+	m_pPlayer->HandleUserInput(this, fElapsedTime);
 
-	} //else playerDir = { 0.0f, 0.0f };
-	if (GetKey(olc::Key::D).bHeld)
-	{
-		playerVel.x += (bOnGround ? 50.0f : 1.0f) * fElapsedTime;
-	}
-	if (GetKey(olc::Key::SPACE).bPressed)
-	{
-		if (playerVel.y == 0)
-		{
-			playerVel.y = -12.0f;
-		}
-	}
-
+	olc::vf2d playerPos = *m_pPlayer->GetPlayerPosition();
+	olc::vf2d playerVel = *m_pPlayer->GetPlayerVelocity();
+	olc::vf2d playerSpawnPoint = *m_pPlayer->GetPlayerSpawnPosition();
 	
 	// Clamp velocities
 
 	if (playerVel.x > 50.0f)
+	{
 		playerVel.x = 50.0f;
-
+		//m_pPlayer->SetPlayerVelocity(playerVel);
+	}
 	if (playerVel.x < -50.0f)
+	{
 		playerVel.x = -50.0f;
-
+		//m_pPlayer->SetPlayerVelocity(playerVel);
+	}
 	if (playerVel.y > 100.0f)
+	{
 		playerVel.y = 100.0f;
-
+		//m_pPlayer->SetPlayerVelocity(playerVel);
+	}
 	if (playerVel.y < -100.0f)
+	{
 		playerVel.y = -100.0f;
-	
+		//m_pPlayer->SetPlayerVelocity(playerVel);
+	}
 	// Clamp player position on the left and upward side
 	if (playerPos.x < 0.0f) playerPos.x = 0.0f;
 	if (playerPos.y < 0.0f) playerPos.y = 0.0f;
-
+	//m_pPlayer->SetPlayerPosition(playerPos);
 	// Handle player falling off the level or finishing level and respawning
 	if (playerPos.y > backgroundSize.y)
 	{
 		playerPos = playerSpawnPoint;
 		playerVel = { 0.0f, 0.0f };
+		//m_pPlayer->SetPlayerPosition(playerPos);
+		//m_pPlayer->SetPlayerVelocity(playerVel);
 	}
 	if (playerPos.x > backgroundSize.x + 1)
 	{
 		playerPos = playerSpawnPoint;
 		playerVel = { 0.0f,0.0f };
+		//m_pPlayer->SetPlayerPosition(playerPos);
+		//m_pPlayer->SetPlayerVelocity(playerVel);
 	}
 
 
@@ -167,11 +162,11 @@ bool App::OnUserUpdate(float fElapsedTime)
 	
 	// Gravity physics
 	playerVel.y += 20.0f * fElapsedTime;
-
-	//std::cout << "Player velocity: " << playerVel.x << " " << playerVel.y << std::endl;
-
+	m_pPlayer->SetPlayerVelocity(playerVel);
+	std::cout << "Player velocity: " << playerVel.x << " " << playerVel.y << std::endl;
+	std::cout << "Player position: " << playerPos.x << " " << playerPos.y << std::endl;
 	// Drag
-	if (bOnGround)
+	if (m_pPlayer->IsOnGround())
 	{
 		playerVel.x += -4.0f * playerVel.x * fElapsedTime;
 		if (fabs(playerVel.x) < 0.01f)
@@ -183,13 +178,15 @@ bool App::OnUserUpdate(float fElapsedTime)
 	tv.FillRect(potentialPlayerPos, { 1,1 }, olc::DARK_MAGENTA);
 	// Check for collision
 
-	bTouchWall = false;
+	/*bTouchWall = false;*/
+	m_pPlayer->SetTouchedWall(false);
 	if (playerVel.x <= 0) // Moving Left
 	{
  		if (GetTile(potentialPlayerPos.x + 0.0f, playerPos.y + 0.0f).GetCollisionType() != TILE_NOCOLLIDE || GetTile(potentialPlayerPos.x + 0.0f, playerPos.y + 0.9f).GetCollisionType() != TILE_NOCOLLIDE)
 		{
 			potentialPlayerPos.x = (int)potentialPlayerPos.x + 1;
 			playerVel.x = 0;
+			m_pPlayer->SetPlayerVelocity(playerVel);
 		}
 	}
 	if (playerVel.x > 0) // Moving Right
@@ -198,16 +195,19 @@ bool App::OnUserUpdate(float fElapsedTime)
 		{
 			potentialPlayerPos.x = (int)potentialPlayerPos.x;
 			playerVel.x = 0;
+			m_pPlayer->SetPlayerVelocity(playerVel);
 		}
 	}
 
-	bOnGround = false;
+	/*bOnGround = false;*/
+	m_pPlayer->SetOnGround(false);
 	if (playerVel.y <= 0) // Moving Up
 	{
 		if (GetTile(potentialPlayerPos.x + 0.0f, potentialPlayerPos.y).GetCollisionType() !=  TILE_NOCOLLIDE || GetTile(potentialPlayerPos.x + 0.9f, potentialPlayerPos.y).GetCollisionType() != TILE_NOCOLLIDE)
 		{
 			potentialPlayerPos.y = (int)potentialPlayerPos.y + 1;
 			playerVel.y = 0;
+			m_pPlayer->SetPlayerVelocity(playerVel);
 		}
 	}
 	else if(playerVel.y > 0) // Moving Down
@@ -216,22 +216,27 @@ bool App::OnUserUpdate(float fElapsedTime)
 		{
 			potentialPlayerPos.y = (int)potentialPlayerPos.y;
 			playerVel.y = 0;
-			bOnGround = true; // Player has a solid surface underfoot
+			//bOnGround = true; // Player has a solid surface underfoot
+			m_pPlayer->SetOnGround(true);
+			m_pPlayer->SetPlayerVelocity(playerVel);
 		}
 	}
 
 	// Check for touching wall
 	if (GetTile((int)potentialPlayerPos.x, playerPos.y + 0.0f).GetCollisionType() != TILE_NOCOLLIDE || GetTile((int)potentialPlayerPos.x, playerPos.y + 0.9f).GetCollisionType() != TILE_NOCOLLIDE)
 	{
-		bTouchWall = true;
+		//bTouchWall = true;
+		m_pPlayer->SetTouchedWall(true);
 	}
 	
 	if (GetTile(potentialPlayerPos.x + 1.0f, playerPos.y + 0.0f).GetCollisionType() != TILE_NOCOLLIDE || GetTile(potentialPlayerPos.x + 1.0f, playerPos.y + 0.9f).GetCollisionType() != TILE_NOCOLLIDE)
 	{
-		bTouchWall = true;
+		//bTouchWall = true;
+		m_pPlayer->SetTouchedWall(true);
 	}
 
 	playerPos = potentialPlayerPos;
+	m_pPlayer->SetPlayerPosition(playerPos);
 
 
 
@@ -261,12 +266,15 @@ bool App::OnUserUpdate(float fElapsedTime)
 	}
 
 	//Render player
-	if(!animator.GetAnim("Idle")->bIsPlaying)
-		animator.Play("Idle");
+	if(!m_pPlayer->GetAnimator().GetAnim("Idle")->bIsPlaying)
+		m_pPlayer->GetAnimator().Play("Idle");
 
-	animator.UpdateAnimations(fElapsedTime);
+	m_pPlayer->GetAnimator().UpdateAnimations(fElapsedTime);
 
-	animator.DrawAnimationFrame(playerPos,0.0f, &tv);
+	m_pPlayer->GetAnimator().DrawAnimationFrame(playerPos,0.0f, &tv);
+
+	// Debug render
+	//tv.FillRectDecal(playerPos, { 1,1 }, olc::DARK_BLUE);
 	//tv.DrawDecal({ playerPos.x, playerPos.y}, playerDecal, { 1,1 });
 	
 	return true;

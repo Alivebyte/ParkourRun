@@ -54,3 +54,57 @@ void Tile::SetCollisionType(TILE_COLLISION_TYPES type)
 {
 	m_iColType = type;
 }
+
+Player::Player()
+{
+
+}
+
+Player::Player(std::string filename, GameResourceManager* rm, olc::ResourcePack* pack, olc::vf2d spawn_pos)
+{
+	//BaseClass::Tile(filename, rm, pack);
+	m_pTileSprite = rm->RM_Sprite(filename, pack);
+
+	m_sSprite_name = filename;
+	m_pRM = rm;
+	m_vfPlayerPos = spawn_pos;
+	m_vfPlayerSpawnPoint = spawn_pos;
+}
+
+void Player::InitializeAnimations(olc::ResourcePack* pack)
+{
+	// Idle
+	m_Animator.AddAnimation("Idle", 2, 4, m_pRM->RM_Sprite(m_sSprite_name), {0.0f,0.0f}, {32.0f,32.0f}, {0.0f,0.0f}, {0.0f, 0.0f}, true);
+	// Running
+	// Climbing
+	// Jump
+}
+
+void Player::HandleUserInput(olc::PixelGameEngine* pge, float fElapsedTime)
+{
+	if (pge->GetKey(olc::Key::W).bHeld)
+	{
+		if (m_bTouchWall)
+			m_vfPlayerVel.y += -30.0f * fElapsedTime;
+	} //else playerDir = { 0.0f, 0.0f };
+	if (pge->GetKey(olc::Key::S).bHeld)
+	{
+		m_vfPlayerVel.y = 2.0f;
+	} //else playerDir = { 0.0f, 0.0f };
+	if (pge->GetKey(olc::Key::A).bHeld)
+	{
+		m_vfPlayerVel.x += (m_bIsOnGround ? -50.0f : -1.0f) * fElapsedTime;
+
+	} //else playerDir = { 0.0f, 0.0f };
+	if (pge->GetKey(olc::Key::D).bHeld)
+	{
+		m_vfPlayerVel.x += (m_bIsOnGround ? 50.0f : 1.0f) * fElapsedTime;
+	}
+	if (pge->GetKey(olc::Key::SPACE).bPressed)
+	{
+		if (m_vfPlayerVel.y == 0)
+		{
+			m_vfPlayerVel.y = -12.0f;
+		}
+	}
+}

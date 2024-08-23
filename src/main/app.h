@@ -29,17 +29,13 @@ public:
 	//void Render();
 	//void HandleUserInput();
 	//void HandleCollision();
-
-	//olc::Sprite* playerSprite;
-	olc::Decal* playerDecal;
-	//olc::Sprite* backgroundSprite;
+	//std::unique_ptr<Player> m_pPlayer;
+	Player* m_pPlayer;
 	olc::Decal* backgroundDecal;
-	olc::vf2d playerPos;
-	olc::vf2d playerSpawnPoint;
-	olc::vf2d playerVel;
-	float playerSpeed;
-	bool bOnGround;
-	bool bTouchWall;
+	
+	
+	//bool bOnGround;
+	//bool bTouchWall;
 
 	olc::ResourcePack* pack;
 
@@ -50,8 +46,6 @@ public:
 	olc::TileTransformedView tv;
 	olc::vi2d vTileSize;
 	olcPGEX_RayCast2D rayCaster2D;
-
-	GameAnimator animator;
 
 	Tile *tiles;
 };
