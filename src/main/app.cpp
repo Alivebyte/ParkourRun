@@ -265,13 +265,15 @@ bool App::OnUserUpdate(float fElapsedTime)
 		}
 	}
 
+	auto& animator = *m_pPlayer->GetAnimator();
+
 	//Render player
-	if(!m_pPlayer->GetAnimator().GetAnim("Idle")->bIsPlaying)
-		m_pPlayer->GetAnimator().Play("Idle");
+	if(!animator.GetAnim("Idle")->bIsPlaying)
+		animator.Play("Idle");
 
-	m_pPlayer->GetAnimator().UpdateAnimations(fElapsedTime);
+	animator.UpdateAnimations(fElapsedTime);
 
-	m_pPlayer->GetAnimator().DrawAnimationFrame(playerPos,0.0f, &tv);
+	animator.DrawAnimationFrame(playerPos,0.0f, &tv);
 
 	// Debug render
 	//tv.FillRectDecal(playerPos, { 1,1 }, olc::DARK_BLUE);

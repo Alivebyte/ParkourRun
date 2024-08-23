@@ -27,7 +27,7 @@ public:
 	void SetCollisionType(TILE_COLLISION_TYPES type);
 	int GetCollisionType();
 
-	GameAnimator GetAnimator() { return m_Animator; };
+	GameAnimator* GetAnimator() { return &m_Animator; };
 
 protected:
 	GameResourceManager* m_pRM;
