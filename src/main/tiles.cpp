@@ -1,56 +1,56 @@
 #include "olcPixelGameEngine.h"
 #include "tiles.h"
 
-Tile::Tile() : m_TileSprite(nullptr), m_Type(0), m_rm(nullptr)
+Tile::Tile() : m_pTileSprite(nullptr), m_iColType(TILE_NOCOLLIDE), m_pRM(nullptr)
 {
-	std::cout << "Tile created\n";
+	//std::cout << "Tile created\n";
 }
 
 Tile::~Tile()
 {
-	if (m_rm)
+	if (m_pRM)
 	{
-		if (m_TileSprite)
+		if (m_pTileSprite)
 		{
-			if (!m_sprite_name.empty())
+			if (!m_sSprite_name.empty())
 			{
-				m_rm->RM_FreeSpriteData(m_sprite_name);
-				m_TileSprite = nullptr;
+				m_pRM->RM_FreeSpriteData(m_sSprite_name);
+				m_pTileSprite = nullptr;
 			}
 			else
 			{
-				delete m_TileSprite;
-				m_TileSprite = nullptr;
+				delete m_pTileSprite;
+				m_pTileSprite = nullptr;
 			}
 		}
 	}
 }
 
-Tile::Tile(std::string filename, GameResourceManager* rm, olc::ResourcePack* pack) : m_Type(0)
+Tile::Tile(std::string filename, GameResourceManager* rm, olc::ResourcePack* pack) : m_iColType(0)
 {
-	m_sprite_name = filename;
-	m_TileSprite = rm->RM_Sprite(filename, pack);
-	m_rm = rm;
+	m_sSprite_name = filename;
+	m_pTileSprite = rm->RM_Sprite(filename, pack);
+	m_pRM = rm;
 }
 
 void Tile::SetSprite(std::string filename, GameResourceManager* rm, olc::ResourcePack* pack)
 {
-	m_sprite_name = filename;
-	m_TileSprite = rm->RM_Sprite(filename, pack);
-	m_rm = rm;
+	m_sSprite_name = filename;
+	m_pTileSprite = rm->RM_Sprite(filename, pack);
+	m_pRM = rm;
 }
 
 olc::Decal* Tile::GetSprite()
 {
-	return m_TileSprite;
+	return m_pTileSprite;
 }
 
-int Tile::GetType()
+int Tile::GetCollisionType()
 {
-	return m_Type;
+	return m_iColType;
 }
 
-void Tile::SetType(TILE_TYPES type)
+void Tile::SetCollisionType(TILE_COLLISION_TYPES type)
 {
-	m_Type = type;
+	m_iColType = type;
 }

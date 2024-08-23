@@ -40,11 +40,11 @@ bool App::OnUserCreate()
 				//tiles->at(y*24+x) = Tile("content/sprites/world_objects/industrial_pipe_vertical.png", &rm, pack);
 				//tiles->at(y* 24 + x).SetType(10);
 				tiles[y * backgroundSize.x + x].SetSprite("content/sprites/world_objects/industrial_pipe_vertical.png", &rm, pack);
-				tiles[y * backgroundSize.x + x].SetType(TILE_COLLIDE);
+				tiles[y * backgroundSize.x + x].SetCollisionType(TILE_COLLIDE);
 			}
 			else
 			{
-				tiles[y*backgroundSize.x+x].SetType(TILE_AIR);
+				tiles[y*backgroundSize.x+x].SetCollisionType(TILE_NOCOLLIDE);
 			}
 		}
 	}
@@ -92,7 +92,7 @@ bool App::OnUserUpdate(float fElapsedTime)
 	{
 		for (int x = 0; x < backgroundSize.x; x++)
 		{
-			switch (tiles[y * backgroundSize.x + x].GetType())
+			switch (tiles[y * backgroundSize.x + x].GetCollisionType())
 			{
 			case 0:
 				break;
@@ -185,7 +185,7 @@ bool App::OnUserUpdate(float fElapsedTime)
 	bTouchWall = false;
 	if (playerVel.x <= 0) // Moving Left
 	{
- 		if (GetTile(potentialPlayerPos.x + 0.0f, playerPos.y + 0.0f).GetType() != TILE_AIR || GetTile(potentialPlayerPos.x + 0.0f, playerPos.y + 0.9f).GetType() != TILE_AIR)
+ 		if (GetTile(potentialPlayerPos.x + 0.0f, playerPos.y + 0.0f).GetCollisionType() != TILE_NOCOLLIDE || GetTile(potentialPlayerPos.x + 0.0f, playerPos.y + 0.9f).GetCollisionType() != TILE_NOCOLLIDE)
 		{
 			potentialPlayerPos.x = (int)potentialPlayerPos.x + 1;
 			playerVel.x = 0;
@@ -193,7 +193,7 @@ bool App::OnUserUpdate(float fElapsedTime)
 	}
 	if (playerVel.x > 0) // Moving Right
 	{
-		if (GetTile(potentialPlayerPos.x + 1.0f, playerPos.y + 0.0f).GetType() != TILE_AIR || GetTile(potentialPlayerPos.x + 1.0f, playerPos.y + 0.9f).GetType() != TILE_AIR)
+		if (GetTile(potentialPlayerPos.x + 1.0f, playerPos.y + 0.0f).GetCollisionType() != TILE_NOCOLLIDE || GetTile(potentialPlayerPos.x + 1.0f, playerPos.y + 0.9f).GetCollisionType() != TILE_NOCOLLIDE)
 		{
 			potentialPlayerPos.x = (int)potentialPlayerPos.x;
 			playerVel.x = 0;
@@ -203,7 +203,7 @@ bool App::OnUserUpdate(float fElapsedTime)
 	bOnGround = false;
 	if (playerVel.y <= 0) // Moving Up
 	{
-		if (GetTile(potentialPlayerPos.x + 0.0f, potentialPlayerPos.y).GetType() !=  TILE_AIR || GetTile(potentialPlayerPos.x + 0.9f, potentialPlayerPos.y).GetType() != TILE_AIR)
+		if (GetTile(potentialPlayerPos.x + 0.0f, potentialPlayerPos.y).GetCollisionType() !=  TILE_NOCOLLIDE || GetTile(potentialPlayerPos.x + 0.9f, potentialPlayerPos.y).GetCollisionType() != TILE_NOCOLLIDE)
 		{
 			potentialPlayerPos.y = (int)potentialPlayerPos.y + 1;
 			playerVel.y = 0;
@@ -211,7 +211,7 @@ bool App::OnUserUpdate(float fElapsedTime)
 	}
 	else if(playerVel.y > 0) // Moving Down
 	{
-		if (GetTile(potentialPlayerPos.x + 0.0f, potentialPlayerPos.y + 1.0f).GetType() != TILE_AIR || GetTile(potentialPlayerPos.x + 0.9f, potentialPlayerPos.y + 1.0f).GetType() != TILE_AIR)
+		if (GetTile(potentialPlayerPos.x + 0.0f, potentialPlayerPos.y + 1.0f).GetCollisionType() != TILE_NOCOLLIDE || GetTile(potentialPlayerPos.x + 0.9f, potentialPlayerPos.y + 1.0f).GetCollisionType() != TILE_NOCOLLIDE)
 		{
 			potentialPlayerPos.y = (int)potentialPlayerPos.y;
 			playerVel.y = 0;
@@ -220,12 +220,12 @@ bool App::OnUserUpdate(float fElapsedTime)
 	}
 
 	// Check for touching wall
-	if (GetTile((int)potentialPlayerPos.x, playerPos.y + 0.0f).GetType() != TILE_AIR || GetTile((int)potentialPlayerPos.x, playerPos.y + 0.9f).GetType() != TILE_AIR)
+	if (GetTile((int)potentialPlayerPos.x, playerPos.y + 0.0f).GetCollisionType() != TILE_NOCOLLIDE || GetTile((int)potentialPlayerPos.x, playerPos.y + 0.9f).GetCollisionType() != TILE_NOCOLLIDE)
 	{
 		bTouchWall = true;
 	}
 	
-	if (GetTile(potentialPlayerPos.x + 1.0f, playerPos.y + 0.0f).GetType() != TILE_AIR || GetTile(potentialPlayerPos.x + 1.0f, playerPos.y + 0.9f).GetType() != TILE_AIR)
+	if (GetTile(potentialPlayerPos.x + 1.0f, playerPos.y + 0.0f).GetCollisionType() != TILE_NOCOLLIDE || GetTile(potentialPlayerPos.x + 1.0f, playerPos.y + 0.9f).GetCollisionType() != TILE_NOCOLLIDE)
 	{
 		bTouchWall = true;
 	}
@@ -249,9 +249,9 @@ bool App::OnUserUpdate(float fElapsedTime)
 	{
 		for (int x = 0; x < backgroundSize.x; x++)
 		{
-			switch (tiles[y * backgroundSize.x + x].GetType())
+			switch (tiles[y * backgroundSize.x + x].GetCollisionType())
 			{
-			case TILE_AIR:
+			case TILE_NOCOLLIDE:
 				break;
 			case TILE_COLLIDE:
 				tv.DrawDecal(olc::vi2d( x,y ), tiles[y * backgroundSize.x + x].GetSprite());
