@@ -23,24 +23,24 @@ bool App::OnUserCreate()
 
 	//animator.ScaleAnimation("Idle", { 2.0f, 2.0f });
 	//pipeTurnSprite = new olc::Sprite("content/sprites/world_objects/industrial_pipe_turn90.png",pack);
-	auto backgroundSize = backgroundDecal->sprite->Size() / vTileSize;
+	levelSize = backgroundDecal->sprite->Size() / vTileSize;
 
 	// Generate world
-	tiles = new Tile[backgroundSize.y*backgroundSize.x];
-	for (int y = 0; y < backgroundSize.y; y++)
+	tiles = new Tile[levelSize.y*levelSize.x];
+	for (int y = 0; y < levelSize.y; y++)
 	{
-		for (int x = 0; x < backgroundSize.x; x++)
+		for (int x = 0; x < levelSize.x; x++)
 		{
 			if (x == 0 || y == 0 || y == 22 || (x == 23 && y >= 18))
 			{
 				//tiles->at(y*24+x) = Tile("content/sprites/world_objects/industrial_pipe_vertical.png", &rm, pack);
 				//tiles->at(y* 24 + x).SetType(10);
-				tiles[y * backgroundSize.x + x].SetSprite("content/sprites/world_objects/industrial_pipe_vertical.png", &rm, pack);
-				tiles[y * backgroundSize.x + x].SetCollisionType(TILE_COLLIDE);
+				tiles[y * levelSize.x + x].SetSprite("content/sprites/world_objects/industrial_pipe_vertical.png", &rm, pack);
+				tiles[y * levelSize.x + x].SetCollisionType(TILE_COLLIDE);
 			}
 			else
 			{
-				tiles[y*backgroundSize.x+x].SetCollisionType(TILE_NOCOLLIDE);
+				tiles[y*levelSize.x+x].SetCollisionType(TILE_NOCOLLIDE);
 			}
 		}
 	}
@@ -77,44 +77,74 @@ bool App::OnUserUpdate(float fElapsedTime)
 	// called once per frame
 	Clear(olc::CYAN);
 
-	auto backgroundSize = backgroundDecal->sprite->Size() / vTileSize;
+	// Handle user input
+	m_pPlayer->HandleUserInput(this, fElapsedTime);
 
+	// Handle collision
+	HandleCollision(fElapsedTime);
 	
+	// Handle player camera movement
+	CameraMovement(fElapsedTime);
 
+	// Do Render
+	Render(fElapsedTime);
 
-	auto GetTile = [&](int x, int y)
+	return true;
+}
+
+void App::Render(float fElapsedTime)
+{
+	// Render background
+	tv.DrawDecal({ 0,0 }, backgroundDecal);
+
+	// Render world
+	for (int y = 0; y < levelSize.y; y++)
 	{
-		if (x >= 0 && x < backgroundSize.x && y >= 0 && y < backgroundSize.y)
-			return tiles[y * backgroundSize.x + x];
-		else
-			return Tile("content/sprites/test_wall.png", &rm, pack);
-	};
-
-	// Debug rendering
-
-	for (int y = 0; y < backgroundSize.y; y++)
-	{
-		for (int x = 0; x < backgroundSize.x; x++)
+		for (int x = 0; x < levelSize.x; x++)
 		{
-			switch (tiles[y * backgroundSize.x + x].GetCollisionType())
+			switch (tiles[y * levelSize.x + x].GetCollisionType())
 			{
-			case 0:
+			case TILE_NOCOLLIDE:
 				break;
-			case 10:
-				tv.FillRect(olc::vi2d( x,y ), {1,1}, olc::GREEN);
+			case TILE_COLLIDE:
+				tv.DrawDecal(olc::vi2d(x, y), tiles[y * levelSize.x + x].GetSprite());
 			}
 		}
 	}
-	
-	//playerVel = { 0.0f ,0.0f };
 
-	// Handle user input
-	m_pPlayer->HandleUserInput(this, fElapsedTime);
+	auto& animator = *m_pPlayer->GetAnimator();
+
+	//Render player
+	if (!animator.GetAnim("Idle")->bIsPlaying)
+		animator.Play("Idle");
+
+	animator.UpdateAnimations(fElapsedTime);
+
+	animator.DrawAnimationFrame(*m_pPlayer->GetPlayerPosition(), 0.0f, &tv);
+}
+
+void App::CameraMovement(float fElapsedTime)
+{
+	camera.SetMode(olc::utils::Camera2D::Mode::LazyFollow);
+	bool bOnScreen = camera.Update(fElapsedTime);
+	tv.SetWorldOffset(camera.GetViewPosition());
+}
+
+void App::HandleCollision(float fElapsedTime)
+{
+	auto GetTile = [&](int x, int y)
+		{
+			if (x >= 0 && x < levelSize.x && y >= 0 && y < levelSize.y)
+				return tiles[y * levelSize.x + x];
+			else
+				return Tile("content/sprites/test_wall.png", &rm, pack);
+		};
+
 
 	olc::vf2d playerPos = *m_pPlayer->GetPlayerPosition();
 	olc::vf2d playerVel = *m_pPlayer->GetPlayerVelocity();
 	olc::vf2d playerSpawnPoint = *m_pPlayer->GetPlayerSpawnPosition();
-	
+
 	// Clamp velocities
 
 	if (playerVel.x > 50.0f)
@@ -142,14 +172,14 @@ bool App::OnUserUpdate(float fElapsedTime)
 	if (playerPos.y < 0.0f) playerPos.y = 0.0f;
 	//m_pPlayer->SetPlayerPosition(playerPos);
 	// Handle player falling off the level or finishing level and respawning
-	if (playerPos.y > backgroundSize.y)
+	if (playerPos.y > levelSize.y)
 	{
 		playerPos = playerSpawnPoint;
 		playerVel = { 0.0f, 0.0f };
 		//m_pPlayer->SetPlayerPosition(playerPos);
 		//m_pPlayer->SetPlayerVelocity(playerVel);
 	}
-	if (playerPos.x > backgroundSize.x + 1)
+	if (playerPos.x > levelSize.x + 1)
 	{
 		playerPos = playerSpawnPoint;
 		playerVel = { 0.0f,0.0f };
@@ -159,12 +189,12 @@ bool App::OnUserUpdate(float fElapsedTime)
 
 
 	// Handle collision & simple physics
-	
+
 	// Gravity physics
 	playerVel.y += 20.0f * fElapsedTime;
 	m_pPlayer->SetPlayerVelocity(playerVel);
-	std::cout << "Player velocity: " << playerVel.x << " " << playerVel.y << std::endl;
-	std::cout << "Player position: " << playerPos.x << " " << playerPos.y << std::endl;
+	//std::cout << "Player velocity: " << playerVel.x << " " << playerVel.y << std::endl;
+	//std::cout << "Player position: " << playerPos.x << " " << playerPos.y << std::endl;
 	// Drag
 	if (m_pPlayer->IsOnGround())
 	{
@@ -182,7 +212,7 @@ bool App::OnUserUpdate(float fElapsedTime)
 	m_pPlayer->SetTouchedWall(false);
 	if (playerVel.x <= 0) // Moving Left
 	{
- 		if (GetTile(potentialPlayerPos.x + 0.0f, playerPos.y + 0.0f).GetCollisionType() != TILE_NOCOLLIDE || GetTile(potentialPlayerPos.x + 0.0f, playerPos.y + 0.9f).GetCollisionType() != TILE_NOCOLLIDE)
+		if (GetTile(potentialPlayerPos.x + 0.0f, playerPos.y + 0.0f).GetCollisionType() != TILE_NOCOLLIDE || GetTile(potentialPlayerPos.x + 0.0f, playerPos.y + 0.9f).GetCollisionType() != TILE_NOCOLLIDE)
 		{
 			potentialPlayerPos.x = (int)potentialPlayerPos.x + 1;
 			playerVel.x = 0;
@@ -203,14 +233,14 @@ bool App::OnUserUpdate(float fElapsedTime)
 	m_pPlayer->SetOnGround(false);
 	if (playerVel.y <= 0) // Moving Up
 	{
-		if (GetTile(potentialPlayerPos.x + 0.0f, potentialPlayerPos.y).GetCollisionType() !=  TILE_NOCOLLIDE || GetTile(potentialPlayerPos.x + 0.9f, potentialPlayerPos.y).GetCollisionType() != TILE_NOCOLLIDE)
+		if (GetTile(potentialPlayerPos.x + 0.0f, potentialPlayerPos.y).GetCollisionType() != TILE_NOCOLLIDE || GetTile(potentialPlayerPos.x + 0.9f, potentialPlayerPos.y).GetCollisionType() != TILE_NOCOLLIDE)
 		{
 			potentialPlayerPos.y = (int)potentialPlayerPos.y + 1;
 			playerVel.y = 0;
 			m_pPlayer->SetPlayerVelocity(playerVel);
 		}
 	}
-	else if(playerVel.y > 0) // Moving Down
+	else if (playerVel.y > 0) // Moving Down
 	{
 		if (GetTile(potentialPlayerPos.x + 0.0f, potentialPlayerPos.y + 1.0f).GetCollisionType() != TILE_NOCOLLIDE || GetTile(potentialPlayerPos.x + 0.9f, potentialPlayerPos.y + 1.0f).GetCollisionType() != TILE_NOCOLLIDE)
 		{
@@ -228,7 +258,7 @@ bool App::OnUserUpdate(float fElapsedTime)
 		//bTouchWall = true;
 		m_pPlayer->SetTouchedWall(true);
 	}
-	
+
 	if (GetTile(potentialPlayerPos.x + 1.0f, playerPos.y + 0.0f).GetCollisionType() != TILE_NOCOLLIDE || GetTile(potentialPlayerPos.x + 1.0f, playerPos.y + 0.9f).GetCollisionType() != TILE_NOCOLLIDE)
 	{
 		//bTouchWall = true;
@@ -237,49 +267,6 @@ bool App::OnUserUpdate(float fElapsedTime)
 
 	playerPos = potentialPlayerPos;
 	m_pPlayer->SetPlayerPosition(playerPos);
-
-
-
-	
-	// Handle player camera movement
-	camera.SetMode(olc::utils::Camera2D::Mode::LazyFollow);
-	bool bOnScreen = camera.Update(fElapsedTime);
-	tv.SetWorldOffset(camera.GetViewPosition());
-
-
-	// Render background
-	tv.DrawDecal({ 0,0 }, backgroundDecal);
-
-	// Render world
-	for (int y = 0; y < backgroundSize.y; y++)
-	{
-		for (int x = 0; x < backgroundSize.x; x++)
-		{
-			switch (tiles[y * backgroundSize.x + x].GetCollisionType())
-			{
-			case TILE_NOCOLLIDE:
-				break;
-			case TILE_COLLIDE:
-				tv.DrawDecal(olc::vi2d( x,y ), tiles[y * backgroundSize.x + x].GetSprite());
-			}
-		}
-	}
-
-	auto& animator = *m_pPlayer->GetAnimator();
-
-	//Render player
-	if(!animator.GetAnim("Idle")->bIsPlaying)
-		animator.Play("Idle");
-
-	animator.UpdateAnimations(fElapsedTime);
-
-	animator.DrawAnimationFrame(playerPos,0.0f, &tv);
-
-	// Debug render
-	//tv.FillRectDecal(playerPos, { 1,1 }, olc::DARK_BLUE);
-	//tv.DrawDecal({ playerPos.x, playerPos.y}, playerDecal, { 1,1 });
-	
-	return true;
 }
 
 bool App::OnUserDestroy()

@@ -26,17 +26,14 @@ public:
 	bool OnUserUpdate(float fElapsedTime) override;
 	bool OnUserDestroy() override;
 
-	//void Render();
-	//void HandleUserInput();
-	//void HandleCollision();
-	//std::unique_ptr<Player> m_pPlayer;
+
+	void Render(float fElapsedTime);
+	void HandleCollision(float fElapasedTime);
+	void CameraMovement(float fElapsedTime);
+
 	Player* m_pPlayer;
 	olc::Decal* backgroundDecal;
-	
-	
-	//bool bOnGround;
-	//bool bTouchWall;
-
+	olc::vi2d levelSize;
 	olc::ResourcePack* pack;
 
 	GameResourceManager rm;
