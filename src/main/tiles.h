@@ -2,8 +2,6 @@
 #include "resource_manager.h"
 #include "animator.h"
 
-class olc::Decal;
-
 typedef enum
 {
 	TILE_NOCOLLIDE = 0,
