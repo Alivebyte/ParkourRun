@@ -9,7 +9,7 @@
 #include "utilities/olcUTIL_Camera2D.h"
 #include "olcPGEX_Raycast2D.h"
 #include "resource_manager.h"
-#include "olcPGEX_Animator2D.h"
+#include "animator.h"
 #include "tiles.h"
 
 class App : public olc::PixelGameEngine
@@ -50,6 +50,8 @@ public:
 	olc::TileTransformedView tv;
 	olc::vi2d vTileSize;
 	olcPGEX_RayCast2D rayCaster2D;
+
+	GameAnimator animator;
 
 	Tile *tiles;
 };

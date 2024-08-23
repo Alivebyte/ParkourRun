@@ -3,3 +3,9 @@ content/sprites/player.png
 content/sprites/world_objects/industrial_pipe_horizontal.png
 content/sprites/world_objects/industrial_pipe_turn90.png
 content/sprites/world_objects/industrial_pipe_vertical.png
+content/sprites/world_objects/tile_wall1.png
+content/sprites/world_objects/tile_wall2.png
+content/sprites/world_objects/tile_wall3.png
+content/sprites/world_objects/tile_wall4.png
+content/sprites/world_objects/tile_wall5.png
+content/sprites/world_objects/tile_wall6.png

@@ -1,5 +1,6 @@
 #include "olcPixelGameEngine.h"
 #include "resource_manager.h"
+#include "animator.h"
 
 class olc::Decal;
 

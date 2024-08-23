@@ -11,16 +11,21 @@ bool App::OnUserCreate()
 	vTileSize = { 32,32 }; 
 	pack->LoadPack("content.pack", "TEST_KEY");
 
+	
+
 	tv = olc::TileTransformedView(GetScreenSize(), vTileSize);
+	
 	//playerSprite = new olc::Sprite("content/sprites/player.png", pack);
 	//playerDecal = new olc::Decal(playerSprite);
 	//backgroundSprite = new olc::Sprite("content/sprites/background_test.png",pack);
 	//backgroundDecal = new olc::Decal(backgroundSprite);
 	
 	backgroundDecal = rm.RM_Sprite("content/sprites/background_test.png", pack);//pipeHorizontalSprite = new olc::Sprite("content/sprites/world_objects/industrial_pipe_horizontal.png",pack);
-	playerDecal = rm.RM_Sprite("content/sprites/player.png", pack);
+	playerDecal = rm.RM_Sprite("content/sprites/player.png",pack);
 	//pipeVerticalSprite = new olc::Sprite("content/sprites/world_objects/industrial_pipe_vertical.png",pack)
-	
+	animator.AddAnimation("Idle", 2, 4, playerDecal,{0.0f,0.0f}, {32.0f,32.0f}, {0.0f,0.0f}, {0.0f, 0.0f}, true);
+
+	//animator.ScaleAnimation("Idle", { 2.0f, 2.0f });
 	//pipeTurnSprite = new olc::Sprite("content/sprites/world_objects/industrial_pipe_turn90.png",pack);
 	auto backgroundSize = backgroundDecal->sprite->Size() / vTileSize;
 
@@ -30,7 +35,7 @@ bool App::OnUserCreate()
 	{
 		for (int x = 0; x < backgroundSize.x; x++)
 		{
-			if (x == 0 || y == 0 || y == 21 || (x == 23 && y >= 18))
+			if (x == 0 || y == 0 || y == 22 || (x == 23 && y >= 18))
 			{
 				//tiles->at(y*24+x) = Tile("content/sprites/world_objects/industrial_pipe_vertical.png", &rm, pack);
 				//tiles->at(y* 24 + x).SetType(10);
@@ -50,6 +55,8 @@ bool App::OnUserCreate()
 	playerSpawnPoint = { 4.0f, 10.0f };
 	playerPos = playerSpawnPoint;
 	playerSpeed = 3.0f;
+
+	
 	//playerPos.y = ScreenHeight() - 250.0f;
 	//printf("Background size: %d %d\n", .x / vTileSize, backgroundDecal->sprite->Size().y / vTileSize);
 
@@ -160,7 +167,7 @@ bool App::OnUserUpdate(float fElapsedTime)
 	// Gravity physics
 	playerVel.y += 20.0f * fElapsedTime;
 
-	std::cout << "Player velocity: " << playerVel.x << " " << playerVel.y << std::endl;
+	//std::cout << "Player velocity: " << playerVel.x << " " << playerVel.y << std::endl;
 
 	// Drag
 	if (bOnGround)
@@ -253,7 +260,13 @@ bool App::OnUserUpdate(float fElapsedTime)
 	}
 
 	//Render player
-	tv.DrawDecal({ playerPos.x, playerPos.y}, playerDecal, { 1,1 });
+	if(!animator.GetAnim("Idle")->bIsPlaying)
+		animator.Play("Idle");
+
+	animator.UpdateAnimations(fElapsedTime);
+
+	animator.DrawAnimationFrame(playerPos,0.0f, &tv);
+	//tv.DrawDecal({ playerPos.x, playerPos.y}, playerDecal, { 1,1 });
 	
 	return true;
 }
