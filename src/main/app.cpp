@@ -131,6 +131,7 @@ bool App::OnUserUpdate(float fElapsedTime)
 		}
 	}
 
+	
 	// Clamp velocities
 
 	if (playerVel.x > 50.0f)

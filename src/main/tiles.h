@@ -13,6 +13,7 @@ typedef enum
 class Tile
 {
 public:
+
 	Tile();
 	Tile(std::string filename, GameResourceManager* rm, olc::ResourcePack* pack);
 	~Tile();
@@ -20,12 +21,14 @@ public:
 	olc::Decal* GetSprite();
 	void SetSprite(std::string filename, GameResourceManager* rm, olc::ResourcePack* pack);
 
+	std::string GetSpriteName() { return m_sSprite_name; };
+
 	void SetCollisionType(TILE_COLLISION_TYPES type);
 	int GetCollisionType();
 
-private:
-
+protected:
 	GameResourceManager* m_pRM;
+	GameAnimator m_Animator;
 	std::string m_sSprite_name;
 	olc::Decal* m_pTileSprite;
 	int m_iColType;
