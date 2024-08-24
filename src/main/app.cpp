@@ -16,16 +16,16 @@ bool App::OnUserCreate()
 	const int size = 10;
 	//ld->m_sLevelName = "level1";
 	ld->playerSpawnPoint = { rand() % 43, rand() % 22 };
-	ld->m_TilesInfo = new TileInfo[size];
+	//ld->m_TilesInfo = new TileInfo[size];
 
 	for (int i = 0; i < size; i++)
 	{
-		ld->m_TilesInfo[i] = tinfo;
+		ld->m_TilesInfo.push_back(tinfo);
 	}
 
 	lm.SaveLevel("content/levels/level1.map", &level);
 
-	lm.LoadLevelFile("content/levels/level1.map");
+	//lm.LoadLevelFile("content/levels/level1.map");
 	//splash = new olc::SplashScreen();
 
 	pack = new olc::ResourcePack();

@@ -1,11 +1,162 @@
-55
-content/sprites/world_objects/test_wall.png0210
-content/sprites/world_objects/test_wall.png0210
-content/sprites/world_objects/test_wall.png0210
-content/sprites/world_objects/test_wall.png0210
-content/sprites/world_objects/test_wall.png0210
-content/sprites/world_objects/test_wall.png0210
-content/sprites/world_objects/test_wall.png0210
-content/sprites/world_objects/test_wall.png0210
-content/sprites/world_objects/test_wall.png0210
-content/sprites/world_objects/test_wall.png0210
+
+level_node
+{
+
+	player_spawnpoint
+	{
+		X = 5
+		Y = 8
+	}
+
+
+	tile_info[0]
+	{
+		SpriteFile = content/sprites/world_objects/test_wall.png
+
+		TilePosition
+		{
+			X = 0
+			Y = 2
+		}
+
+		Flip = 1
+		CollisionType = 0
+	}
+
+
+	tile_info[1]
+	{
+		SpriteFile = content/sprites/world_objects/test_wall.png
+
+		TilePosition
+		{
+			X = 0
+			Y = 2
+		}
+
+		Flip = 1
+		CollisionType = 0
+	}
+
+
+	tile_info[2]
+	{
+		SpriteFile = content/sprites/world_objects/test_wall.png
+
+		TilePosition
+		{
+			X = 0
+			Y = 2
+		}
+
+		Flip = 1
+		CollisionType = 0
+	}
+
+
+	tile_info[3]
+	{
+		SpriteFile = content/sprites/world_objects/test_wall.png
+
+		TilePosition
+		{
+			X = 0
+			Y = 2
+		}
+
+		Flip = 1
+		CollisionType = 0
+	}
+
+
+	tile_info[4]
+	{
+		SpriteFile = content/sprites/world_objects/test_wall.png
+
+		TilePosition
+		{
+			X = 0
+			Y = 2
+		}
+
+		Flip = 1
+		CollisionType = 0
+	}
+
+
+	tile_info[5]
+	{
+		SpriteFile = content/sprites/world_objects/test_wall.png
+
+		TilePosition
+		{
+			X = 0
+			Y = 2
+		}
+
+		Flip = 1
+		CollisionType = 0
+	}
+
+
+	tile_info[6]
+	{
+		SpriteFile = content/sprites/world_objects/test_wall.png
+
+		TilePosition
+		{
+			X = 0
+			Y = 2
+		}
+
+		Flip = 1
+		CollisionType = 0
+	}
+
+
+	tile_info[7]
+	{
+		SpriteFile = content/sprites/world_objects/test_wall.png
+
+		TilePosition
+		{
+			X = 0
+			Y = 2
+		}
+
+		Flip = 1
+		CollisionType = 0
+	}
+
+
+	tile_info[8]
+	{
+		SpriteFile = content/sprites/world_objects/test_wall.png
+
+		TilePosition
+		{
+			X = 0
+			Y = 2
+		}
+
+		Flip = 1
+		CollisionType = 0
+	}
+
+
+	tile_info[9]
+	{
+		SpriteFile = content/sprites/world_objects/test_wall.png
+
+		TilePosition
+		{
+			X = 0
+			Y = 2
+		}
+
+		Flip = 1
+		CollisionType = 0
+	}
+
+}
+

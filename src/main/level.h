@@ -15,7 +15,7 @@ struct LevelData
 {
 public:
 	olc::vi2d playerSpawnPoint;
-	TileInfo* m_TilesInfo;
+	std::vector<TileInfo> m_TilesInfo;
 };
 
 class Level
