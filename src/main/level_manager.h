@@ -9,7 +9,7 @@ class LevelManager
 public:
 	LevelManager();
 	bool LoadLevelFile(std::string filename);
-	bool SaveLevel(std::string filename, Level* level);
+	bool SaveLevelFile(std::string filename, Level* level);
 private:
 	Level m_Level;
 };

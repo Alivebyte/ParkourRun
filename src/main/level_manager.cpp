@@ -8,62 +8,49 @@ LevelManager::LevelManager()
 
 bool LevelManager::LoadLevelFile(std::string filename)
 {
-	olc::utils::datafile datafile;
+	Level level;
+
+	auto ld = level.GetLevelData();
+
+	olc::utils::datafile df;
+
+	if (olc::utils::datafile::Read(df, filename))
+	{
+
+		auto& level_node = df["level_node"];
+		auto& player_spawnPoint = level_node["player_spawnpoint"];
+		ld->playerSpawnPoint.x = player_spawnPoint["X"].GetInt();
+		ld->playerSpawnPoint.y = player_spawnPoint["Y"].GetInt();
+
+		
+		int nTileInfoCount = level_node["tile_info_count"].GetInt();
+
+		
+		for (int i = 0; i < nTileInfoCount; i++)
+		{
+			TileInfo tinfo;
+			
+			auto& TileInfoNode = level_node["tile_info[" + std::to_string(i) + "]"];
+
+			tinfo.m_spriteName = TileInfoNode["SpriteFile"].GetString();
+			auto& tilePos = TileInfoNode["TilePosition"];
+			tinfo.m_viPos.x = tilePos["X"].GetInt();
+			tinfo.m_viPos.y = tilePos["Y"].GetInt();
+			tinfo.flip = (olc::Sprite::Flip)TileInfoNode["Flip"].GetInt();
+			tinfo.m_iColType = (TILE_COLLISION_TYPES)TileInfoNode["CollisionType"].GetInt();
+
+			ld->m_TilesInfo.push_back(tinfo);
+		}
+
+		m_Level = level;
+	}
+	else return false;
 
 	return true;
 }
 
-bool LevelManager::SaveLevel(std::string filename, Level* level)
+bool LevelManager::SaveLevelFile(std::string filename, Level* level)
 {
-	//FILE* fstream = fopen(filename.c_str(), "wb+");
-
-	//if (fstream == NULL)
-	//{
-	//	printf("Couldn't open level file %s!\n", filename.c_str());
-	//	return false;
-	//}
-	//
-	//if (level)
-	//{
-	//	LevelData* ld = level->GetLevelData();
-
-	//	char ldstr[1024] = "";
-	//	char end[] = "\2";
-	//	char next[] = "\n";
-	//	//snprintf()
-
-	//	if (ld)
-	//	{
-	//		std::strcat(ldstr, std::to_string(ld->playerSpawnPoint.x).c_str());
-	//		strcat(ldstr, end);
-	//		std::strcat(ldstr, std::to_string(ld->playerSpawnPoint.x).c_str());
-	//		strcat(ldstr, next);
-
-	//		if (ld->m_TilesInfo)
-	//		{
-	//			for (int i = 0; i < 10; i++)
-	//			{
-	//				auto& tinfo = ld->m_TilesInfo[i];
-	//				strcat(ldstr, tinfo.m_spriteName.c_str());
-	//				strcat(ldstr, end);
-	//				strcat(ldstr, std::to_string(tinfo.m_viPos.x).c_str());
-	//				strcat(ldstr, end);
-	//				strcat(ldstr, std::to_string(tinfo.m_viPos.y).c_str());
-	//				strcat(ldstr, end);
-	//				strcat(ldstr, std::to_string(tinfo.flip).c_str());
-	//				strcat(ldstr, end);
-	//				strcat(ldstr, std::to_string(tinfo.m_iColType).c_str());
-	//				strcat(ldstr, next);
-	//			}
-	//		}
-
-	//		fputs(ldstr, fstream);
-	//	}
-	//}
-
-	//fclose(fstream);
-
-	// Datafile Test
 	if (level)
 	{
 		auto ld = level->GetLevelData();
@@ -78,6 +65,8 @@ bool LevelManager::SaveLevel(std::string filename, Level* level)
 
 			if (!ld->m_TilesInfo.empty())
 			{
+				level_node["tile_info_count"].SetInt(ld->m_TilesInfo.size());
+
 				for (int i = 0; i < ld->m_TilesInfo.size(); i++)
 				{
 					auto tinfo = ld->m_TilesInfo[i];

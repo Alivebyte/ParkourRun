@@ -8,6 +8,7 @@ level_node
 		Y = 8
 	}
 
+	tile_info_count = 10
 
 	tile_info[0]
 	{
