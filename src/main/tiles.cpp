@@ -26,17 +26,17 @@ Tile::~Tile()
 	}
 }
 
-Tile::Tile(std::string filename, GameResourceManager* rm, olc::ResourcePack* pack) : m_iColType(TILE_NOCOLLIDE)
+Tile::Tile(std::string filename, GameResourceManager* rm, olc::Sprite::Flip flip) : m_iColType(TILE_NOCOLLIDE), m_flip(olc::Sprite::Flip::NONE)
 {
 	m_sSprite_name = filename;
-	m_pTileSprite = rm->RM_Sprite(filename, pack);
+	m_pTileSprite = rm->RM_Sprite(filename);
 	m_pRM = rm;
 }
 
-void Tile::SetSprite(std::string filename, GameResourceManager* rm, olc::ResourcePack* pack)
+void Tile::SetSprite(std::string filename, GameResourceManager* rm)
 {
 	m_sSprite_name = filename;
-	m_pTileSprite = rm->RM_Sprite(filename, pack);
+	m_pTileSprite = rm->RM_Sprite(filename);
 	m_pRM = rm;
 }
 
@@ -60,10 +60,10 @@ Player::Player()
 
 }
 
-Player::Player(std::string filename, GameResourceManager* rm, olc::ResourcePack* pack, olc::vf2d spawn_pos)
+Player::Player(std::string filename, GameResourceManager* rm, olc::vf2d spawn_pos)
 {
 	//BaseClass::Tile(filename, rm, pack);
-	m_pTileSprite = rm->RM_Sprite(filename, pack);
+	m_pTileSprite = rm->RM_Sprite(filename);
 
 	m_sSprite_name = filename;
 	m_pRM = rm;
@@ -71,7 +71,7 @@ Player::Player(std::string filename, GameResourceManager* rm, olc::ResourcePack*
 	m_vfPlayerSpawnPoint = spawn_pos;
 }
 
-void Player::InitializeAnimations(olc::ResourcePack* pack)
+void Player::InitializeAnimations()
 {
 	// Idle
 	m_Animator.AddAnimation("Idle", 2, 4, m_pRM->RM_Sprite(m_sSprite_name), {0.0f,0.0f}, {32.0f,32.0f}, {0.0f,0.0f}, {0.0f, 0.0f}, true);

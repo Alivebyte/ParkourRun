@@ -2,15 +2,16 @@
 
 //#ifdef OLC_PGEX_RESOURCE_MANAGER_IMPLEMENTATION
 #undef OLC_PGEX_RESOURCE_MANAGER_IMPLEMENTATION
-bool GameResourceManager::i_NewSpriteResource(spriteResource& sprRes, const std::string& sprFileName, olc::ResourcePack* pack)
+bool GameResourceManager::i_NewSpriteResource(spriteResource& sprRes, const std::string& sprFileName)
 {
-	sprRes.spr = new olc::Sprite(sprFileName, pack);
+	sprRes.spr = new olc::Sprite(sprFileName, m_pack.get());
 	sprRes.dec = new olc::Decal(sprRes.spr);
 	sprRes.fileName = sprFileName;
 	if (sprRes.ID == -1)
 		sprRes.ID = resSprites.size() > 0 ? (resSprites.back().ID) + 1 : 0;
 
 	resSprites.push_back(sprRes);
+
 
 	if (sprRes.spr->pColData.size() > 0)
 		return true;
@@ -31,7 +32,7 @@ bool GameResourceManager::i_UnloadSpriteData(spriteResource& sprRes)
 	return false;
 }
 
-olc::Decal* GameResourceManager::RM_Sprite(const std::string& spriteFileName, olc::ResourcePack* pack)
+olc::Decal* GameResourceManager::RM_Sprite(const std::string& spriteFileName)
 {
 	strError = "";
 
@@ -40,14 +41,14 @@ olc::Decal* GameResourceManager::RM_Sprite(const std::string& spriteFileName, ol
 			return s.dec;
 
 	spriteResource resCurrentSprite{};
-	if (i_NewSpriteResource(resCurrentSprite, spriteFileName, pack))
+	if (i_NewSpriteResource(resCurrentSprite, spriteFileName))
 		return resCurrentSprite.dec;
 
 	strError = "ERROR: RM_Sprite - Sprite data was empty...";
 	return resCurrentSprite.dec;
 }
 
-olc::Decal* GameResourceManager::RM_Sprite(const int fileNameID, const std::string& spriteFileName, olc::ResourcePack* pack)
+olc::Decal* GameResourceManager::RM_Sprite(const int fileNameID, const std::string& spriteFileName)
 {
 	strError = "";
 
@@ -71,10 +72,23 @@ olc::Decal* GameResourceManager::RM_Sprite(const int fileNameID, const std::stri
 	spriteResource resCurrentSprite{};
 	resCurrentSprite.ID = fileNameID;
 
-	if (i_NewSpriteResource(resCurrentSprite, spriteFileName, pack))
+	if (i_NewSpriteResource(resCurrentSprite, spriteFileName))
 		return resCurrentSprite.dec;
 
 	strError = "ERROR: RM_Sprite - Sprite data was empty...";
 	return resCurrentSprite.dec;
+}
+
+void GameResourceManager::InitializeResourcePack()
+{
+	m_pack = std::make_unique<olc::ResourcePack>();
+}
+
+void GameResourceManager::LoadResourcePack(const std::string sFile, const std::string sKey)
+{
+	if (m_pack.get())
+	{
+		m_pack->LoadPack(sFile, sKey);
+	}
 }
 //#endif

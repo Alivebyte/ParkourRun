@@ -14,10 +14,12 @@
 #include "level_manager.h"
 #include "level.h"
 
+
+
 class App : public olc::PixelGameEngine
 {
 public:
-	App(): pack(nullptr)
+	App()
 	{
 		sAppName = "Parkour Run";
 	}
@@ -38,9 +40,9 @@ private:
 	Player* m_pPlayer;
 	olc::Decal* backgroundDecal;
 	olc::vi2d levelSize;
-	olc::ResourcePack* pack;
+	//olc::ResourcePack* pack;
 
-	GameResourceManager rm;
+
 	
 	olc::SplashScreen* splash;
 	olc::utils::Camera2D camera;
@@ -49,12 +51,13 @@ private:
 	olcPGEX_RayCast2D rayCaster2D;
 
 	LevelManager lm;
-	Level level;
 
 	Tile *tiles;
 
 private:
 	bool m_bEditMode;
 };
+
+
 
 #endif

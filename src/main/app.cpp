@@ -1,6 +1,13 @@
 #include "app.h"
 #include "level.h"
 
+GameResourceManager g_RM;
+
+GameResourceManager* GetGameResourceManager()
+{
+	return &g_RM;
+}
+
 bool App::OnUserCreate()
 {
 
@@ -17,7 +24,9 @@ bool App::OnUserCreate()
 	////ld->m_sLevelName = "level1";
 	//ld->playerSpawnPoint = { rand() % 43, rand() % 22 };
 	////ld->m_TilesInfo = new TileInfo[size];
+	g_RM.InitializeResourcePack();
 
+	g_RM.LoadResourcePack("content.pack", "TEST_KEY");
 	//for (int i = 0; i < size; i++)
 	//{
 	//	ld->m_TilesInfo.push_back(tinfo);
@@ -28,10 +37,10 @@ bool App::OnUserCreate()
 	lm.LoadLevelFile("content/levels/level1.map");
 	//splash = new olc::SplashScreen();
 
-	pack = new olc::ResourcePack();
+	//pack = new olc::ResourcePack();
 
 	vTileSize = { 32,32 }; 
-	pack->LoadPack("content.pack", "TEST_KEY");
+	//pack->LoadPack("content.pack", "TEST_KEY");
 
 	tv = olc::TileTransformedView(GetScreenSize(), vTileSize);
 	
@@ -40,7 +49,7 @@ bool App::OnUserCreate()
 	//backgroundSprite = new olc::Sprite("content/sprites/background_test.png",pack);
 	//backgroundDecal = new olc::Decal(backgroundSprite);
 	
-	backgroundDecal = rm.RM_Sprite("content/sprites/background_test.png", pack);//pipeHorizontalSprite = new olc::Sprite("content/sprites/world_objects/industrial_pipe_horizontal.png",pack);
+	backgroundDecal = g_RM.RM_Sprite("content/sprites/background_test.png");//pipeHorizontalSprite = new olc::Sprite("content/sprites/world_objects/industrial_pipe_horizontal.png",pack);
 	//playerDecal = rm.RM_Sprite("content/sprites/player.png",pack);
 	//pipeVerticalSprite = new olc::Sprite("content/sprites/world_objects/industrial_pipe_vertical.png",pack)
 	
@@ -59,7 +68,7 @@ bool App::OnUserCreate()
 			{
 				//tiles->at(y*24+x) = Tile("content/sprites/world_objects/industrial_pipe_vertical.png", &rm, pack);
 				//tiles->at(y* 24 + x).SetType(10);
-				tiles[y * levelSize.x + x].SetSprite("content/sprites/world_objects/industrial_pipe_vertical.png", &rm, pack);
+				tiles[y * levelSize.x + x].SetSprite("content/sprites/world_objects/industrial_pipe_vertical.png", &g_RM);
 				tiles[y * levelSize.x + x].SetCollisionType(TILE_COLLIDE);
 			}
 			else
@@ -71,10 +80,10 @@ bool App::OnUserCreate()
 
 
 	// Create player
-	m_pPlayer = new Player("content/sprites/player.png", &rm, pack, olc::vf2d(4.0f, 10.0f));
+	m_pPlayer = new Player("content/sprites/player.png", &g_RM, olc::vf2d(4.0f, 10.0f));
 
 	// Initialize animations
-	m_pPlayer->InitializeAnimations(pack);
+	m_pPlayer->InitializeAnimations();
 	m_pPlayer->SetTouchedWall(false);
 	/*playerVel = { 0.0f, 0.0f };
 	playerSpawnPoint = { 4.0f, 10.0f };
@@ -118,6 +127,7 @@ bool App::OnUserUpdate(float fElapsedTime)
 
 void App::Render(float fElapsedTime)
 {
+	Level *level = lm.GetLevel();
 	// Render background
 	tv.DrawDecal({ 0,0 }, backgroundDecal);
 
@@ -126,6 +136,10 @@ void App::Render(float fElapsedTime)
 	{
 		for (int x = 0; x < levelSize.x; x++)
 		{
+			/*if (level)
+			{
+				
+			}*/
 			switch (tiles[y * levelSize.x + x].GetCollisionType())
 			{
 			case TILE_NOCOLLIDE:
@@ -133,6 +147,7 @@ void App::Render(float fElapsedTime)
 			case TILE_COLLIDE:
 				tv.DrawDecal(olc::vi2d(x, y), tiles[y * levelSize.x + x].GetSprite());
 			}
+
 		}
 	}
 
@@ -161,7 +176,7 @@ void App::HandleCollision(float fElapsedTime)
 			if (x >= 0 && x < levelSize.x && y >= 0 && y < levelSize.y)
 				return tiles[y * levelSize.x + x];
 			else
-				return Tile("content/sprites/test_wall.png", &rm, pack);
+				return Tile("content/sprites/test_wall.png", &g_RM);
 		};
 
 

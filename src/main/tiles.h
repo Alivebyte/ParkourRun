@@ -31,11 +31,11 @@ class Tile
 public:
 
 	Tile();
-	Tile(std::string filename, GameResourceManager* rm, olc::ResourcePack* pack);
+	Tile(std::string filename, GameResourceManager* rm, olc::Sprite::Flip flip = olc::Sprite::Flip::NONE);
 	~Tile();
 
 	olc::Decal* GetSprite();
-	void SetSprite(std::string filename, GameResourceManager* rm, olc::ResourcePack* pack);
+	void SetSprite(std::string filename, GameResourceManager* rm);
 
 	std::string GetSpriteName() { return m_sSprite_name; };
 	olc::vi2d GetPosition() { return m_viPos; };
@@ -50,6 +50,7 @@ protected:
 	GameAnimator m_Animator;
 	std::string m_sSprite_name;
 	olc::Decal* m_pTileSprite;
+	olc::Sprite::Flip m_flip;
 	TILE_COLLISION_TYPES m_iColType;
 private:
 	olc::vi2d m_viPos;
@@ -59,9 +60,9 @@ class Player : public Tile
 {
 public:
 	Player();
-	Player(std::string filename, GameResourceManager* rm, olc::ResourcePack* pack, olc::vf2d spawn_pos);
+	Player(std::string filename, GameResourceManager* rm, olc::vf2d spawn_pos);
 
-	void InitializeAnimations(olc::ResourcePack* pack);
+	void InitializeAnimations();
 
 
 	void SetPlayerPosition(olc::vf2d position) { m_vfPlayerPos = position; };

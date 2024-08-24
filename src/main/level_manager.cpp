@@ -49,39 +49,37 @@ bool LevelManager::LoadLevelFile(std::string filename)
 	return true;
 }
 
-bool LevelManager::SaveLevelFile(std::string filename, Level* level)
+bool LevelManager::SaveLevelFile(std::string filename)
 {
-	if (level)
+	
+	auto ld = m_Level.GetLevelData();
+	if (ld)
 	{
-		auto ld = level->GetLevelData();
-		if (ld)
+		olc::utils::datafile df;
+
+		auto& level_node = df["level_node"];
+		auto& player_spawnPoint = level_node["player_spawnpoint"];
+		player_spawnPoint["X"].SetInt(ld->playerSpawnPoint.x);
+		player_spawnPoint["Y"].SetInt(ld->playerSpawnPoint.y);
+		
+		if (!ld->m_TilesInfo.empty())
 		{
-			olc::utils::datafile df;
+			level_node["tile_info_count"].SetInt(ld->m_TilesInfo.size());
 
-			auto& level_node = df["level_node"];
-			auto& player_spawnPoint = level_node["player_spawnpoint"];
-			player_spawnPoint["X"].SetInt(ld->playerSpawnPoint.x);
-			player_spawnPoint["Y"].SetInt(ld->playerSpawnPoint.y);
-
-			if (!ld->m_TilesInfo.empty())
+			for (int i = 0; i < ld->m_TilesInfo.size(); i++)
 			{
-				level_node["tile_info_count"].SetInt(ld->m_TilesInfo.size());
+				auto tinfo = ld->m_TilesInfo[i];
+				auto& TileInfoNode = level_node["tile_info["+std::to_string(i)+"]"];
+				TileInfoNode["SpriteFile"].SetString(tinfo.m_spriteName);
+				auto& tilePos = TileInfoNode["TilePosition"];
+				tilePos["X"].SetInt(tinfo.m_viPos.x);
+				tilePos["Y"].SetInt(tinfo.m_viPos.y);
 
-				for (int i = 0; i < ld->m_TilesInfo.size(); i++)
-				{
-					auto tinfo = ld->m_TilesInfo[i];
-					auto& TileInfoNode = level_node["tile_info["+std::to_string(i)+"]"];
-					TileInfoNode["SpriteFile"].SetString(tinfo.m_spriteName);
-					auto& tilePos = TileInfoNode["TilePosition"];
-					tilePos["X"].SetInt(tinfo.m_viPos.x);
-					tilePos["Y"].SetInt(tinfo.m_viPos.y);
-
-					TileInfoNode["Flip"].SetInt(tinfo.flip);
-					TileInfoNode["CollisionType"].SetInt(tinfo.m_iColType);
-				}
+				TileInfoNode["Flip"].SetInt(tinfo.flip);
+				TileInfoNode["CollisionType"].SetInt(tinfo.m_iColType);
 			}
-			olc::utils::datafile::Write(df, filename);
 		}
+		olc::utils::datafile::Write(df, filename);
 	}
 
 	return true;

@@ -22,13 +22,15 @@ class Level
 {
 private:
 	LevelData m_ld;
+	std::vector<Tile> tiles;
+
 public:
 	Level();
 	~Level();
 	void Load();
 	void Create();
-	void OnLevelCreate();
-	void OnLevelLoad();
+	virtual void OnLevelCreate();
+	virtual void OnLevelLoad();
 
 	LevelData* GetLevelData() { return &m_ld; };
 
