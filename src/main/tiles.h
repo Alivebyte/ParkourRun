@@ -1,12 +1,30 @@
+#pragma once
+
 #include "olcPixelGameEngine.h"
 #include "resource_manager.h"
 #include "animator.h"
+
 
 typedef enum
 {
 	TILE_NOCOLLIDE = 0,
 	TILE_COLLIDE = 10
 } TILE_COLLISION_TYPES;
+
+//typedef enum
+//{
+//	TILE_AIR = 0,
+//	TILE_PIPE_HORIZONTAL,
+//	TILE_PIPE_90_TURN,
+//	TILE_PIPE_VERTICAL,
+//	TILE_TEST,
+//	TILE_WALL1,
+//	TILE_WALL2,
+//	TILE_WALL3,
+//	TILE_WALL4,
+//	TILE_WALL5,
+//	TILE_WALL6
+//} TILE_TYPES;
 
 class Tile
 {
@@ -32,16 +50,13 @@ protected:
 	GameAnimator m_Animator;
 	std::string m_sSprite_name;
 	olc::Decal* m_pTileSprite;
-	int m_iColType;
+	TILE_COLLISION_TYPES m_iColType;
 private:
 	olc::vi2d m_viPos;
 };
 
 class Player : public Tile
 {
-
-	typedef Tile BaseClass;
-
 public:
 	Player();
 	Player(std::string filename, GameResourceManager* rm, olc::ResourcePack* pack, olc::vf2d spawn_pos);
@@ -62,7 +77,7 @@ public:
 	olc::vf2d* GetPlayerVelocity() { return &m_vfPlayerVel; };
 
 	bool IsOnGround() { return m_bIsOnGround; };
-	bool HasTouchedWall() { return m_bIsOnGround; };
+	bool HasTouchedWall() { return m_bTouchWall; };
 
 	void SetOnGround(bool onGround = false) { m_bIsOnGround = onGround; };
 	void SetTouchedWall(bool touchWall = false) { m_bTouchWall = touchWall; };

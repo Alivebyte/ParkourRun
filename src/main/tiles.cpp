@@ -26,7 +26,7 @@ Tile::~Tile()
 	}
 }
 
-Tile::Tile(std::string filename, GameResourceManager* rm, olc::ResourcePack* pack) : m_iColType(0)
+Tile::Tile(std::string filename, GameResourceManager* rm, olc::ResourcePack* pack) : m_iColType(TILE_NOCOLLIDE)
 {
 	m_sSprite_name = filename;
 	m_pTileSprite = rm->RM_Sprite(filename, pack);
@@ -84,7 +84,7 @@ void Player::HandleUserInput(olc::PixelGameEngine* pge, float fElapsedTime)
 {
 	if (pge->GetKey(olc::Key::W).bHeld)
 	{
-		if (m_bTouchWall)
+		if (HasTouchedWall())
 			m_vfPlayerVel.y += -30.0f * fElapsedTime;
 	} //else playerDir = { 0.0f, 0.0f };
 	if (pge->GetKey(olc::Key::S).bHeld)

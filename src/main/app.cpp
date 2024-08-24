@@ -1,7 +1,31 @@
 #include "app.h"
+#include "level.h"
 
 bool App::OnUserCreate()
 {
+
+	// Testing out level creation
+	srand(rand() % 255);
+	TileInfo tinfo;
+	tinfo.flip = olc::Sprite::Flip::HORIZ;
+	tinfo.m_iColType = TILE_NOCOLLIDE;
+	tinfo.m_spriteName = "content/sprites/world_objects/test_wall.png";
+	tinfo.m_viPos = { rand() % 43, rand() % 22 };
+
+	auto ld = level.GetLevelData();
+	const int size = 10;
+	//ld->m_sLevelName = "level1";
+	ld->playerSpawnPoint = { rand() % 43, rand() % 22 };
+	ld->m_TilesInfo = new TileInfo[size];
+
+	for (int i = 0; i < size; i++)
+	{
+		ld->m_TilesInfo[i] = tinfo;
+	}
+
+	lm.SaveLevel("content/levels/level1.map", &level);
+
+	lm.LoadLevelFile("content/levels/level1.map");
 	//splash = new olc::SplashScreen();
 
 	pack = new olc::ResourcePack();
@@ -267,6 +291,11 @@ void App::HandleCollision(float fElapsedTime)
 
 	playerPos = potentialPlayerPos;
 	m_pPlayer->SetPlayerPosition(playerPos);
+}
+
+void App::SetEditMode(bool EMode)
+{
+	m_bEditMode = EMode;
 }
 
 bool App::OnUserDestroy()
