@@ -1,6 +1,7 @@
 #ifndef APP_H
 #define APP_H
 
+#pragma once
 
 #include "olcPixelGameEngine.h"
 #include "extensions/olcPGEX_Graphics2D.h"
@@ -52,7 +53,7 @@ private:
 
 	LevelManager lm;
 
-	Tile *tiles;
+	//Tile *tiles;
 
 private:
 	bool m_bEditMode;

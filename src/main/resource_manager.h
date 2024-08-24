@@ -3,6 +3,8 @@
 // Simple override to make use of packs
 #include "olcPGEX_ResourceManager.h"
 
+
+
 class GameResourceManager : public olcPGEX_ResourceManager
 {
 private:
@@ -32,4 +34,11 @@ public:
 	//void RM_FreeSpriteData(const std::string& spriteFileName); 								// Locate a Sprite Resource by File Name and delete its Sprite Data (Will invalidate existing Sprite References, use with caution)
 	//void RM_FreeSpriteData(const int fileNameID);
 };
+
+static GameResourceManager g_RM;
+
+static GameResourceManager* GetGameResourceManager()
+{
+	return &g_RM;
+}
 #endif

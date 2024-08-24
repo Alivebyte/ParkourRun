@@ -17,7 +17,7 @@ level_node
 		TilePosition
 		{
 			X = 0
-			Y = 2
+			Y = 1
 		}
 
 		Flip = 1
@@ -27,7 +27,7 @@ level_node
 
 	tile_info[1]
 	{
-		SpriteFile = content/sprites/world_objects/test_wall.png
+		SpriteFile = content/sprites/world_objects/spawnpoint.png
 
 		TilePosition
 		{
@@ -42,12 +42,12 @@ level_node
 
 	tile_info[2]
 	{
-		SpriteFile = content/sprites/world_objects/test_wall.png
+		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
 		TilePosition
 		{
 			X = 0
-			Y = 2
+			Y = 3
 		}
 
 		Flip = 1
@@ -62,7 +62,7 @@ level_node
 		TilePosition
 		{
 			X = 0
-			Y = 2
+			Y = 4
 		}
 
 		Flip = 1
@@ -77,7 +77,7 @@ level_node
 		TilePosition
 		{
 			X = 0
-			Y = 2
+			Y = 5
 		}
 
 		Flip = 1
@@ -91,8 +91,8 @@ level_node
 
 		TilePosition
 		{
-			X = 0
-			Y = 2
+			X = 1
+			Y = 6
 		}
 
 		Flip = 1
@@ -106,8 +106,8 @@ level_node
 
 		TilePosition
 		{
-			X = 0
-			Y = 2
+			X = 2
+			Y = 3
 		}
 
 		Flip = 1
@@ -121,8 +121,8 @@ level_node
 
 		TilePosition
 		{
-			X = 0
-			Y = 2
+			X = 5
+			Y = 4
 		}
 
 		Flip = 1
@@ -136,8 +136,8 @@ level_node
 
 		TilePosition
 		{
-			X = 0
-			Y = 2
+			X = 6
+			Y = 4
 		}
 
 		Flip = 1
@@ -147,16 +147,16 @@ level_node
 
 	tile_info[9]
 	{
-		SpriteFile = content/sprites/world_objects/test_wall.png
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
 		TilePosition
 		{
-			X = 0
-			Y = 2
+			X = 4
+			Y = 13
 		}
 
 		Flip = 1
-		CollisionType = 0
+		CollisionType = 1
 	}
 
 }

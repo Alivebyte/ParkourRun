@@ -39,6 +39,7 @@ public:
 
 	std::string GetSpriteName() { return m_sSprite_name; };
 	olc::vi2d GetPosition() { return m_viPos; };
+	void SetPosition(olc::vi2d vecPosition) { m_viPos = vecPosition; };
 
 	void SetCollisionType(TILE_COLLISION_TYPES type);
 	int GetCollisionType();

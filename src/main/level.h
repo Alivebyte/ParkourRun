@@ -22,17 +22,23 @@ class Level
 {
 private:
 	LevelData m_ld;
-	std::vector<Tile> tiles;
+	Tile* tiles;
+	olc::vi2d m_levelSize;
 
 public:
 	Level();
 	~Level();
-	void Load();
+	//void Load();
 	void Create();
 	virtual void OnLevelCreate();
-	virtual void OnLevelLoad();
+	//virtual void OnLevelLoad();
+
+	olc::vi2d* GetLevelSize() { return &m_levelSize; };
+	void SetLevelSize(olc::vi2d levelSize) { m_levelSize = levelSize; };
+
 
 	LevelData* GetLevelData() { return &m_ld; };
+	Tile* GetTiles() { return tiles; };
 
 
 	

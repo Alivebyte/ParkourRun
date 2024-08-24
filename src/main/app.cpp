@@ -1,47 +1,31 @@
 #include "app.h"
 #include "level.h"
 
-GameResourceManager g_RM;
 
-GameResourceManager* GetGameResourceManager()
-{
-	return &g_RM;
-}
 
 bool App::OnUserCreate()
 {
-
-	//// Testing out level creation
-	//srand(rand() % 255);
-	//TileInfo tinfo;
-	//tinfo.flip = olc::Sprite::Flip::HORIZ;
-	//tinfo.m_iColType = TILE_NOCOLLIDE;
-	//tinfo.m_spriteName = "content/sprites/world_objects/test_wall.png";
-	//tinfo.m_viPos = { rand() % 43, rand() % 22 };
-
-	//auto ld = level.GetLevelData();
-	//const int size = 10;
-	////ld->m_sLevelName = "level1";
-	//ld->playerSpawnPoint = { rand() % 43, rand() % 22 };
-	////ld->m_TilesInfo = new TileInfo[size];
+	// Initializing resource pack
 	g_RM.InitializeResourcePack();
 
+	// Loading resource pack
 	g_RM.LoadResourcePack("content.pack", "TEST_KEY");
-	//for (int i = 0; i < size; i++)
-	//{
-	//	ld->m_TilesInfo.push_back(tinfo);
-	//}
-
-	//lm.SaveLevelFile("content/levels/level1.map", &level);
-
-	lm.LoadLevelFile("content/levels/level1.map");
+	
+	vTileSize = { 32,32 };
 	//splash = new olc::SplashScreen();
-
+	backgroundDecal = g_RM.RM_Sprite("content/sprites/background_test.png");
 	//pack = new olc::ResourcePack();
+	levelSize = backgroundDecal->sprite->Size() / vTileSize;
+	lm.GetLevel()->SetLevelSize(levelSize);
 
-	vTileSize = { 32,32 }; 
+	
 	//pack->LoadPack("content.pack", "TEST_KEY");
-
+	// Load level file
+	if (!lm.LoadLevelFile("content/levels/level1.map"))
+	{
+		std::cout << "Couldn't load level! The game will now exit";
+		return false;
+	}
 	tv = olc::TileTransformedView(GetScreenSize(), vTileSize);
 	
 	//playerSprite = new olc::Sprite("content/sprites/player.png", pack);
@@ -49,34 +33,34 @@ bool App::OnUserCreate()
 	//backgroundSprite = new olc::Sprite("content/sprites/background_test.png",pack);
 	//backgroundDecal = new olc::Decal(backgroundSprite);
 	
-	backgroundDecal = g_RM.RM_Sprite("content/sprites/background_test.png");//pipeHorizontalSprite = new olc::Sprite("content/sprites/world_objects/industrial_pipe_horizontal.png",pack);
+	//pipeHorizontalSprite = new olc::Sprite("content/sprites/world_objects/industrial_pipe_horizontal.png",pack);
 	//playerDecal = rm.RM_Sprite("content/sprites/player.png",pack);
 	//pipeVerticalSprite = new olc::Sprite("content/sprites/world_objects/industrial_pipe_vertical.png",pack)
 	
 
 	//animator.ScaleAnimation("Idle", { 2.0f, 2.0f });
 	//pipeTurnSprite = new olc::Sprite("content/sprites/world_objects/industrial_pipe_turn90.png",pack);
-	levelSize = backgroundDecal->sprite->Size() / vTileSize;
+	
 
-	// Generate world
-	tiles = new Tile[levelSize.y*levelSize.x];
-	for (int y = 0; y < levelSize.y; y++)
-	{
-		for (int x = 0; x < levelSize.x; x++)
-		{
-			if (x == 0 || y == 0 || y == 22 || (x == 23 && y >= 18))
-			{
-				//tiles->at(y*24+x) = Tile("content/sprites/world_objects/industrial_pipe_vertical.png", &rm, pack);
-				//tiles->at(y* 24 + x).SetType(10);
-				tiles[y * levelSize.x + x].SetSprite("content/sprites/world_objects/industrial_pipe_vertical.png", &g_RM);
-				tiles[y * levelSize.x + x].SetCollisionType(TILE_COLLIDE);
-			}
-			else
-			{
-				tiles[y*levelSize.x+x].SetCollisionType(TILE_NOCOLLIDE);
-			}
-		}
-	}
+	//// Generate world
+	//tiles = new Tile[levelSize.y*levelSize.x];
+	//for (int y = 0; y < levelSize.y; y++)
+	//{
+	//	for (int x = 0; x < levelSize.x; x++)
+	//	{
+	//		if (x == 0 || y == 0 || y == 22 || (x == 23 && y >= 18))
+	//		{
+	//			//tiles->at(y*24+x) = Tile("content/sprites/world_objects/industrial_pipe_vertical.png", &rm, pack);
+	//			//tiles->at(y* 24 + x).SetType(10);
+	//			tiles[y * levelSize.x + x].SetSprite("content/sprites/world_objects/industrial_pipe_vertical.png", &g_RM);
+	//			tiles[y * levelSize.x + x].SetCollisionType(TILE_COLLIDE);
+	//		}
+	//		else
+	//		{
+	//			tiles[y*levelSize.x+x].SetCollisionType(TILE_NOCOLLIDE);
+	//		}
+	//	}
+	//}
 
 
 	// Create player
@@ -127,39 +111,62 @@ bool App::OnUserUpdate(float fElapsedTime)
 
 void App::Render(float fElapsedTime)
 {
-	Level *level = lm.GetLevel();
+	Level* level = lm.GetLevel();
 	// Render background
 	tv.DrawDecal({ 0,0 }, backgroundDecal);
 
-	// Render world
-	for (int y = 0; y < levelSize.y; y++)
+	// Render level
+	//for (int y = 0; y < levelSize.y; y++)
+	//{
+	//	for (int x = 0; x < levelSize.x; x++)
+	//	{
+	//		/*if (level)
+	//		{
+	//			
+	//		}*/
+	//		switch (tiles[y * levelSize.x + x].GetCollisionType())
+	//		{
+	//		case TILE_NOCOLLIDE:
+	//			break;
+	//		case TILE_COLLIDE:
+	//			tv.DrawDecal(olc::vi2d(x, y), tiles[y * levelSize.x + x].GetSprite());
+	//		}
+
+	//	}
+	//}
+	if (level)
 	{
-		for (int x = 0; x < levelSize.x; x++)
+		auto ld = level->GetLevelData();
+
+
+		if (ld)
 		{
-			/*if (level)
+			auto tiles = level->GetTiles();
+			if (tiles)
 			{
-				
-			}*/
-			switch (tiles[y * levelSize.x + x].GetCollisionType())
-			{
-			case TILE_NOCOLLIDE:
-				break;
-			case TILE_COLLIDE:
-				tv.DrawDecal(olc::vi2d(x, y), tiles[y * levelSize.x + x].GetSprite());
+				for (int y = 0; y < levelSize.y; y++)
+				{
+					for (int x = 0; x < levelSize.x; x++)
+					{
+						auto tile = tiles[y * levelSize.x + x];
+						if(tile.GetSprite())
+							tv.DrawDecal(tile.GetPosition(),tile.GetSprite());
+					}
+				}
 			}
-
 		}
+
+
+		auto& animator = *m_pPlayer->GetAnimator();
+
+		//Render player
+		if (!animator.GetAnim("Idle")->bIsPlaying)
+			animator.Play("Idle");
+
+		animator.UpdateAnimations(fElapsedTime);
+
+		animator.DrawAnimationFrame(*m_pPlayer->GetPlayerPosition(), 0.0f, &tv);
 	}
-
-	auto& animator = *m_pPlayer->GetAnimator();
-
-	//Render player
-	if (!animator.GetAnim("Idle")->bIsPlaying)
-		animator.Play("Idle");
-
-	animator.UpdateAnimations(fElapsedTime);
-
-	animator.DrawAnimationFrame(*m_pPlayer->GetPlayerPosition(), 0.0f, &tv);
 }
 
 void App::CameraMovement(float fElapsedTime)
@@ -171,12 +178,13 @@ void App::CameraMovement(float fElapsedTime)
 
 void App::HandleCollision(float fElapsedTime)
 {
-	auto GetTile = [&](int x, int y)
+	auto GetTile = [&](int x, int y, LevelManager lm)
 		{
+			auto tiles = lm.GetLevel()->GetTiles();
 			if (x >= 0 && x < levelSize.x && y >= 0 && y < levelSize.y)
 				return tiles[y * levelSize.x + x];
 			else
-				return Tile("content/sprites/test_wall.png", &g_RM);
+				return Tile();
 		};
 
 
@@ -251,7 +259,7 @@ void App::HandleCollision(float fElapsedTime)
 	m_pPlayer->SetTouchedWall(false);
 	if (playerVel.x <= 0) // Moving Left
 	{
-		if (GetTile(potentialPlayerPos.x + 0.0f, playerPos.y + 0.0f).GetCollisionType() != TILE_NOCOLLIDE || GetTile(potentialPlayerPos.x + 0.0f, playerPos.y + 0.9f).GetCollisionType() != TILE_NOCOLLIDE)
+		if (GetTile(potentialPlayerPos.x + 0.0f, playerPos.y + 0.0f, lm).GetCollisionType() != TILE_NOCOLLIDE || GetTile(potentialPlayerPos.x + 0.0f, playerPos.y + 0.9f,lm).GetCollisionType() != TILE_NOCOLLIDE)
 		{
 			potentialPlayerPos.x = (int)potentialPlayerPos.x + 1;
 			playerVel.x = 0;
@@ -260,7 +268,7 @@ void App::HandleCollision(float fElapsedTime)
 	}
 	if (playerVel.x > 0) // Moving Right
 	{
-		if (GetTile(potentialPlayerPos.x + 1.0f, playerPos.y + 0.0f).GetCollisionType() != TILE_NOCOLLIDE || GetTile(potentialPlayerPos.x + 1.0f, playerPos.y + 0.9f).GetCollisionType() != TILE_NOCOLLIDE)
+		if (GetTile(potentialPlayerPos.x + 1.0f, playerPos.y + 0.0f,lm).GetCollisionType() != TILE_NOCOLLIDE || GetTile(potentialPlayerPos.x + 1.0f, playerPos.y + 0.9f,lm).GetCollisionType() != TILE_NOCOLLIDE)
 		{
 			potentialPlayerPos.x = (int)potentialPlayerPos.x;
 			playerVel.x = 0;
@@ -272,7 +280,7 @@ void App::HandleCollision(float fElapsedTime)
 	m_pPlayer->SetOnGround(false);
 	if (playerVel.y <= 0) // Moving Up
 	{
-		if (GetTile(potentialPlayerPos.x + 0.0f, potentialPlayerPos.y).GetCollisionType() != TILE_NOCOLLIDE || GetTile(potentialPlayerPos.x + 0.9f, potentialPlayerPos.y).GetCollisionType() != TILE_NOCOLLIDE)
+		if (GetTile(potentialPlayerPos.x + 0.0f, potentialPlayerPos.y,lm).GetCollisionType() != TILE_NOCOLLIDE || GetTile(potentialPlayerPos.x + 0.9f, potentialPlayerPos.y,lm).GetCollisionType() != TILE_NOCOLLIDE)
 		{
 			potentialPlayerPos.y = (int)potentialPlayerPos.y + 1;
 			playerVel.y = 0;
@@ -281,7 +289,7 @@ void App::HandleCollision(float fElapsedTime)
 	}
 	else if (playerVel.y > 0) // Moving Down
 	{
-		if (GetTile(potentialPlayerPos.x + 0.0f, potentialPlayerPos.y + 1.0f).GetCollisionType() != TILE_NOCOLLIDE || GetTile(potentialPlayerPos.x + 0.9f, potentialPlayerPos.y + 1.0f).GetCollisionType() != TILE_NOCOLLIDE)
+		if (GetTile(potentialPlayerPos.x + 0.0f, potentialPlayerPos.y + 1.0f,lm).GetCollisionType() != TILE_NOCOLLIDE || GetTile(potentialPlayerPos.x + 0.9f, potentialPlayerPos.y + 1.0f,lm).GetCollisionType() != TILE_NOCOLLIDE)
 		{
 			potentialPlayerPos.y = (int)potentialPlayerPos.y;
 			playerVel.y = 0;
@@ -292,13 +300,13 @@ void App::HandleCollision(float fElapsedTime)
 	}
 
 	// Check for touching wall
-	if (GetTile((int)potentialPlayerPos.x, playerPos.y + 0.0f).GetCollisionType() != TILE_NOCOLLIDE || GetTile((int)potentialPlayerPos.x, playerPos.y + 0.9f).GetCollisionType() != TILE_NOCOLLIDE)
+	if (GetTile((int)potentialPlayerPos.x, playerPos.y + 0.0f,lm).GetCollisionType() != TILE_NOCOLLIDE || GetTile((int)potentialPlayerPos.x, playerPos.y + 0.9f,lm).GetCollisionType() != TILE_NOCOLLIDE)
 	{
 		//bTouchWall = true;
 		m_pPlayer->SetTouchedWall(true);
 	}
 
-	if (GetTile(potentialPlayerPos.x + 1.0f, playerPos.y + 0.0f).GetCollisionType() != TILE_NOCOLLIDE || GetTile(potentialPlayerPos.x + 1.0f, playerPos.y + 0.9f).GetCollisionType() != TILE_NOCOLLIDE)
+	if (GetTile(potentialPlayerPos.x + 1.0f, playerPos.y + 0.0f,lm).GetCollisionType() != TILE_NOCOLLIDE || GetTile(potentialPlayerPos.x + 1.0f, playerPos.y + 0.9f,lm).GetCollisionType() != TILE_NOCOLLIDE)
 	{
 		//bTouchWall = true;
 		m_pPlayer->SetTouchedWall(true);

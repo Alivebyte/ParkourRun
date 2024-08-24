@@ -8,9 +8,7 @@ LevelManager::LevelManager()
 
 bool LevelManager::LoadLevelFile(std::string filename)
 {
-	Level level;
-
-	auto ld = level.GetLevelData();
+	auto ld = m_Level.GetLevelData();
 
 	olc::utils::datafile df;
 
@@ -42,7 +40,7 @@ bool LevelManager::LoadLevelFile(std::string filename)
 			ld->m_TilesInfo.push_back(tinfo);
 		}
 
-		m_Level = level;
+		m_Level.Create();
 	}
 	else return false;
 
