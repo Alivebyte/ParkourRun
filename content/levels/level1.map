@@ -8,36 +8,5 @@ level_node
 		Y = 4
 	}
 
-	tile_info_count = 2
-
-	tile_info[0]
-	{
-		SpriteFile = content/sprites/world_objects/test_wall.png
-
-		TilePosition
-		{
-			X = 7
-			Y = 5
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[1]
-	{
-		SpriteFile = content/sprites/world_objects/test_wall.png
-
-		TilePosition
-		{
-			X = 10
-			Y = 5
-		}
-
-		Flip = 0
-		CollisionType = 0
-	}
-
 }
 

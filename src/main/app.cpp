@@ -171,9 +171,6 @@ void App::HandleEditMode(float fElapsedTime)
 		static std::string selected_sprite = "content/sprites/world_objects/test_wall.png";
 		static olc::Sprite::Flip flip;
 
-		std::cout << "Screen pos:" << screen_mouse_pos << std::endl;
-		std::cout << "World pos:" << world_pos << std::endl;
-
 		world_pos.x = std::clamp(world_pos.x, 0, levelSize.x);
 		world_pos.y = std::clamp(world_pos.y, 0, levelSize.y);
 

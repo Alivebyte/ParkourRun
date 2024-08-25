@@ -1,3 +1,4 @@
+content/sprites/background.png
 content/sprites/background_test.png
 content/sprites/player.png
 content/sprites/world_objects/industrial_pipe_horizontal.png
