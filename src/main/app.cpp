@@ -14,7 +14,7 @@ bool App::OnUserCreate()
 	
 	vTileSize = { 32,32 };
 	//splash = new olc::SplashScreen();
-	backgroundDecal = g_RM.RM_Sprite("content/sprites/background_test.png");
+	backgroundDecal = g_RM.RM_Sprite("content/sprites/background.png");
 	//pack = new olc::ResourcePack();
 	levelSize = backgroundDecal->sprite->Size() / vTileSize;
 	lm.GetLevel()->SetLevelSize(levelSize);
@@ -168,11 +168,52 @@ void App::HandleEditMode(float fElapsedTime)
 		olc::vi2d screen_mouse_pos = GetMousePos();
 		olc::vi2d world_pos = tv.ScreenToWorld(screen_mouse_pos);
 
+		static std::string selected_sprite = "content/sprites/world_objects/test_wall.png";
+		static olc::Sprite::Flip flip;
+
 		std::cout << "Screen pos:" << screen_mouse_pos << std::endl;
 		std::cout << "World pos:" << world_pos << std::endl;
 
 		world_pos.x = std::clamp(world_pos.x, 0, levelSize.x);
 		world_pos.y = std::clamp(world_pos.y, 0, levelSize.y);
+
+		// Sprite selection
+		if (GetKey(olc::T).bPressed)
+		{
+			selected_sprite = "content/sprites/world_objects/industrial_pipe_horizontal.png";
+		}
+		else if (GetKey(olc::R).bPressed)
+		{
+			selected_sprite = "content/sprites/world_objects/industrial_pipe_turn90.png";
+		}
+		else if (GetKey(olc::V).bPressed)
+		{
+			selected_sprite = "content/sprites/world_objects/industrial_pipe_vertical.png";
+		}
+		else if (GetKey(olc::B).bPressed)
+		{
+			selected_sprite = "content/sprites/world_objects/tile_wall1.png";
+		}
+		else if (GetKey(olc::N).bPressed)
+		{
+			selected_sprite = "content/sprites/world_objects/tile_wall2.png";
+		}
+		else if (GetKey(olc::M).bPressed)
+		{
+			selected_sprite = "content/sprites/world_objects/tile_wall3.png";
+		}
+		else if (GetKey(olc::D).bPressed)
+		{
+			selected_sprite = "content/sprites/world_objects/tile_wall4.png";
+		}
+		else if (GetKey(olc::H).bPressed)
+		{
+			selected_sprite = "content/sprites/world_objects/tile_wall5.png";
+		}
+		else if (GetKey(olc::J).bPressed)
+		{
+			selected_sprite = "content/sprites/world_objects/tile_wall6.png";
+		}
 
 		// Add tile at cursor position
 		if (GetMouse(0).bHeld)
@@ -181,7 +222,9 @@ void App::HandleEditMode(float fElapsedTime)
 			//if ((world_pos.x > levelSize.x || world_pos.x < 0) || (world_pos.y > levelSize.y || world_pos.y < 0)) world_pos = world_pos;
 			if (tiles)
 			{
-				tiles[world_pos.y * levelSize.x + world_pos.x].SetSprite("content/sprites/world_objects/test_wall.png", &g_RM);
+				tiles[world_pos.y * levelSize.x + world_pos.x].SetSprite(selected_sprite, &g_RM);
+				//tiles[world_pos.y * levelSize.x + world_pos.x].GetSprite()->sprite..
+				tiles[world_pos.y * levelSize.x + world_pos.x].SetCollisionType(TILE_COLLIDE);
 			}
 		}
 
@@ -234,8 +277,6 @@ void App::HandleEditMode(float fElapsedTime)
 		// Toggle collision state
 		if (GetKey(olc::C).bPressed)
 		{
-			
-
 			if (tiles)
 			{
 				tiles[world_pos.y * levelSize.x + world_pos.x].SetCollisionType(
@@ -244,6 +285,7 @@ void App::HandleEditMode(float fElapsedTime)
 			}
 		}
 
+		
 	}
 }
 
