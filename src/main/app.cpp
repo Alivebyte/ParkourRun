@@ -5,6 +5,8 @@
 
 bool App::OnUserCreate()
 {
+	splash = new olc::SplashScreen();
+
 	m_bEditMode = false;
 	// Initializing resource pack
 	g_RM.InitializeResourcePack();
@@ -13,7 +15,7 @@ bool App::OnUserCreate()
 	g_RM.LoadResourcePack("content.pack", "TEST_KEY");
 	
 	vTileSize = { 32,32 };
-	//splash = new olc::SplashScreen();
+	
 	backgroundDecal = g_RM.RM_Sprite("content/sprites/background.png");
 	//pack = new olc::ResourcePack();
 	levelSize = backgroundDecal->sprite->Size() / vTileSize;
