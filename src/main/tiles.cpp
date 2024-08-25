@@ -87,6 +87,7 @@ void Player::InitializeAnimations()
 	// Running
 	// Climbing
 	// Jump
+	// Fall
 }
 
 void Player::HandleUserInput(olc::PixelGameEngine* pge, float fElapsedTime)

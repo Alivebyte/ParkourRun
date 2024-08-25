@@ -5,19 +5,19 @@ level_node
 	player_spawnpoint
 	{
 		X = 1
-		Y = 16
+		Y = 10
 	}
 
-	tile_info_count = 490
+	tile_info_count = 757
 
 	tile_info[0]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 53
-			Y = 10
+			X = 41
+			Y = 3
 		}
 
 		Flip = 0
@@ -27,12 +27,12 @@ level_node
 
 	tile_info[1]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 54
-			Y = 10
+			X = 42
+			Y = 3
 		}
 
 		Flip = 0
@@ -42,12 +42,12 @@ level_node
 
 	tile_info[2]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 55
-			Y = 10
+			X = 39
+			Y = 4
 		}
 
 		Flip = 0
@@ -57,12 +57,12 @@ level_node
 
 	tile_info[3]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 56
-			Y = 10
+			X = 40
+			Y = 4
 		}
 
 		Flip = 0
@@ -72,12 +72,12 @@ level_node
 
 	tile_info[4]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 57
-			Y = 10
+			X = 41
+			Y = 4
 		}
 
 		Flip = 0
@@ -87,12 +87,12 @@ level_node
 
 	tile_info[5]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 58
-			Y = 10
+			X = 42
+			Y = 4
 		}
 
 		Flip = 0
@@ -102,12 +102,12 @@ level_node
 
 	tile_info[6]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 59
-			Y = 10
+			X = 43
+			Y = 4
 		}
 
 		Flip = 0
@@ -117,12 +117,12 @@ level_node
 
 	tile_info[7]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 60
-			Y = 10
+			X = 39
+			Y = 5
 		}
 
 		Flip = 0
@@ -132,12 +132,12 @@ level_node
 
 	tile_info[8]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 61
-			Y = 10
+			X = 40
+			Y = 5
 		}
 
 		Flip = 0
@@ -147,12 +147,12 @@ level_node
 
 	tile_info[9]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 62
-			Y = 10
+			X = 41
+			Y = 5
 		}
 
 		Flip = 0
@@ -162,12 +162,12 @@ level_node
 
 	tile_info[10]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 63
-			Y = 10
+			X = 42
+			Y = 5
 		}
 
 		Flip = 0
@@ -177,12 +177,12 @@ level_node
 
 	tile_info[11]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 51
-			Y = 11
+			X = 43
+			Y = 5
 		}
 
 		Flip = 0
@@ -192,12 +192,12 @@ level_node
 
 	tile_info[12]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 52
-			Y = 11
+			X = 39
+			Y = 6
 		}
 
 		Flip = 0
@@ -207,12 +207,12 @@ level_node
 
 	tile_info[13]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 53
-			Y = 11
+			X = 40
+			Y = 6
 		}
 
 		Flip = 0
@@ -222,12 +222,12 @@ level_node
 
 	tile_info[14]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 54
-			Y = 11
+			X = 41
+			Y = 6
 		}
 
 		Flip = 0
@@ -237,12 +237,12 @@ level_node
 
 	tile_info[15]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 55
-			Y = 11
+			X = 42
+			Y = 6
 		}
 
 		Flip = 0
@@ -252,12 +252,12 @@ level_node
 
 	tile_info[16]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 56
-			Y = 11
+			X = 43
+			Y = 6
 		}
 
 		Flip = 0
@@ -267,12 +267,12 @@ level_node
 
 	tile_info[17]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 57
-			Y = 11
+			X = 39
+			Y = 7
 		}
 
 		Flip = 0
@@ -282,12 +282,12 @@ level_node
 
 	tile_info[18]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 58
-			Y = 11
+			X = 40
+			Y = 7
 		}
 
 		Flip = 0
@@ -297,12 +297,12 @@ level_node
 
 	tile_info[19]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 59
-			Y = 11
+			X = 41
+			Y = 7
 		}
 
 		Flip = 0
@@ -312,12 +312,12 @@ level_node
 
 	tile_info[20]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 60
-			Y = 11
+			X = 42
+			Y = 7
 		}
 
 		Flip = 0
@@ -327,12 +327,12 @@ level_node
 
 	tile_info[21]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 61
-			Y = 11
+			X = 43
+			Y = 7
 		}
 
 		Flip = 0
@@ -342,12 +342,12 @@ level_node
 
 	tile_info[22]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 62
-			Y = 11
+			X = 39
+			Y = 8
 		}
 
 		Flip = 0
@@ -357,12 +357,12 @@ level_node
 
 	tile_info[23]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 63
-			Y = 11
+			X = 40
+			Y = 8
 		}
 
 		Flip = 0
@@ -372,12 +372,12 @@ level_node
 
 	tile_info[24]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 51
-			Y = 12
+			X = 41
+			Y = 8
 		}
 
 		Flip = 0
@@ -387,12 +387,12 @@ level_node
 
 	tile_info[25]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 52
-			Y = 12
+			X = 42
+			Y = 8
 		}
 
 		Flip = 0
@@ -402,12 +402,12 @@ level_node
 
 	tile_info[26]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 53
-			Y = 12
+			X = 43
+			Y = 8
 		}
 
 		Flip = 0
@@ -417,12 +417,12 @@ level_node
 
 	tile_info[27]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 54
-			Y = 12
+			X = 39
+			Y = 9
 		}
 
 		Flip = 0
@@ -432,12 +432,12 @@ level_node
 
 	tile_info[28]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 55
-			Y = 12
+			X = 40
+			Y = 9
 		}
 
 		Flip = 0
@@ -447,12 +447,12 @@ level_node
 
 	tile_info[29]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 56
-			Y = 12
+			X = 41
+			Y = 9
 		}
 
 		Flip = 0
@@ -462,12 +462,12 @@ level_node
 
 	tile_info[30]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 57
-			Y = 12
+			X = 42
+			Y = 9
 		}
 
 		Flip = 0
@@ -477,12 +477,12 @@ level_node
 
 	tile_info[31]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 58
-			Y = 12
+			X = 43
+			Y = 9
 		}
 
 		Flip = 0
@@ -492,12 +492,12 @@ level_node
 
 	tile_info[32]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 59
-			Y = 12
+			X = 39
+			Y = 10
 		}
 
 		Flip = 0
@@ -507,12 +507,12 @@ level_node
 
 	tile_info[33]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 60
-			Y = 12
+			X = 40
+			Y = 10
 		}
 
 		Flip = 0
@@ -522,12 +522,12 @@ level_node
 
 	tile_info[34]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 61
-			Y = 12
+			X = 41
+			Y = 10
 		}
 
 		Flip = 0
@@ -537,12 +537,12 @@ level_node
 
 	tile_info[35]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 62
-			Y = 12
+			X = 42
+			Y = 10
 		}
 
 		Flip = 0
@@ -552,12 +552,12 @@ level_node
 
 	tile_info[36]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 63
-			Y = 12
+			X = 43
+			Y = 10
 		}
 
 		Flip = 0
@@ -571,8 +571,8 @@ level_node
 
 		TilePosition
 		{
-			X = 51
-			Y = 13
+			X = 53
+			Y = 10
 		}
 
 		Flip = 0
@@ -586,8 +586,8 @@ level_node
 
 		TilePosition
 		{
-			X = 52
-			Y = 13
+			X = 54
+			Y = 10
 		}
 
 		Flip = 0
@@ -601,8 +601,8 @@ level_node
 
 		TilePosition
 		{
-			X = 53
-			Y = 13
+			X = 55
+			Y = 10
 		}
 
 		Flip = 0
@@ -616,8 +616,8 @@ level_node
 
 		TilePosition
 		{
-			X = 54
-			Y = 13
+			X = 56
+			Y = 10
 		}
 
 		Flip = 0
@@ -631,8 +631,8 @@ level_node
 
 		TilePosition
 		{
-			X = 55
-			Y = 13
+			X = 57
+			Y = 10
 		}
 
 		Flip = 0
@@ -642,477 +642,477 @@ level_node
 
 	tile_info[42]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_turn90.png
 
 		TilePosition
 		{
-			X = 56
-			Y = 13
+			X = 8
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[43]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 57
-			Y = 13
+			X = 9
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[44]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 58
-			Y = 13
+			X = 10
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[45]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 59
-			Y = 13
+			X = 11
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[46]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 60
-			Y = 13
+			X = 12
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[47]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 61
-			Y = 13
+			X = 13
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[48]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 62
-			Y = 13
+			X = 14
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[49]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 63
-			Y = 13
+			X = 15
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[50]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 49
-			Y = 14
+			X = 16
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[51]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 50
-			Y = 14
+			X = 17
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[52]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 51
-			Y = 14
+			X = 18
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[53]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 52
-			Y = 14
+			X = 19
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[54]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 53
-			Y = 14
+			X = 20
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[55]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 54
-			Y = 14
+			X = 21
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[56]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 55
-			Y = 14
+			X = 22
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[57]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 56
-			Y = 14
+			X = 23
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[58]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 57
-			Y = 14
+			X = 24
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[59]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 58
-			Y = 14
+			X = 25
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[60]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 59
-			Y = 14
+			X = 26
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[61]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 60
-			Y = 14
+			X = 27
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[62]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 61
-			Y = 14
+			X = 28
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[63]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 62
-			Y = 14
+			X = 29
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[64]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 63
-			Y = 14
+			X = 30
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[65]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 49
-			Y = 15
+			X = 31
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[66]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 50
-			Y = 15
+			X = 32
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[67]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 51
-			Y = 15
+			X = 33
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[68]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 52
-			Y = 15
+			X = 34
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[69]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 53
-			Y = 15
+			X = 35
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[70]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 54
-			Y = 15
+			X = 36
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[71]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 55
-			Y = 15
+			X = 37
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[72]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 56
-			Y = 15
+			X = 38
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[73]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 57
-			Y = 15
+			X = 39
+			Y = 11
 		}
 
 		Flip = 0
@@ -1122,12 +1122,12 @@ level_node
 
 	tile_info[74]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 58
-			Y = 15
+			X = 40
+			Y = 11
 		}
 
 		Flip = 0
@@ -1137,12 +1137,12 @@ level_node
 
 	tile_info[75]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 59
-			Y = 15
+			X = 41
+			Y = 11
 		}
 
 		Flip = 0
@@ -1152,12 +1152,12 @@ level_node
 
 	tile_info[76]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 60
-			Y = 15
+			X = 42
+			Y = 11
 		}
 
 		Flip = 0
@@ -1167,12 +1167,12 @@ level_node
 
 	tile_info[77]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 61
-			Y = 15
+			X = 43
+			Y = 11
 		}
 
 		Flip = 0
@@ -1182,106 +1182,106 @@ level_node
 
 	tile_info[78]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 62
-			Y = 15
+			X = 44
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[79]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 63
-			Y = 15
+			X = 45
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[80]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall5.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 28
-			Y = 16
+			X = 46
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[81]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 49
-			Y = 16
+			X = 47
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[82]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 50
-			Y = 16
+			X = 48
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[83]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 51
-			Y = 16
+			X = 49
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[84]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 52
-			Y = 16
+			X = 50
+			Y = 11
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
@@ -1291,8 +1291,8 @@ level_node
 
 		TilePosition
 		{
-			X = 53
-			Y = 16
+			X = 51
+			Y = 11
 		}
 
 		Flip = 0
@@ -1306,6 +1306,1176 @@ level_node
 
 		TilePosition
 		{
+			X = 52
+			Y = 11
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[87]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 53
+			Y = 11
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[88]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 54
+			Y = 11
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[89]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 55
+			Y = 11
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[90]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 56
+			Y = 11
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[91]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 57
+			Y = 11
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[92]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_vertical.png
+
+		TilePosition
+		{
+			X = 8
+			Y = 12
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[93]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 39
+			Y = 12
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[94]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 40
+			Y = 12
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[95]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 41
+			Y = 12
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[96]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 42
+			Y = 12
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[97]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 43
+			Y = 12
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[98]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 51
+			Y = 12
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[99]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 52
+			Y = 12
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[100]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 53
+			Y = 12
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[101]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 54
+			Y = 12
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[102]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 55
+			Y = 12
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[103]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 56
+			Y = 12
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[104]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 57
+			Y = 12
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[105]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 58
+			Y = 12
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[106]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_vertical.png
+
+		TilePosition
+		{
+			X = 8
+			Y = 13
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[107]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 39
+			Y = 13
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[108]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 40
+			Y = 13
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[109]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 41
+			Y = 13
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[110]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 42
+			Y = 13
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[111]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 43
+			Y = 13
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[112]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 51
+			Y = 13
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[113]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 52
+			Y = 13
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[114]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 53
+			Y = 13
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[115]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 54
+			Y = 13
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[116]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 55
+			Y = 13
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[117]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 56
+			Y = 13
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[118]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 57
+			Y = 13
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[119]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 58
+			Y = 13
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[120]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_vertical.png
+
+		TilePosition
+		{
+			X = 8
+			Y = 14
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[121]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 39
+			Y = 14
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[122]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 40
+			Y = 14
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[123]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 41
+			Y = 14
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[124]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 42
+			Y = 14
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[125]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 43
+			Y = 14
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[126]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 49
+			Y = 14
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[127]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 50
+			Y = 14
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[128]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 51
+			Y = 14
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[129]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 52
+			Y = 14
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[130]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 53
+			Y = 14
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[131]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 54
+			Y = 14
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[132]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 55
+			Y = 14
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[133]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 56
+			Y = 14
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[134]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 57
+			Y = 14
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[135]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 58
+			Y = 14
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[136]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_vertical.png
+
+		TilePosition
+		{
+			X = 8
+			Y = 15
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[137]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 39
+			Y = 15
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[138]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 40
+			Y = 15
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[139]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 41
+			Y = 15
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[140]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 42
+			Y = 15
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[141]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 43
+			Y = 15
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[142]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 49
+			Y = 15
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[143]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 50
+			Y = 15
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[144]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 51
+			Y = 15
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[145]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 52
+			Y = 15
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[146]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 53
+			Y = 15
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[147]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 54
+			Y = 15
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[148]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 55
+			Y = 15
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[149]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 56
+			Y = 15
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[150]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 57
+			Y = 15
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[151]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 58
+			Y = 15
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[152]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_vertical.png
+
+		TilePosition
+		{
+			X = 8
+			Y = 16
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[153]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall5.png
+
+		TilePosition
+		{
+			X = 28
+			Y = 16
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[154]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 39
+			Y = 16
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[155]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 40
+			Y = 16
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[156]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 41
+			Y = 16
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[157]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 42
+			Y = 16
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[158]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 43
+			Y = 16
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[159]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 49
+			Y = 16
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[160]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 50
+			Y = 16
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[161]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 51
+			Y = 16
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[162]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 52
+			Y = 16
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[163]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 53
+			Y = 16
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[164]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
 			X = 54
 			Y = 16
 		}
@@ -1315,7 +2485,7 @@ level_node
 	}
 
 
-	tile_info[87]
+	tile_info[165]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -1330,7 +2500,7 @@ level_node
 	}
 
 
-	tile_info[88]
+	tile_info[166]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -1345,7 +2515,7 @@ level_node
 	}
 
 
-	tile_info[89]
+	tile_info[167]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -1360,7 +2530,7 @@ level_node
 	}
 
 
-	tile_info[90]
+	tile_info[168]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -1375,82 +2545,22 @@ level_node
 	}
 
 
-	tile_info[91]
+	tile_info[169]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_vertical.png
 
 		TilePosition
 		{
-			X = 59
-			Y = 16
+			X = 8
+			Y = 17
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
-	tile_info[92]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
-
-		TilePosition
-		{
-			X = 60
-			Y = 16
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[93]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
-
-		TilePosition
-		{
-			X = 61
-			Y = 16
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[94]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
-
-		TilePosition
-		{
-			X = 62
-			Y = 16
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[95]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
-
-		TilePosition
-		{
-			X = 63
-			Y = 16
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[96]
+	tile_info[170]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -1465,7 +2575,7 @@ level_node
 	}
 
 
-	tile_info[97]
+	tile_info[171]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -1480,7 +2590,7 @@ level_node
 	}
 
 
-	tile_info[98]
+	tile_info[172]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -1495,7 +2605,7 @@ level_node
 	}
 
 
-	tile_info[99]
+	tile_info[173]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -1510,7 +2620,7 @@ level_node
 	}
 
 
-	tile_info[100]
+	tile_info[174]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -1525,7 +2635,7 @@ level_node
 	}
 
 
-	tile_info[101]
+	tile_info[175]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -1540,7 +2650,7 @@ level_node
 	}
 
 
-	tile_info[102]
+	tile_info[176]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -1555,7 +2665,7 @@ level_node
 	}
 
 
-	tile_info[103]
+	tile_info[177]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -1570,7 +2680,7 @@ level_node
 	}
 
 
-	tile_info[104]
+	tile_info[178]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -1585,7 +2695,7 @@ level_node
 	}
 
 
-	tile_info[105]
+	tile_info[179]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -1600,7 +2710,7 @@ level_node
 	}
 
 
-	tile_info[106]
+	tile_info[180]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -1615,7 +2725,7 @@ level_node
 	}
 
 
-	tile_info[107]
+	tile_info[181]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -1630,7 +2740,7 @@ level_node
 	}
 
 
-	tile_info[108]
+	tile_info[182]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -1645,7 +2755,7 @@ level_node
 	}
 
 
-	tile_info[109]
+	tile_info[183]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -1660,7 +2770,7 @@ level_node
 	}
 
 
-	tile_info[110]
+	tile_info[184]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -1675,7 +2785,7 @@ level_node
 	}
 
 
-	tile_info[111]
+	tile_info[185]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -1690,7 +2800,7 @@ level_node
 	}
 
 
-	tile_info[112]
+	tile_info[186]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -1705,1124 +2815,14 @@ level_node
 	}
 
 
-	tile_info[113]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
-
-		TilePosition
-		{
-			X = 59
-			Y = 17
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[114]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
-
-		TilePosition
-		{
-			X = 60
-			Y = 17
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[115]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
-
-		TilePosition
-		{
-			X = 61
-			Y = 17
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[116]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
-
-		TilePosition
-		{
-			X = 62
-			Y = 17
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[117]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
-
-		TilePosition
-		{
-			X = 63
-			Y = 17
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[118]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall1.png
-
-		TilePosition
-		{
-			X = 0
-			Y = 18
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[119]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall1.png
-
-		TilePosition
-		{
-			X = 1
-			Y = 18
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[120]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall1.png
-
-		TilePosition
-		{
-			X = 2
-			Y = 18
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[121]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall1.png
-
-		TilePosition
-		{
-			X = 3
-			Y = 18
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[122]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall1.png
-
-		TilePosition
-		{
-			X = 4
-			Y = 18
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[123]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall1.png
-
-		TilePosition
-		{
-			X = 5
-			Y = 18
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[124]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall1.png
-
-		TilePosition
-		{
-			X = 19
-			Y = 18
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[125]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall1.png
-
-		TilePosition
-		{
-			X = 20
-			Y = 18
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[126]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall5.png
-
-		TilePosition
-		{
-			X = 25
-			Y = 18
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[127]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall5.png
-
-		TilePosition
-		{
-			X = 26
-			Y = 18
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[128]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall5.png
-
-		TilePosition
-		{
-			X = 27
-			Y = 18
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[129]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall5.png
-
-		TilePosition
-		{
-			X = 28
-			Y = 18
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[130]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall5.png
-
-		TilePosition
-		{
-			X = 29
-			Y = 18
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[131]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall4.png
-
-		TilePosition
-		{
-			X = 39
-			Y = 18
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[132]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall4.png
-
-		TilePosition
-		{
-			X = 40
-			Y = 18
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[133]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall4.png
-
-		TilePosition
-		{
-			X = 41
-			Y = 18
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[134]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall4.png
-
-		TilePosition
-		{
-			X = 42
-			Y = 18
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[135]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall4.png
-
-		TilePosition
-		{
-			X = 43
-			Y = 18
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[136]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
-
-		TilePosition
-		{
-			X = 49
-			Y = 18
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[137]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
-
-		TilePosition
-		{
-			X = 50
-			Y = 18
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[138]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
-
-		TilePosition
-		{
-			X = 51
-			Y = 18
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[139]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall1.png
-
-		TilePosition
-		{
-			X = 0
-			Y = 19
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[140]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall1.png
-
-		TilePosition
-		{
-			X = 1
-			Y = 19
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[141]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall1.png
-
-		TilePosition
-		{
-			X = 2
-			Y = 19
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[142]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall1.png
-
-		TilePosition
-		{
-			X = 3
-			Y = 19
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[143]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall1.png
-
-		TilePosition
-		{
-			X = 4
-			Y = 19
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[144]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall1.png
-
-		TilePosition
-		{
-			X = 5
-			Y = 19
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[145]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall1.png
-
-		TilePosition
-		{
-			X = 18
-			Y = 19
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[146]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall2.png
-
-		TilePosition
-		{
-			X = 19
-			Y = 19
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[147]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall2.png
-
-		TilePosition
-		{
-			X = 20
-			Y = 19
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[148]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall5.png
-
-		TilePosition
-		{
-			X = 25
-			Y = 19
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[149]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall5.png
-
-		TilePosition
-		{
-			X = 26
-			Y = 19
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[150]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall5.png
-
-		TilePosition
-		{
-			X = 27
-			Y = 19
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[151]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall5.png
-
-		TilePosition
-		{
-			X = 28
-			Y = 19
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[152]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall5.png
-
-		TilePosition
-		{
-			X = 29
-			Y = 19
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[153]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall4.png
-
-		TilePosition
-		{
-			X = 39
-			Y = 19
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[154]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall4.png
-
-		TilePosition
-		{
-			X = 40
-			Y = 19
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[155]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall4.png
-
-		TilePosition
-		{
-			X = 41
-			Y = 19
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[156]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall4.png
-
-		TilePosition
-		{
-			X = 42
-			Y = 19
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[157]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall4.png
-
-		TilePosition
-		{
-			X = 43
-			Y = 19
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[158]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
-
-		TilePosition
-		{
-			X = 49
-			Y = 19
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[159]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
-
-		TilePosition
-		{
-			X = 50
-			Y = 19
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[160]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
-
-		TilePosition
-		{
-			X = 51
-			Y = 19
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[161]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall1.png
-
-		TilePosition
-		{
-			X = 0
-			Y = 20
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[162]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall1.png
-
-		TilePosition
-		{
-			X = 1
-			Y = 20
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[163]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall1.png
-
-		TilePosition
-		{
-			X = 2
-			Y = 20
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[164]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall1.png
-
-		TilePosition
-		{
-			X = 3
-			Y = 20
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[165]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall1.png
-
-		TilePosition
-		{
-			X = 4
-			Y = 20
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[166]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall1.png
-
-		TilePosition
-		{
-			X = 5
-			Y = 20
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[167]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall1.png
-
-		TilePosition
-		{
-			X = 17
-			Y = 20
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[168]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall2.png
-
-		TilePosition
-		{
-			X = 18
-			Y = 20
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[169]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall2.png
-
-		TilePosition
-		{
-			X = 19
-			Y = 20
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[170]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall2.png
-
-		TilePosition
-		{
-			X = 20
-			Y = 20
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[171]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall5.png
-
-		TilePosition
-		{
-			X = 25
-			Y = 20
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[172]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall5.png
-
-		TilePosition
-		{
-			X = 26
-			Y = 20
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[173]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall5.png
-
-		TilePosition
-		{
-			X = 27
-			Y = 20
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[174]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall5.png
-
-		TilePosition
-		{
-			X = 28
-			Y = 20
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[175]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall5.png
-
-		TilePosition
-		{
-			X = 29
-			Y = 20
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[176]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall5.png
-
-		TilePosition
-		{
-			X = 30
-			Y = 20
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[177]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall5.png
-
-		TilePosition
-		{
-			X = 31
-			Y = 20
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[178]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall5.png
-
-		TilePosition
-		{
-			X = 32
-			Y = 20
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[179]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall5.png
-
-		TilePosition
-		{
-			X = 33
-			Y = 20
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[180]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall5.png
-
-		TilePosition
-		{
-			X = 34
-			Y = 20
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[181]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall5.png
-
-		TilePosition
-		{
-			X = 35
-			Y = 20
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[182]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall4.png
-
-		TilePosition
-		{
-			X = 39
-			Y = 20
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[183]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall4.png
-
-		TilePosition
-		{
-			X = 40
-			Y = 20
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[184]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall4.png
-
-		TilePosition
-		{
-			X = 41
-			Y = 20
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[185]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall4.png
-
-		TilePosition
-		{
-			X = 42
-			Y = 20
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
-	tile_info[186]
-	{
-		SpriteFile = content/sprites/world_objects/tile_wall4.png
-
-		TilePosition
-		{
-			X = 43
-			Y = 20
-		}
-
-		Flip = 0
-		CollisionType = 10
-	}
-
-
 	tile_info[187]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
 		TilePosition
 		{
-			X = 49
-			Y = 20
+			X = 0
+			Y = 18
 		}
 
 		Flip = 0
@@ -2832,12 +2832,12 @@ level_node
 
 	tile_info[188]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
 		TilePosition
 		{
-			X = 50
-			Y = 20
+			X = 1
+			Y = 18
 		}
 
 		Flip = 0
@@ -2847,12 +2847,12 @@ level_node
 
 	tile_info[189]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall6.png
+		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
 		TilePosition
 		{
-			X = 51
-			Y = 20
+			X = 2
+			Y = 18
 		}
 
 		Flip = 0
@@ -2866,8 +2866,8 @@ level_node
 
 		TilePosition
 		{
-			X = 0
-			Y = 21
+			X = 3
+			Y = 18
 		}
 
 		Flip = 0
@@ -2881,8 +2881,8 @@ level_node
 
 		TilePosition
 		{
-			X = 1
-			Y = 21
+			X = 4
+			Y = 18
 		}
 
 		Flip = 0
@@ -2896,8 +2896,8 @@ level_node
 
 		TilePosition
 		{
-			X = 2
-			Y = 21
+			X = 5
+			Y = 18
 		}
 
 		Flip = 0
@@ -2907,16 +2907,16 @@ level_node
 
 	tile_info[193]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall1.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_vertical.png
 
 		TilePosition
 		{
-			X = 3
-			Y = 21
+			X = 8
+			Y = 18
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
@@ -2926,8 +2926,8 @@ level_node
 
 		TilePosition
 		{
-			X = 4
-			Y = 21
+			X = 19
+			Y = 18
 		}
 
 		Flip = 0
@@ -2941,8 +2941,8 @@ level_node
 
 		TilePosition
 		{
-			X = 5
-			Y = 21
+			X = 20
+			Y = 18
 		}
 
 		Flip = 0
@@ -2952,12 +2952,12 @@ level_node
 
 	tile_info[196]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall1.png
+		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
 		TilePosition
 		{
-			X = 16
-			Y = 21
+			X = 25
+			Y = 18
 		}
 
 		Flip = 0
@@ -2967,12 +2967,12 @@ level_node
 
 	tile_info[197]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall2.png
+		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
 		TilePosition
 		{
-			X = 17
-			Y = 21
+			X = 26
+			Y = 18
 		}
 
 		Flip = 0
@@ -2982,12 +2982,12 @@ level_node
 
 	tile_info[198]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall2.png
+		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
 		TilePosition
 		{
-			X = 18
-			Y = 21
+			X = 27
+			Y = 18
 		}
 
 		Flip = 0
@@ -2997,12 +2997,12 @@ level_node
 
 	tile_info[199]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall2.png
+		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
 		TilePosition
 		{
-			X = 19
-			Y = 21
+			X = 28
+			Y = 18
 		}
 
 		Flip = 0
@@ -3012,12 +3012,12 @@ level_node
 
 	tile_info[200]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall2.png
+		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
 		TilePosition
 		{
-			X = 20
-			Y = 21
+			X = 29
+			Y = 18
 		}
 
 		Flip = 0
@@ -3027,132 +3027,132 @@ level_node
 
 	tile_info[201]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall5.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_turn90.png
 
 		TilePosition
 		{
-			X = 25
-			Y = 21
+			X = 31
+			Y = 18
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[202]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall5.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 26
-			Y = 21
+			X = 32
+			Y = 18
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[203]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall5.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 27
-			Y = 21
+			X = 33
+			Y = 18
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[204]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall5.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 28
-			Y = 21
+			X = 34
+			Y = 18
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[205]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall5.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 29
-			Y = 21
+			X = 35
+			Y = 18
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[206]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall5.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 30
-			Y = 21
+			X = 36
+			Y = 18
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[207]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall5.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 31
-			Y = 21
+			X = 37
+			Y = 18
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[208]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall5.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
-			X = 32
-			Y = 21
+			X = 38
+			Y = 18
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
 	tile_info[209]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall5.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 33
-			Y = 21
+			X = 39
+			Y = 18
 		}
 
 		Flip = 0
@@ -3162,12 +3162,12 @@ level_node
 
 	tile_info[210]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall5.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 34
-			Y = 21
+			X = 40
+			Y = 18
 		}
 
 		Flip = 0
@@ -3177,12 +3177,12 @@ level_node
 
 	tile_info[211]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall5.png
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
 		TilePosition
 		{
-			X = 35
-			Y = 21
+			X = 41
+			Y = 18
 		}
 
 		Flip = 0
@@ -3196,8 +3196,8 @@ level_node
 
 		TilePosition
 		{
-			X = 39
-			Y = 21
+			X = 42
+			Y = 18
 		}
 
 		Flip = 0
@@ -3211,6 +3211,1686 @@ level_node
 
 		TilePosition
 		{
+			X = 43
+			Y = 18
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[214]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
+
+		TilePosition
+		{
+			X = 44
+			Y = 18
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[215]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
+
+		TilePosition
+		{
+			X = 45
+			Y = 18
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[216]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
+
+		TilePosition
+		{
+			X = 46
+			Y = 18
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[217]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
+
+		TilePosition
+		{
+			X = 47
+			Y = 18
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[218]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
+
+		TilePosition
+		{
+			X = 48
+			Y = 18
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[219]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 49
+			Y = 18
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[220]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 50
+			Y = 18
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[221]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 51
+			Y = 18
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[222]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 52
+			Y = 18
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[223]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 53
+			Y = 18
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[224]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 54
+			Y = 18
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[225]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 55
+			Y = 18
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[226]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 56
+			Y = 18
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[227]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 57
+			Y = 18
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[228]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 58
+			Y = 18
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[229]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall1.png
+
+		TilePosition
+		{
+			X = 0
+			Y = 19
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[230]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall1.png
+
+		TilePosition
+		{
+			X = 1
+			Y = 19
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[231]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall1.png
+
+		TilePosition
+		{
+			X = 2
+			Y = 19
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[232]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall1.png
+
+		TilePosition
+		{
+			X = 3
+			Y = 19
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[233]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall1.png
+
+		TilePosition
+		{
+			X = 4
+			Y = 19
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[234]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall1.png
+
+		TilePosition
+		{
+			X = 5
+			Y = 19
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[235]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_vertical.png
+
+		TilePosition
+		{
+			X = 8
+			Y = 19
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[236]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall1.png
+
+		TilePosition
+		{
+			X = 18
+			Y = 19
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[237]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall2.png
+
+		TilePosition
+		{
+			X = 19
+			Y = 19
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[238]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall2.png
+
+		TilePosition
+		{
+			X = 20
+			Y = 19
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[239]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
+
+		TilePosition
+		{
+			X = 21
+			Y = 19
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[240]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
+
+		TilePosition
+		{
+			X = 22
+			Y = 19
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[241]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
+
+		TilePosition
+		{
+			X = 23
+			Y = 19
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[242]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
+
+		TilePosition
+		{
+			X = 24
+			Y = 19
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[243]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall5.png
+
+		TilePosition
+		{
+			X = 25
+			Y = 19
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[244]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall5.png
+
+		TilePosition
+		{
+			X = 26
+			Y = 19
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[245]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall5.png
+
+		TilePosition
+		{
+			X = 27
+			Y = 19
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[246]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall5.png
+
+		TilePosition
+		{
+			X = 28
+			Y = 19
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[247]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall5.png
+
+		TilePosition
+		{
+			X = 29
+			Y = 19
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[248]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_vertical.png
+
+		TilePosition
+		{
+			X = 31
+			Y = 19
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[249]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 39
+			Y = 19
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[250]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 40
+			Y = 19
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[251]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 41
+			Y = 19
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[252]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 42
+			Y = 19
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[253]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 43
+			Y = 19
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[254]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 49
+			Y = 19
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[255]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 50
+			Y = 19
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[256]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 51
+			Y = 19
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[257]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 52
+			Y = 19
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[258]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 53
+			Y = 19
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[259]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 54
+			Y = 19
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[260]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 55
+			Y = 19
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[261]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 56
+			Y = 19
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[262]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 57
+			Y = 19
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[263]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 58
+			Y = 19
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[264]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall1.png
+
+		TilePosition
+		{
+			X = 0
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[265]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall1.png
+
+		TilePosition
+		{
+			X = 1
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[266]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall1.png
+
+		TilePosition
+		{
+			X = 2
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[267]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall1.png
+
+		TilePosition
+		{
+			X = 3
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[268]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall1.png
+
+		TilePosition
+		{
+			X = 4
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[269]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall1.png
+
+		TilePosition
+		{
+			X = 5
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[270]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_vertical.png
+
+		TilePosition
+		{
+			X = 8
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[271]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall1.png
+
+		TilePosition
+		{
+			X = 17
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[272]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall2.png
+
+		TilePosition
+		{
+			X = 18
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[273]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall2.png
+
+		TilePosition
+		{
+			X = 19
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[274]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall2.png
+
+		TilePosition
+		{
+			X = 20
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[275]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall5.png
+
+		TilePosition
+		{
+			X = 25
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[276]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall5.png
+
+		TilePosition
+		{
+			X = 26
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[277]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall5.png
+
+		TilePosition
+		{
+			X = 27
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[278]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall5.png
+
+		TilePosition
+		{
+			X = 28
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[279]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall5.png
+
+		TilePosition
+		{
+			X = 29
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[280]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall5.png
+
+		TilePosition
+		{
+			X = 30
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[281]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall5.png
+
+		TilePosition
+		{
+			X = 31
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[282]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall5.png
+
+		TilePosition
+		{
+			X = 32
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[283]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall5.png
+
+		TilePosition
+		{
+			X = 33
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[284]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall5.png
+
+		TilePosition
+		{
+			X = 34
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[285]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall5.png
+
+		TilePosition
+		{
+			X = 35
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[286]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 39
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[287]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 40
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[288]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 41
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[289]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 42
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[290]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 43
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[291]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 49
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[292]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 50
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[293]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 51
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[294]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 52
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[295]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 53
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[296]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 54
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[297]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 55
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[298]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 56
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[299]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 57
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[300]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 58
+			Y = 20
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[301]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall1.png
+
+		TilePosition
+		{
+			X = 0
+			Y = 21
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[302]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall1.png
+
+		TilePosition
+		{
+			X = 1
+			Y = 21
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[303]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall1.png
+
+		TilePosition
+		{
+			X = 2
+			Y = 21
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[304]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall1.png
+
+		TilePosition
+		{
+			X = 3
+			Y = 21
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[305]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall1.png
+
+		TilePosition
+		{
+			X = 4
+			Y = 21
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[306]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall1.png
+
+		TilePosition
+		{
+			X = 5
+			Y = 21
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[307]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_vertical.png
+
+		TilePosition
+		{
+			X = 8
+			Y = 21
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[308]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall1.png
+
+		TilePosition
+		{
+			X = 16
+			Y = 21
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[309]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall2.png
+
+		TilePosition
+		{
+			X = 17
+			Y = 21
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[310]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall2.png
+
+		TilePosition
+		{
+			X = 18
+			Y = 21
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[311]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall2.png
+
+		TilePosition
+		{
+			X = 19
+			Y = 21
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[312]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall2.png
+
+		TilePosition
+		{
+			X = 20
+			Y = 21
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[313]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall5.png
+
+		TilePosition
+		{
+			X = 25
+			Y = 21
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[314]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall5.png
+
+		TilePosition
+		{
+			X = 26
+			Y = 21
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[315]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall5.png
+
+		TilePosition
+		{
+			X = 27
+			Y = 21
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[316]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall5.png
+
+		TilePosition
+		{
+			X = 28
+			Y = 21
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[317]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall5.png
+
+		TilePosition
+		{
+			X = 29
+			Y = 21
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[318]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall5.png
+
+		TilePosition
+		{
+			X = 30
+			Y = 21
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[319]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall5.png
+
+		TilePosition
+		{
+			X = 31
+			Y = 21
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[320]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall5.png
+
+		TilePosition
+		{
+			X = 32
+			Y = 21
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[321]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall5.png
+
+		TilePosition
+		{
+			X = 33
+			Y = 21
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[322]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall5.png
+
+		TilePosition
+		{
+			X = 34
+			Y = 21
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[323]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall5.png
+
+		TilePosition
+		{
+			X = 35
+			Y = 21
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[324]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 39
+			Y = 21
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[325]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
 			X = 40
 			Y = 21
 		}
@@ -3220,7 +4900,7 @@ level_node
 	}
 
 
-	tile_info[214]
+	tile_info[326]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -3235,7 +4915,7 @@ level_node
 	}
 
 
-	tile_info[215]
+	tile_info[327]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -3250,7 +4930,7 @@ level_node
 	}
 
 
-	tile_info[216]
+	tile_info[328]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -3265,7 +4945,7 @@ level_node
 	}
 
 
-	tile_info[217]
+	tile_info[329]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -3280,7 +4960,7 @@ level_node
 	}
 
 
-	tile_info[218]
+	tile_info[330]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -3295,7 +4975,7 @@ level_node
 	}
 
 
-	tile_info[219]
+	tile_info[331]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -3310,7 +4990,112 @@ level_node
 	}
 
 
-	tile_info[220]
+	tile_info[332]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 52
+			Y = 21
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[333]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 53
+			Y = 21
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[334]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 54
+			Y = 21
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[335]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 55
+			Y = 21
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[336]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 56
+			Y = 21
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[337]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 57
+			Y = 21
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[338]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 58
+			Y = 21
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[339]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -3325,7 +5110,7 @@ level_node
 	}
 
 
-	tile_info[221]
+	tile_info[340]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -3340,7 +5125,7 @@ level_node
 	}
 
 
-	tile_info[222]
+	tile_info[341]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -3355,7 +5140,7 @@ level_node
 	}
 
 
-	tile_info[223]
+	tile_info[342]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -3370,7 +5155,7 @@ level_node
 	}
 
 
-	tile_info[224]
+	tile_info[343]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -3385,7 +5170,7 @@ level_node
 	}
 
 
-	tile_info[225]
+	tile_info[344]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -3400,7 +5185,22 @@ level_node
 	}
 
 
-	tile_info[226]
+	tile_info[345]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_vertical.png
+
+		TilePosition
+		{
+			X = 8
+			Y = 22
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[346]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -3415,7 +5215,7 @@ level_node
 	}
 
 
-	tile_info[227]
+	tile_info[347]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall2.png
 
@@ -3430,7 +5230,7 @@ level_node
 	}
 
 
-	tile_info[228]
+	tile_info[348]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall2.png
 
@@ -3445,7 +5245,7 @@ level_node
 	}
 
 
-	tile_info[229]
+	tile_info[349]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall2.png
 
@@ -3460,7 +5260,7 @@ level_node
 	}
 
 
-	tile_info[230]
+	tile_info[350]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall2.png
 
@@ -3475,7 +5275,67 @@ level_node
 	}
 
 
-	tile_info[231]
+	tile_info[351]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_turn90.png
+
+		TilePosition
+		{
+			X = 21
+			Y = 22
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[352]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
+
+		TilePosition
+		{
+			X = 22
+			Y = 22
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[353]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
+
+		TilePosition
+		{
+			X = 23
+			Y = 22
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[354]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
+
+		TilePosition
+		{
+			X = 24
+			Y = 22
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[355]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -3490,7 +5350,7 @@ level_node
 	}
 
 
-	tile_info[232]
+	tile_info[356]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -3505,7 +5365,7 @@ level_node
 	}
 
 
-	tile_info[233]
+	tile_info[357]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -3520,7 +5380,7 @@ level_node
 	}
 
 
-	tile_info[234]
+	tile_info[358]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -3535,7 +5395,7 @@ level_node
 	}
 
 
-	tile_info[235]
+	tile_info[359]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -3550,7 +5410,7 @@ level_node
 	}
 
 
-	tile_info[236]
+	tile_info[360]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -3565,7 +5425,7 @@ level_node
 	}
 
 
-	tile_info[237]
+	tile_info[361]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -3580,7 +5440,7 @@ level_node
 	}
 
 
-	tile_info[238]
+	tile_info[362]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -3595,7 +5455,7 @@ level_node
 	}
 
 
-	tile_info[239]
+	tile_info[363]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -3610,7 +5470,7 @@ level_node
 	}
 
 
-	tile_info[240]
+	tile_info[364]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -3625,7 +5485,7 @@ level_node
 	}
 
 
-	tile_info[241]
+	tile_info[365]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -3640,9 +5500,9 @@ level_node
 	}
 
 
-	tile_info[242]
+	tile_info[366]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall4.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
@@ -3651,13 +5511,13 @@ level_node
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
-	tile_info[243]
+	tile_info[367]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall4.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
@@ -3666,13 +5526,13 @@ level_node
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
-	tile_info[244]
+	tile_info[368]
 	{
-		SpriteFile = content/sprites/world_objects/tile_wall4.png
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
 
 		TilePosition
 		{
@@ -3681,11 +5541,11 @@ level_node
 		}
 
 		Flip = 0
-		CollisionType = 10
+		CollisionType = 0
 	}
 
 
-	tile_info[245]
+	tile_info[369]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -3700,7 +5560,7 @@ level_node
 	}
 
 
-	tile_info[246]
+	tile_info[370]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -3715,7 +5575,7 @@ level_node
 	}
 
 
-	tile_info[247]
+	tile_info[371]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -3730,7 +5590,7 @@ level_node
 	}
 
 
-	tile_info[248]
+	tile_info[372]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -3745,7 +5605,7 @@ level_node
 	}
 
 
-	tile_info[249]
+	tile_info[373]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -3760,7 +5620,82 @@ level_node
 	}
 
 
-	tile_info[250]
+	tile_info[374]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
+
+		TilePosition
+		{
+			X = 44
+			Y = 22
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[375]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
+
+		TilePosition
+		{
+			X = 45
+			Y = 22
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[376]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
+
+		TilePosition
+		{
+			X = 46
+			Y = 22
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[377]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
+
+		TilePosition
+		{
+			X = 47
+			Y = 22
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[378]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_horizontal.png
+
+		TilePosition
+		{
+			X = 48
+			Y = 22
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[379]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -3775,7 +5710,7 @@ level_node
 	}
 
 
-	tile_info[251]
+	tile_info[380]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -3790,7 +5725,7 @@ level_node
 	}
 
 
-	tile_info[252]
+	tile_info[381]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -3805,7 +5740,187 @@ level_node
 	}
 
 
-	tile_info[253]
+	tile_info[382]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 52
+			Y = 22
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[383]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 53
+			Y = 22
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[384]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 54
+			Y = 22
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[385]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 55
+			Y = 22
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[386]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 56
+			Y = 22
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[387]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 57
+			Y = 22
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[388]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 58
+			Y = 22
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[389]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 59
+			Y = 22
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[390]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 60
+			Y = 22
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[391]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 61
+			Y = 22
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[392]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 62
+			Y = 22
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[393]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 63
+			Y = 22
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[394]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -3820,7 +5935,7 @@ level_node
 	}
 
 
-	tile_info[254]
+	tile_info[395]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -3835,7 +5950,7 @@ level_node
 	}
 
 
-	tile_info[255]
+	tile_info[396]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -3850,7 +5965,7 @@ level_node
 	}
 
 
-	tile_info[256]
+	tile_info[397]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -3865,7 +5980,7 @@ level_node
 	}
 
 
-	tile_info[257]
+	tile_info[398]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -3880,7 +5995,7 @@ level_node
 	}
 
 
-	tile_info[258]
+	tile_info[399]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -3895,7 +6010,22 @@ level_node
 	}
 
 
-	tile_info[259]
+	tile_info[400]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_vertical.png
+
+		TilePosition
+		{
+			X = 8
+			Y = 23
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[401]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -3910,7 +6040,7 @@ level_node
 	}
 
 
-	tile_info[260]
+	tile_info[402]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall2.png
 
@@ -3925,7 +6055,7 @@ level_node
 	}
 
 
-	tile_info[261]
+	tile_info[403]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall2.png
 
@@ -3940,7 +6070,7 @@ level_node
 	}
 
 
-	tile_info[262]
+	tile_info[404]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall2.png
 
@@ -3955,7 +6085,7 @@ level_node
 	}
 
 
-	tile_info[263]
+	tile_info[405]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall2.png
 
@@ -3970,7 +6100,22 @@ level_node
 	}
 
 
-	tile_info[264]
+	tile_info[406]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_vertical.png
+
+		TilePosition
+		{
+			X = 21
+			Y = 23
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[407]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -3985,7 +6130,7 @@ level_node
 	}
 
 
-	tile_info[265]
+	tile_info[408]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -4000,7 +6145,7 @@ level_node
 	}
 
 
-	tile_info[266]
+	tile_info[409]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -4015,7 +6160,7 @@ level_node
 	}
 
 
-	tile_info[267]
+	tile_info[410]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -4030,7 +6175,7 @@ level_node
 	}
 
 
-	tile_info[268]
+	tile_info[411]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -4045,7 +6190,7 @@ level_node
 	}
 
 
-	tile_info[269]
+	tile_info[412]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -4060,7 +6205,7 @@ level_node
 	}
 
 
-	tile_info[270]
+	tile_info[413]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -4075,7 +6220,7 @@ level_node
 	}
 
 
-	tile_info[271]
+	tile_info[414]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -4090,7 +6235,7 @@ level_node
 	}
 
 
-	tile_info[272]
+	tile_info[415]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -4105,7 +6250,7 @@ level_node
 	}
 
 
-	tile_info[273]
+	tile_info[416]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -4120,7 +6265,7 @@ level_node
 	}
 
 
-	tile_info[274]
+	tile_info[417]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -4135,7 +6280,37 @@ level_node
 	}
 
 
-	tile_info[275]
+	tile_info[418]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 39
+			Y = 23
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[419]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 40
+			Y = 23
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[420]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -4150,7 +6325,7 @@ level_node
 	}
 
 
-	tile_info[276]
+	tile_info[421]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -4165,7 +6340,7 @@ level_node
 	}
 
 
-	tile_info[277]
+	tile_info[422]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -4180,7 +6355,7 @@ level_node
 	}
 
 
-	tile_info[278]
+	tile_info[423]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -4195,7 +6370,7 @@ level_node
 	}
 
 
-	tile_info[279]
+	tile_info[424]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -4210,7 +6385,7 @@ level_node
 	}
 
 
-	tile_info[280]
+	tile_info[425]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -4225,7 +6400,112 @@ level_node
 	}
 
 
-	tile_info[281]
+	tile_info[426]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 52
+			Y = 23
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[427]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 53
+			Y = 23
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[428]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 54
+			Y = 23
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[429]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 55
+			Y = 23
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[430]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 56
+			Y = 23
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[431]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 57
+			Y = 23
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[432]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 58
+			Y = 23
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[433]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -4240,7 +6520,7 @@ level_node
 	}
 
 
-	tile_info[282]
+	tile_info[434]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -4255,7 +6535,7 @@ level_node
 	}
 
 
-	tile_info[283]
+	tile_info[435]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -4270,7 +6550,7 @@ level_node
 	}
 
 
-	tile_info[284]
+	tile_info[436]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -4285,7 +6565,7 @@ level_node
 	}
 
 
-	tile_info[285]
+	tile_info[437]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -4300,7 +6580,7 @@ level_node
 	}
 
 
-	tile_info[286]
+	tile_info[438]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -4315,7 +6595,157 @@ level_node
 	}
 
 
-	tile_info[287]
+	tile_info[439]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall1.png
+
+		TilePosition
+		{
+			X = 6
+			Y = 24
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[440]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall1.png
+
+		TilePosition
+		{
+			X = 7
+			Y = 24
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[441]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall1.png
+
+		TilePosition
+		{
+			X = 8
+			Y = 24
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[442]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall1.png
+
+		TilePosition
+		{
+			X = 9
+			Y = 24
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[443]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall1.png
+
+		TilePosition
+		{
+			X = 10
+			Y = 24
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[444]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall1.png
+
+		TilePosition
+		{
+			X = 11
+			Y = 24
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[445]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall1.png
+
+		TilePosition
+		{
+			X = 12
+			Y = 24
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[446]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall1.png
+
+		TilePosition
+		{
+			X = 13
+			Y = 24
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[447]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall1.png
+
+		TilePosition
+		{
+			X = 14
+			Y = 24
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[448]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall1.png
+
+		TilePosition
+		{
+			X = 15
+			Y = 24
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[449]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall2.png
 
@@ -4330,7 +6760,7 @@ level_node
 	}
 
 
-	tile_info[288]
+	tile_info[450]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall2.png
 
@@ -4345,7 +6775,7 @@ level_node
 	}
 
 
-	tile_info[289]
+	tile_info[451]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall2.png
 
@@ -4360,7 +6790,7 @@ level_node
 	}
 
 
-	tile_info[290]
+	tile_info[452]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall2.png
 
@@ -4375,7 +6805,7 @@ level_node
 	}
 
 
-	tile_info[291]
+	tile_info[453]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall2.png
 
@@ -4390,7 +6820,22 @@ level_node
 	}
 
 
-	tile_info[292]
+	tile_info[454]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_vertical.png
+
+		TilePosition
+		{
+			X = 21
+			Y = 24
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[455]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -4405,7 +6850,7 @@ level_node
 	}
 
 
-	tile_info[293]
+	tile_info[456]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -4420,7 +6865,7 @@ level_node
 	}
 
 
-	tile_info[294]
+	tile_info[457]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -4435,7 +6880,7 @@ level_node
 	}
 
 
-	tile_info[295]
+	tile_info[458]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -4450,7 +6895,7 @@ level_node
 	}
 
 
-	tile_info[296]
+	tile_info[459]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -4465,7 +6910,7 @@ level_node
 	}
 
 
-	tile_info[297]
+	tile_info[460]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -4480,7 +6925,7 @@ level_node
 	}
 
 
-	tile_info[298]
+	tile_info[461]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -4495,7 +6940,7 @@ level_node
 	}
 
 
-	tile_info[299]
+	tile_info[462]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -4510,7 +6955,7 @@ level_node
 	}
 
 
-	tile_info[300]
+	tile_info[463]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -4525,7 +6970,7 @@ level_node
 	}
 
 
-	tile_info[301]
+	tile_info[464]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -4540,7 +6985,7 @@ level_node
 	}
 
 
-	tile_info[302]
+	tile_info[465]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -4555,7 +7000,37 @@ level_node
 	}
 
 
-	tile_info[303]
+	tile_info[466]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 39
+			Y = 24
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[467]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 40
+			Y = 24
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[468]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -4570,7 +7045,7 @@ level_node
 	}
 
 
-	tile_info[304]
+	tile_info[469]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -4585,7 +7060,7 @@ level_node
 	}
 
 
-	tile_info[305]
+	tile_info[470]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -4600,7 +7075,7 @@ level_node
 	}
 
 
-	tile_info[306]
+	tile_info[471]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -4615,7 +7090,7 @@ level_node
 	}
 
 
-	tile_info[307]
+	tile_info[472]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -4630,7 +7105,7 @@ level_node
 	}
 
 
-	tile_info[308]
+	tile_info[473]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -4645,7 +7120,112 @@ level_node
 	}
 
 
-	tile_info[309]
+	tile_info[474]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 52
+			Y = 24
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[475]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 53
+			Y = 24
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[476]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 54
+			Y = 24
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[477]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 55
+			Y = 24
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[478]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 56
+			Y = 24
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[479]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 57
+			Y = 24
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[480]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 58
+			Y = 24
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[481]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -4660,7 +7240,7 @@ level_node
 	}
 
 
-	tile_info[310]
+	tile_info[482]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -4675,7 +7255,7 @@ level_node
 	}
 
 
-	tile_info[311]
+	tile_info[483]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -4690,7 +7270,7 @@ level_node
 	}
 
 
-	tile_info[312]
+	tile_info[484]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -4705,7 +7285,7 @@ level_node
 	}
 
 
-	tile_info[313]
+	tile_info[485]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -4720,7 +7300,7 @@ level_node
 	}
 
 
-	tile_info[314]
+	tile_info[486]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -4735,7 +7315,7 @@ level_node
 	}
 
 
-	tile_info[315]
+	tile_info[487]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -4750,7 +7330,7 @@ level_node
 	}
 
 
-	tile_info[316]
+	tile_info[488]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -4765,7 +7345,7 @@ level_node
 	}
 
 
-	tile_info[317]
+	tile_info[489]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -4780,7 +7360,7 @@ level_node
 	}
 
 
-	tile_info[318]
+	tile_info[490]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -4795,7 +7375,7 @@ level_node
 	}
 
 
-	tile_info[319]
+	tile_info[491]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -4810,7 +7390,7 @@ level_node
 	}
 
 
-	tile_info[320]
+	tile_info[492]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -4825,7 +7405,7 @@ level_node
 	}
 
 
-	tile_info[321]
+	tile_info[493]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -4840,7 +7420,7 @@ level_node
 	}
 
 
-	tile_info[322]
+	tile_info[494]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -4855,7 +7435,7 @@ level_node
 	}
 
 
-	tile_info[323]
+	tile_info[495]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -4870,7 +7450,7 @@ level_node
 	}
 
 
-	tile_info[324]
+	tile_info[496]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -4885,7 +7465,7 @@ level_node
 	}
 
 
-	tile_info[325]
+	tile_info[497]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall2.png
 
@@ -4900,7 +7480,7 @@ level_node
 	}
 
 
-	tile_info[326]
+	tile_info[498]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall2.png
 
@@ -4915,7 +7495,7 @@ level_node
 	}
 
 
-	tile_info[327]
+	tile_info[499]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall2.png
 
@@ -4930,7 +7510,7 @@ level_node
 	}
 
 
-	tile_info[328]
+	tile_info[500]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall2.png
 
@@ -4945,7 +7525,7 @@ level_node
 	}
 
 
-	tile_info[329]
+	tile_info[501]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall2.png
 
@@ -4960,7 +7540,22 @@ level_node
 	}
 
 
-	tile_info[330]
+	tile_info[502]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_vertical.png
+
+		TilePosition
+		{
+			X = 21
+			Y = 25
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[503]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -4975,7 +7570,7 @@ level_node
 	}
 
 
-	tile_info[331]
+	tile_info[504]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -4990,7 +7585,7 @@ level_node
 	}
 
 
-	tile_info[332]
+	tile_info[505]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -5005,7 +7600,7 @@ level_node
 	}
 
 
-	tile_info[333]
+	tile_info[506]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -5020,7 +7615,7 @@ level_node
 	}
 
 
-	tile_info[334]
+	tile_info[507]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -5035,7 +7630,7 @@ level_node
 	}
 
 
-	tile_info[335]
+	tile_info[508]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -5050,7 +7645,7 @@ level_node
 	}
 
 
-	tile_info[336]
+	tile_info[509]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -5065,7 +7660,7 @@ level_node
 	}
 
 
-	tile_info[337]
+	tile_info[510]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -5080,7 +7675,7 @@ level_node
 	}
 
 
-	tile_info[338]
+	tile_info[511]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -5095,7 +7690,7 @@ level_node
 	}
 
 
-	tile_info[339]
+	tile_info[512]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -5110,7 +7705,7 @@ level_node
 	}
 
 
-	tile_info[340]
+	tile_info[513]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -5125,7 +7720,37 @@ level_node
 	}
 
 
-	tile_info[341]
+	tile_info[514]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 39
+			Y = 25
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[515]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 40
+			Y = 25
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[516]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -5140,7 +7765,7 @@ level_node
 	}
 
 
-	tile_info[342]
+	tile_info[517]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -5155,7 +7780,7 @@ level_node
 	}
 
 
-	tile_info[343]
+	tile_info[518]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -5170,7 +7795,7 @@ level_node
 	}
 
 
-	tile_info[344]
+	tile_info[519]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -5185,7 +7810,7 @@ level_node
 	}
 
 
-	tile_info[345]
+	tile_info[520]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -5200,7 +7825,7 @@ level_node
 	}
 
 
-	tile_info[346]
+	tile_info[521]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -5215,7 +7840,112 @@ level_node
 	}
 
 
-	tile_info[347]
+	tile_info[522]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 52
+			Y = 25
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[523]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 53
+			Y = 25
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[524]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 54
+			Y = 25
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[525]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 55
+			Y = 25
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[526]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 56
+			Y = 25
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[527]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 57
+			Y = 25
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[528]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 58
+			Y = 25
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[529]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -5230,7 +7960,7 @@ level_node
 	}
 
 
-	tile_info[348]
+	tile_info[530]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -5245,7 +7975,7 @@ level_node
 	}
 
 
-	tile_info[349]
+	tile_info[531]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -5260,7 +7990,7 @@ level_node
 	}
 
 
-	tile_info[350]
+	tile_info[532]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -5275,7 +8005,7 @@ level_node
 	}
 
 
-	tile_info[351]
+	tile_info[533]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -5290,7 +8020,7 @@ level_node
 	}
 
 
-	tile_info[352]
+	tile_info[534]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -5305,7 +8035,7 @@ level_node
 	}
 
 
-	tile_info[353]
+	tile_info[535]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall2.png
 
@@ -5320,7 +8050,7 @@ level_node
 	}
 
 
-	tile_info[354]
+	tile_info[536]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall2.png
 
@@ -5335,7 +8065,7 @@ level_node
 	}
 
 
-	tile_info[355]
+	tile_info[537]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall2.png
 
@@ -5350,7 +8080,7 @@ level_node
 	}
 
 
-	tile_info[356]
+	tile_info[538]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall2.png
 
@@ -5365,7 +8095,7 @@ level_node
 	}
 
 
-	tile_info[357]
+	tile_info[539]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall2.png
 
@@ -5380,7 +8110,22 @@ level_node
 	}
 
 
-	tile_info[358]
+	tile_info[540]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_vertical.png
+
+		TilePosition
+		{
+			X = 21
+			Y = 26
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[541]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -5395,7 +8140,7 @@ level_node
 	}
 
 
-	tile_info[359]
+	tile_info[542]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -5410,7 +8155,7 @@ level_node
 	}
 
 
-	tile_info[360]
+	tile_info[543]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -5425,7 +8170,7 @@ level_node
 	}
 
 
-	tile_info[361]
+	tile_info[544]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -5440,7 +8185,7 @@ level_node
 	}
 
 
-	tile_info[362]
+	tile_info[545]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -5455,7 +8200,7 @@ level_node
 	}
 
 
-	tile_info[363]
+	tile_info[546]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -5470,7 +8215,7 @@ level_node
 	}
 
 
-	tile_info[364]
+	tile_info[547]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -5485,7 +8230,7 @@ level_node
 	}
 
 
-	tile_info[365]
+	tile_info[548]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -5500,7 +8245,7 @@ level_node
 	}
 
 
-	tile_info[366]
+	tile_info[549]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -5515,7 +8260,7 @@ level_node
 	}
 
 
-	tile_info[367]
+	tile_info[550]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -5530,7 +8275,7 @@ level_node
 	}
 
 
-	tile_info[368]
+	tile_info[551]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -5545,7 +8290,37 @@ level_node
 	}
 
 
-	tile_info[369]
+	tile_info[552]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 39
+			Y = 26
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[553]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 40
+			Y = 26
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[554]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -5560,7 +8335,7 @@ level_node
 	}
 
 
-	tile_info[370]
+	tile_info[555]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -5575,7 +8350,7 @@ level_node
 	}
 
 
-	tile_info[371]
+	tile_info[556]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -5590,7 +8365,7 @@ level_node
 	}
 
 
-	tile_info[372]
+	tile_info[557]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -5605,7 +8380,7 @@ level_node
 	}
 
 
-	tile_info[373]
+	tile_info[558]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -5620,7 +8395,7 @@ level_node
 	}
 
 
-	tile_info[374]
+	tile_info[559]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -5635,7 +8410,112 @@ level_node
 	}
 
 
-	tile_info[375]
+	tile_info[560]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 52
+			Y = 26
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[561]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 53
+			Y = 26
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[562]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 54
+			Y = 26
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[563]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 55
+			Y = 26
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[564]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 56
+			Y = 26
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[565]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 57
+			Y = 26
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[566]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 58
+			Y = 26
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[567]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -5650,7 +8530,7 @@ level_node
 	}
 
 
-	tile_info[376]
+	tile_info[568]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -5665,7 +8545,7 @@ level_node
 	}
 
 
-	tile_info[377]
+	tile_info[569]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -5680,7 +8560,7 @@ level_node
 	}
 
 
-	tile_info[378]
+	tile_info[570]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -5695,7 +8575,7 @@ level_node
 	}
 
 
-	tile_info[379]
+	tile_info[571]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -5710,7 +8590,7 @@ level_node
 	}
 
 
-	tile_info[380]
+	tile_info[572]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -5725,7 +8605,97 @@ level_node
 	}
 
 
-	tile_info[381]
+	tile_info[573]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall2.png
+
+		TilePosition
+		{
+			X = 16
+			Y = 27
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[574]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall2.png
+
+		TilePosition
+		{
+			X = 17
+			Y = 27
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[575]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall2.png
+
+		TilePosition
+		{
+			X = 18
+			Y = 27
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[576]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall2.png
+
+		TilePosition
+		{
+			X = 19
+			Y = 27
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[577]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall2.png
+
+		TilePosition
+		{
+			X = 20
+			Y = 27
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[578]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_vertical.png
+
+		TilePosition
+		{
+			X = 21
+			Y = 27
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[579]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -5740,7 +8710,7 @@ level_node
 	}
 
 
-	tile_info[382]
+	tile_info[580]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -5755,7 +8725,7 @@ level_node
 	}
 
 
-	tile_info[383]
+	tile_info[581]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -5770,7 +8740,7 @@ level_node
 	}
 
 
-	tile_info[384]
+	tile_info[582]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -5785,7 +8755,7 @@ level_node
 	}
 
 
-	tile_info[385]
+	tile_info[583]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -5800,7 +8770,7 @@ level_node
 	}
 
 
-	tile_info[386]
+	tile_info[584]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -5815,7 +8785,7 @@ level_node
 	}
 
 
-	tile_info[387]
+	tile_info[585]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -5830,7 +8800,7 @@ level_node
 	}
 
 
-	tile_info[388]
+	tile_info[586]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -5845,7 +8815,7 @@ level_node
 	}
 
 
-	tile_info[389]
+	tile_info[587]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -5860,7 +8830,7 @@ level_node
 	}
 
 
-	tile_info[390]
+	tile_info[588]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -5875,7 +8845,7 @@ level_node
 	}
 
 
-	tile_info[391]
+	tile_info[589]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -5890,7 +8860,37 @@ level_node
 	}
 
 
-	tile_info[392]
+	tile_info[590]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 39
+			Y = 27
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[591]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 40
+			Y = 27
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[592]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -5905,7 +8905,7 @@ level_node
 	}
 
 
-	tile_info[393]
+	tile_info[593]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -5920,7 +8920,7 @@ level_node
 	}
 
 
-	tile_info[394]
+	tile_info[594]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -5935,7 +8935,7 @@ level_node
 	}
 
 
-	tile_info[395]
+	tile_info[595]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -5950,7 +8950,7 @@ level_node
 	}
 
 
-	tile_info[396]
+	tile_info[596]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -5965,7 +8965,7 @@ level_node
 	}
 
 
-	tile_info[397]
+	tile_info[597]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -5980,7 +8980,112 @@ level_node
 	}
 
 
-	tile_info[398]
+	tile_info[598]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 52
+			Y = 27
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[599]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 53
+			Y = 27
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[600]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 54
+			Y = 27
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[601]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 55
+			Y = 27
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[602]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 56
+			Y = 27
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[603]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 57
+			Y = 27
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[604]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 58
+			Y = 27
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[605]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -5995,7 +9100,7 @@ level_node
 	}
 
 
-	tile_info[399]
+	tile_info[606]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -6010,7 +9115,7 @@ level_node
 	}
 
 
-	tile_info[400]
+	tile_info[607]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -6025,7 +9130,7 @@ level_node
 	}
 
 
-	tile_info[401]
+	tile_info[608]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -6040,7 +9145,7 @@ level_node
 	}
 
 
-	tile_info[402]
+	tile_info[609]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -6055,7 +9160,7 @@ level_node
 	}
 
 
-	tile_info[403]
+	tile_info[610]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -6070,7 +9175,97 @@ level_node
 	}
 
 
-	tile_info[404]
+	tile_info[611]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall2.png
+
+		TilePosition
+		{
+			X = 16
+			Y = 28
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[612]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall2.png
+
+		TilePosition
+		{
+			X = 17
+			Y = 28
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[613]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall2.png
+
+		TilePosition
+		{
+			X = 18
+			Y = 28
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[614]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall2.png
+
+		TilePosition
+		{
+			X = 19
+			Y = 28
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[615]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall2.png
+
+		TilePosition
+		{
+			X = 20
+			Y = 28
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[616]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_vertical.png
+
+		TilePosition
+		{
+			X = 21
+			Y = 28
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[617]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -6085,7 +9280,7 @@ level_node
 	}
 
 
-	tile_info[405]
+	tile_info[618]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -6100,7 +9295,7 @@ level_node
 	}
 
 
-	tile_info[406]
+	tile_info[619]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -6115,7 +9310,7 @@ level_node
 	}
 
 
-	tile_info[407]
+	tile_info[620]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -6130,7 +9325,7 @@ level_node
 	}
 
 
-	tile_info[408]
+	tile_info[621]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -6145,7 +9340,7 @@ level_node
 	}
 
 
-	tile_info[409]
+	tile_info[622]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -6160,7 +9355,7 @@ level_node
 	}
 
 
-	tile_info[410]
+	tile_info[623]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -6175,7 +9370,7 @@ level_node
 	}
 
 
-	tile_info[411]
+	tile_info[624]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -6190,7 +9385,7 @@ level_node
 	}
 
 
-	tile_info[412]
+	tile_info[625]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -6205,7 +9400,7 @@ level_node
 	}
 
 
-	tile_info[413]
+	tile_info[626]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -6220,7 +9415,7 @@ level_node
 	}
 
 
-	tile_info[414]
+	tile_info[627]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -6235,7 +9430,37 @@ level_node
 	}
 
 
-	tile_info[415]
+	tile_info[628]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 39
+			Y = 28
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[629]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 40
+			Y = 28
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[630]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -6250,7 +9475,7 @@ level_node
 	}
 
 
-	tile_info[416]
+	tile_info[631]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -6265,7 +9490,7 @@ level_node
 	}
 
 
-	tile_info[417]
+	tile_info[632]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -6280,7 +9505,7 @@ level_node
 	}
 
 
-	tile_info[418]
+	tile_info[633]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -6295,7 +9520,7 @@ level_node
 	}
 
 
-	tile_info[419]
+	tile_info[634]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -6310,7 +9535,7 @@ level_node
 	}
 
 
-	tile_info[420]
+	tile_info[635]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -6325,7 +9550,112 @@ level_node
 	}
 
 
-	tile_info[421]
+	tile_info[636]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 52
+			Y = 28
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[637]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 53
+			Y = 28
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[638]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 54
+			Y = 28
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[639]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 55
+			Y = 28
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[640]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 56
+			Y = 28
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[641]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 57
+			Y = 28
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[642]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 58
+			Y = 28
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[643]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -6340,7 +9670,7 @@ level_node
 	}
 
 
-	tile_info[422]
+	tile_info[644]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -6355,7 +9685,7 @@ level_node
 	}
 
 
-	tile_info[423]
+	tile_info[645]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -6370,7 +9700,7 @@ level_node
 	}
 
 
-	tile_info[424]
+	tile_info[646]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -6385,7 +9715,7 @@ level_node
 	}
 
 
-	tile_info[425]
+	tile_info[647]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -6400,7 +9730,7 @@ level_node
 	}
 
 
-	tile_info[426]
+	tile_info[648]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -6415,7 +9745,97 @@ level_node
 	}
 
 
-	tile_info[427]
+	tile_info[649]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall2.png
+
+		TilePosition
+		{
+			X = 16
+			Y = 29
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[650]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall2.png
+
+		TilePosition
+		{
+			X = 17
+			Y = 29
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[651]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall2.png
+
+		TilePosition
+		{
+			X = 18
+			Y = 29
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[652]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall2.png
+
+		TilePosition
+		{
+			X = 19
+			Y = 29
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[653]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall2.png
+
+		TilePosition
+		{
+			X = 20
+			Y = 29
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[654]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_vertical.png
+
+		TilePosition
+		{
+			X = 21
+			Y = 29
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[655]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -6430,7 +9850,7 @@ level_node
 	}
 
 
-	tile_info[428]
+	tile_info[656]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -6445,7 +9865,7 @@ level_node
 	}
 
 
-	tile_info[429]
+	tile_info[657]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -6460,7 +9880,7 @@ level_node
 	}
 
 
-	tile_info[430]
+	tile_info[658]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -6475,7 +9895,7 @@ level_node
 	}
 
 
-	tile_info[431]
+	tile_info[659]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -6490,7 +9910,7 @@ level_node
 	}
 
 
-	tile_info[432]
+	tile_info[660]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -6505,7 +9925,7 @@ level_node
 	}
 
 
-	tile_info[433]
+	tile_info[661]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -6520,7 +9940,7 @@ level_node
 	}
 
 
-	tile_info[434]
+	tile_info[662]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -6535,7 +9955,7 @@ level_node
 	}
 
 
-	tile_info[435]
+	tile_info[663]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -6550,7 +9970,7 @@ level_node
 	}
 
 
-	tile_info[436]
+	tile_info[664]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -6565,7 +9985,7 @@ level_node
 	}
 
 
-	tile_info[437]
+	tile_info[665]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -6580,7 +10000,37 @@ level_node
 	}
 
 
-	tile_info[438]
+	tile_info[666]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 39
+			Y = 29
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[667]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 40
+			Y = 29
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[668]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -6595,7 +10045,7 @@ level_node
 	}
 
 
-	tile_info[439]
+	tile_info[669]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -6610,7 +10060,7 @@ level_node
 	}
 
 
-	tile_info[440]
+	tile_info[670]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -6625,7 +10075,7 @@ level_node
 	}
 
 
-	tile_info[441]
+	tile_info[671]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -6640,7 +10090,7 @@ level_node
 	}
 
 
-	tile_info[442]
+	tile_info[672]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -6655,7 +10105,7 @@ level_node
 	}
 
 
-	tile_info[443]
+	tile_info[673]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -6670,7 +10120,112 @@ level_node
 	}
 
 
-	tile_info[444]
+	tile_info[674]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 52
+			Y = 29
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[675]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 53
+			Y = 29
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[676]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 54
+			Y = 29
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[677]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 55
+			Y = 29
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[678]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 56
+			Y = 29
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[679]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 57
+			Y = 29
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[680]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 58
+			Y = 29
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[681]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -6685,7 +10240,7 @@ level_node
 	}
 
 
-	tile_info[445]
+	tile_info[682]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -6700,7 +10255,7 @@ level_node
 	}
 
 
-	tile_info[446]
+	tile_info[683]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -6715,7 +10270,7 @@ level_node
 	}
 
 
-	tile_info[447]
+	tile_info[684]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -6730,7 +10285,7 @@ level_node
 	}
 
 
-	tile_info[448]
+	tile_info[685]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -6745,7 +10300,7 @@ level_node
 	}
 
 
-	tile_info[449]
+	tile_info[686]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -6760,7 +10315,97 @@ level_node
 	}
 
 
-	tile_info[450]
+	tile_info[687]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall2.png
+
+		TilePosition
+		{
+			X = 16
+			Y = 30
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[688]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall2.png
+
+		TilePosition
+		{
+			X = 17
+			Y = 30
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[689]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall2.png
+
+		TilePosition
+		{
+			X = 18
+			Y = 30
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[690]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall2.png
+
+		TilePosition
+		{
+			X = 19
+			Y = 30
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[691]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall2.png
+
+		TilePosition
+		{
+			X = 20
+			Y = 30
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[692]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_vertical.png
+
+		TilePosition
+		{
+			X = 21
+			Y = 30
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[693]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -6775,7 +10420,7 @@ level_node
 	}
 
 
-	tile_info[451]
+	tile_info[694]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -6790,7 +10435,7 @@ level_node
 	}
 
 
-	tile_info[452]
+	tile_info[695]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -6805,7 +10450,7 @@ level_node
 	}
 
 
-	tile_info[453]
+	tile_info[696]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -6820,7 +10465,7 @@ level_node
 	}
 
 
-	tile_info[454]
+	tile_info[697]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -6835,7 +10480,7 @@ level_node
 	}
 
 
-	tile_info[455]
+	tile_info[698]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -6850,7 +10495,7 @@ level_node
 	}
 
 
-	tile_info[456]
+	tile_info[699]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -6865,7 +10510,7 @@ level_node
 	}
 
 
-	tile_info[457]
+	tile_info[700]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -6880,7 +10525,7 @@ level_node
 	}
 
 
-	tile_info[458]
+	tile_info[701]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -6895,7 +10540,7 @@ level_node
 	}
 
 
-	tile_info[459]
+	tile_info[702]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -6910,7 +10555,7 @@ level_node
 	}
 
 
-	tile_info[460]
+	tile_info[703]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -6925,7 +10570,37 @@ level_node
 	}
 
 
-	tile_info[461]
+	tile_info[704]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 39
+			Y = 30
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[705]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 40
+			Y = 30
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[706]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -6940,7 +10615,7 @@ level_node
 	}
 
 
-	tile_info[462]
+	tile_info[707]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -6955,7 +10630,7 @@ level_node
 	}
 
 
-	tile_info[463]
+	tile_info[708]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -6970,7 +10645,7 @@ level_node
 	}
 
 
-	tile_info[464]
+	tile_info[709]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -6985,7 +10660,7 @@ level_node
 	}
 
 
-	tile_info[465]
+	tile_info[710]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -7000,7 +10675,7 @@ level_node
 	}
 
 
-	tile_info[466]
+	tile_info[711]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -7015,7 +10690,112 @@ level_node
 	}
 
 
-	tile_info[467]
+	tile_info[712]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 52
+			Y = 30
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[713]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 53
+			Y = 30
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[714]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 54
+			Y = 30
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[715]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 55
+			Y = 30
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[716]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 56
+			Y = 30
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[717]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 57
+			Y = 30
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[718]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 58
+			Y = 30
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[719]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -7030,7 +10810,7 @@ level_node
 	}
 
 
-	tile_info[468]
+	tile_info[720]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -7045,7 +10825,7 @@ level_node
 	}
 
 
-	tile_info[469]
+	tile_info[721]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -7060,7 +10840,7 @@ level_node
 	}
 
 
-	tile_info[470]
+	tile_info[722]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -7075,7 +10855,7 @@ level_node
 	}
 
 
-	tile_info[471]
+	tile_info[723]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -7090,7 +10870,7 @@ level_node
 	}
 
 
-	tile_info[472]
+	tile_info[724]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall1.png
 
@@ -7105,7 +10885,97 @@ level_node
 	}
 
 
-	tile_info[473]
+	tile_info[725]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall2.png
+
+		TilePosition
+		{
+			X = 16
+			Y = 31
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[726]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall2.png
+
+		TilePosition
+		{
+			X = 17
+			Y = 31
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[727]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall2.png
+
+		TilePosition
+		{
+			X = 18
+			Y = 31
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[728]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall2.png
+
+		TilePosition
+		{
+			X = 19
+			Y = 31
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[729]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall2.png
+
+		TilePosition
+		{
+			X = 20
+			Y = 31
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[730]
+	{
+		SpriteFile = content/sprites/world_objects/industrial_pipe_vertical.png
+
+		TilePosition
+		{
+			X = 21
+			Y = 31
+		}
+
+		Flip = 0
+		CollisionType = 0
+	}
+
+
+	tile_info[731]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -7120,7 +10990,7 @@ level_node
 	}
 
 
-	tile_info[474]
+	tile_info[732]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -7135,7 +11005,7 @@ level_node
 	}
 
 
-	tile_info[475]
+	tile_info[733]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -7150,7 +11020,7 @@ level_node
 	}
 
 
-	tile_info[476]
+	tile_info[734]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -7165,7 +11035,7 @@ level_node
 	}
 
 
-	tile_info[477]
+	tile_info[735]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -7180,7 +11050,7 @@ level_node
 	}
 
 
-	tile_info[478]
+	tile_info[736]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -7195,7 +11065,7 @@ level_node
 	}
 
 
-	tile_info[479]
+	tile_info[737]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -7210,7 +11080,7 @@ level_node
 	}
 
 
-	tile_info[480]
+	tile_info[738]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -7225,7 +11095,7 @@ level_node
 	}
 
 
-	tile_info[481]
+	tile_info[739]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -7240,7 +11110,7 @@ level_node
 	}
 
 
-	tile_info[482]
+	tile_info[740]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -7255,7 +11125,7 @@ level_node
 	}
 
 
-	tile_info[483]
+	tile_info[741]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall5.png
 
@@ -7270,7 +11140,37 @@ level_node
 	}
 
 
-	tile_info[484]
+	tile_info[742]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 39
+			Y = 31
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[743]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall4.png
+
+		TilePosition
+		{
+			X = 40
+			Y = 31
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[744]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -7285,7 +11185,7 @@ level_node
 	}
 
 
-	tile_info[485]
+	tile_info[745]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -7300,7 +11200,7 @@ level_node
 	}
 
 
-	tile_info[486]
+	tile_info[746]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall4.png
 
@@ -7315,7 +11215,7 @@ level_node
 	}
 
 
-	tile_info[487]
+	tile_info[747]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -7330,7 +11230,7 @@ level_node
 	}
 
 
-	tile_info[488]
+	tile_info[748]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
@@ -7345,13 +11245,118 @@ level_node
 	}
 
 
-	tile_info[489]
+	tile_info[749]
 	{
 		SpriteFile = content/sprites/world_objects/tile_wall6.png
 
 		TilePosition
 		{
 			X = 51
+			Y = 31
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[750]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 52
+			Y = 31
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[751]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 53
+			Y = 31
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[752]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 54
+			Y = 31
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[753]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 55
+			Y = 31
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[754]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 56
+			Y = 31
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[755]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 57
+			Y = 31
+		}
+
+		Flip = 0
+		CollisionType = 10
+	}
+
+
+	tile_info[756]
+	{
+		SpriteFile = content/sprites/world_objects/tile_wall6.png
+
+		TilePosition
+		{
+			X = 58
 			Y = 31
 		}
 

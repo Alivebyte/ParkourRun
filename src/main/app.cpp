@@ -5,7 +5,7 @@
 
 bool App::OnUserCreate()
 {
-	m_bEditMode = true;
+	m_bEditMode = false;
 	// Initializing resource pack
 	g_RM.InitializeResourcePack();
 
@@ -48,7 +48,7 @@ bool App::OnUserCreate()
 
 		camera.SetTarget(*playerPos);
 		camera.SetMode(olc::utils::Camera2D::Mode::Simple);
-		camera.SetWorldBoundary({ 0,0 }, backgroundDecal->sprite->Size() / vTileSize);
+		camera.SetWorldBoundary({ 0,0 }, { (float)levelSize.x, levelSize.y - 1.0f });
 		camera.EnableWorldBoundary(true);
 	}
 	else // Editor mode, enable camera for zooming and panning
@@ -141,7 +141,7 @@ void App::Render(float fElapsedTime)
 				if (!animator.GetAnim("Idle")->bIsPlaying)
 					animator.Play("Idle");
 
-				animator.UpdateAnimations(fElapsedTime);
+				//animator.UpdateAnimations(fElapsedTime);
 
 				animator.DrawAnimationFrame(*m_pPlayer->GetPlayerPosition(), 0.0f, &tv);
 			}
@@ -315,6 +315,8 @@ void App::HandleCollision(float fElapsedTime)
 	olc::vf2d playerPos = *m_pPlayer->GetPlayerPosition();
 	olc::vf2d playerVel = *m_pPlayer->GetPlayerVelocity();
 	olc::vf2d playerSpawnPoint = *m_pPlayer->GetPlayerSpawnPosition();
+
+	std::cout << "Player pos: " << playerPos << std::endl;
 
 	// Clamp velocities
 
