@@ -318,8 +318,6 @@ void App::HandleCollision(float fElapsedTime)
 	olc::vf2d playerVel = *m_pPlayer->GetPlayerVelocity();
 	olc::vf2d playerSpawnPoint = *m_pPlayer->GetPlayerSpawnPosition();
 
-	std::cout << "Player pos: " << playerPos << std::endl;
-
 	// Clamp velocities
 
 	if (playerVel.x > 50.0f)
