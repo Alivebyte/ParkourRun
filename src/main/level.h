@@ -39,7 +39,5 @@ public:
 
 	LevelData* GetLevelData() { return &m_ld; };
 	Tile* GetTiles() { return tiles; };
-
-
 	
 };

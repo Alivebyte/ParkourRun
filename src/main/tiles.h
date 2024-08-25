@@ -44,6 +44,9 @@ public:
 	void SetCollisionType(TILE_COLLISION_TYPES type);
 	int GetCollisionType();
 
+	int GetSpriteFlip() { return m_flip; };
+	void SetSpriteFlip(olc::Sprite::Flip flip) { m_flip = flip; };
+
 	GameAnimator* GetAnimator() { return &m_Animator; };
 
 protected:

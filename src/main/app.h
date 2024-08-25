@@ -34,8 +34,10 @@ public:
 
 	void Render(float fElapsedTime);
 	void HandleCollision(float fElapasedTime);
-	void CameraMovement(float fElapsedTime);
+	void CameraMovement(float fElapsedTime, bool bEditMode = false);
 	void SetEditMode(bool bEMode);
+
+	void HandleEditMode(float fElapsedTime);
 
 private:
 	Player* m_pPlayer;

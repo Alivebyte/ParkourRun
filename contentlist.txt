@@ -3,6 +3,8 @@ content/sprites/player.png
 content/sprites/world_objects/industrial_pipe_horizontal.png
 content/sprites/world_objects/industrial_pipe_turn90.png
 content/sprites/world_objects/industrial_pipe_vertical.png
+content/sprites/world_objects/spawnpoint.png
+content/sprites/world_objects/test_wall.png
 content/sprites/world_objects/tile_wall1.png
 content/sprites/world_objects/tile_wall2.png
 content/sprites/world_objects/tile_wall3.png

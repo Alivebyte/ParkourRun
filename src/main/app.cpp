@@ -5,6 +5,7 @@
 
 bool App::OnUserCreate()
 {
+	m_bEditMode = true;
 	// Initializing resource pack
 	g_RM.InitializeResourcePack();
 
@@ -28,62 +29,33 @@ bool App::OnUserCreate()
 	}
 	tv = olc::TileTransformedView(GetScreenSize(), vTileSize);
 	
-	//playerSprite = new olc::Sprite("content/sprites/player.png", pack);
-	//playerDecal = new olc::Decal(playerSprite);
-	//backgroundSprite = new olc::Sprite("content/sprites/background_test.png",pack);
-	//backgroundDecal = new olc::Decal(backgroundSprite);
-	
-	//pipeHorizontalSprite = new olc::Sprite("content/sprites/world_objects/industrial_pipe_horizontal.png",pack);
-	//playerDecal = rm.RM_Sprite("content/sprites/player.png",pack);
-	//pipeVerticalSprite = new olc::Sprite("content/sprites/world_objects/industrial_pipe_vertical.png",pack)
-	
+	if (!m_bEditMode)
+	{
+		// Create player
+		m_pPlayer = new Player("content/sprites/player.png", &g_RM, lm.GetLevel()->GetLevelData()->playerSpawnPoint);
 
-	//animator.ScaleAnimation("Idle", { 2.0f, 2.0f });
-	//pipeTurnSprite = new olc::Sprite("content/sprites/world_objects/industrial_pipe_turn90.png",pack);
-	
-
-	//// Generate world
-	//tiles = new Tile[levelSize.y*levelSize.x];
-	//for (int y = 0; y < levelSize.y; y++)
-	//{
-	//	for (int x = 0; x < levelSize.x; x++)
-	//	{
-	//		if (x == 0 || y == 0 || y == 22 || (x == 23 && y >= 18))
-	//		{
-	//			//tiles->at(y*24+x) = Tile("content/sprites/world_objects/industrial_pipe_vertical.png", &rm, pack);
-	//			//tiles->at(y* 24 + x).SetType(10);
-	//			tiles[y * levelSize.x + x].SetSprite("content/sprites/world_objects/industrial_pipe_vertical.png", &g_RM);
-	//			tiles[y * levelSize.x + x].SetCollisionType(TILE_COLLIDE);
-	//		}
-	//		else
-	//		{
-	//			tiles[y*levelSize.x+x].SetCollisionType(TILE_NOCOLLIDE);
-	//		}
-	//	}
-	//}
+		// Initialize animations
+		m_pPlayer->InitializeAnimations();
+		m_pPlayer->SetTouchedWall(false);
 
 
-	// Create player
-	m_pPlayer = new Player("content/sprites/player.png", &g_RM, olc::vf2d(4.0f, 10.0f));
+		olc::vf2d* playerPos = m_pPlayer->GetPlayerPosition();
 
-	// Initialize animations
-	m_pPlayer->InitializeAnimations();
-	m_pPlayer->SetTouchedWall(false);
-	/*playerVel = { 0.0f, 0.0f };
-	playerSpawnPoint = { 4.0f, 10.0f };
-	playerPos = playerSpawnPoint;
-	playerSpeed = 3.0f;*/
-	olc::vf2d *playerPos = m_pPlayer->GetPlayerPosition();
-	
-	//playerPos.y = ScreenHeight() - 250.0f;
-	//printf("Background size: %d %d\n", .x / vTileSize, backgroundDecal->sprite->Size().y / vTileSize);
+		//playerPos.y = ScreenHeight() - 250.0f;
+		//printf("Background size: %d %d\n", .x / vTileSize, backgroundDecal->sprite->Size().y / vTileSize);
 
-	camera = olc::utils::Camera2D(GetScreenSize() / vTileSize, *playerPos);
+		camera = olc::utils::Camera2D(GetScreenSize() / vTileSize, *playerPos);
 
-	camera.SetTarget(*playerPos);
-	camera.SetMode(olc::utils::Camera2D::Mode::Simple);
-	camera.SetWorldBoundary({ 0,0 }, backgroundDecal->sprite->Size() / vTileSize);
-	camera.EnableWorldBoundary(true);
+		camera.SetTarget(*playerPos);
+		camera.SetMode(olc::utils::Camera2D::Mode::Simple);
+		camera.SetWorldBoundary({ 0,0 }, backgroundDecal->sprite->Size() / vTileSize);
+		camera.EnableWorldBoundary(true);
+	}
+	else // Editor mode, enable camera for zooming and panning
+	{
+		camera = olc::utils::Camera2D(GetScreenSize() / vTileSize);
+		camera.SetMode(olc::utils::Camera2D::Mode::Simple);
+	}
 
 
 	return true;
@@ -94,15 +66,21 @@ bool App::OnUserUpdate(float fElapsedTime)
 	// called once per frame
 	Clear(olc::CYAN);
 
-	// Handle user input
-	m_pPlayer->HandleUserInput(this, fElapsedTime);
+	if (!m_bEditMode)
+	{
+		// Handle user input
+		m_pPlayer->HandleUserInput(this, fElapsedTime);
 
-	// Handle collision
-	HandleCollision(fElapsedTime);
-	
+		// Handle collision
+		HandleCollision(fElapsedTime);
+	}
 	// Handle player camera movement
-	CameraMovement(fElapsedTime);
+	CameraMovement(fElapsedTime, m_bEditMode);
 
+	if (m_bEditMode)
+	{
+		HandleEditMode(fElapsedTime);
+	}
 	// Do Render
 	Render(fElapsedTime);
 
@@ -116,24 +94,6 @@ void App::Render(float fElapsedTime)
 	tv.DrawDecal({ 0,0 }, backgroundDecal);
 
 	// Render level
-	//for (int y = 0; y < levelSize.y; y++)
-	//{
-	//	for (int x = 0; x < levelSize.x; x++)
-	//	{
-	//		/*if (level)
-	//		{
-	//			
-	//		}*/
-	//		switch (tiles[y * levelSize.x + x].GetCollisionType())
-	//		{
-	//		case TILE_NOCOLLIDE:
-	//			break;
-	//		case TILE_COLLIDE:
-	//			tv.DrawDecal(olc::vi2d(x, y), tiles[y * levelSize.x + x].GetSprite());
-	//		}
-
-	//	}
-	//}
 	if (level)
 	{
 		auto ld = level->GetLevelData();
@@ -149,31 +109,120 @@ void App::Render(float fElapsedTime)
 					for (int x = 0; x < levelSize.x; x++)
 					{
 						auto tile = tiles[y * levelSize.x + x];
-						if(tile.GetSprite())
-							tv.DrawDecal(tile.GetPosition(),tile.GetSprite());
+						if (tile.GetSprite())
+							tv.DrawDecal(tile.GetPosition(), tile.GetSprite());
 					}
 				}
 			}
+
+
+			if (!m_bEditMode || !m_pPlayer)
+			{
+				auto& animator = *m_pPlayer->GetAnimator();
+
+				//Render player
+				if (!animator.GetAnim("Idle")->bIsPlaying)
+					animator.Play("Idle");
+
+				animator.UpdateAnimations(fElapsedTime);
+
+				animator.DrawAnimationFrame(*m_pPlayer->GetPlayerPosition(), 0.0f, &tv);
+			}
+			else
+			{
+				
+				tv.DrawDecal(ld->playerSpawnPoint, g_RM.RM_Sprite("content/sprites/world_objects/spawnpoint.png"));
+
+				DrawStringDecal({ 0,0 }, "EDTTOR MODE", olc::WHITE, { 2.0f, 2.0f });
+			}
 		}
-
-
-		auto& animator = *m_pPlayer->GetAnimator();
-
-		//Render player
-		if (!animator.GetAnim("Idle")->bIsPlaying)
-			animator.Play("Idle");
-
-		animator.UpdateAnimations(fElapsedTime);
-
-		animator.DrawAnimationFrame(*m_pPlayer->GetPlayerPosition(), 0.0f, &tv);
 	}
 }
 
-void App::CameraMovement(float fElapsedTime)
+void App::HandleEditMode(float fElapsedTime)
 {
-	camera.SetMode(olc::utils::Camera2D::Mode::LazyFollow);
-	bool bOnScreen = camera.Update(fElapsedTime);
-	tv.SetWorldOffset(camera.GetViewPosition());
+	Level *level = lm.GetLevel();
+
+	if (level)
+	{
+		Tile* tiles = level->GetTiles();
+		LevelData *ld = level->GetLevelData();
+
+		if (GetMouse(0).bPressed)
+		{
+			olc::vi2d screen_mouse_pos = GetMousePos();
+			olc::vi2d world_pos = tv.ScreenToWorld(screen_mouse_pos);
+
+			std::cout << "Screen pos:" << screen_mouse_pos << std::endl;
+			std::cout << "World pos:" << world_pos << std::endl;
+
+			world_pos.x = std::clamp(world_pos.x, 0, levelSize.x);
+			world_pos.y = std::clamp(world_pos.y, 0, levelSize.y);
+			//if ((world_pos.x > levelSize.x || world_pos.x < 0) || (world_pos.y > levelSize.y || world_pos.y < 0)) world_pos = world_pos;
+			if (tiles)
+			{
+				tiles[world_pos.y * levelSize.x + world_pos.x].SetSprite("content/sprites/world_objects/test_wall.png", &g_RM);
+			}
+		}
+
+		if (GetMouse(1).bPressed)
+		{
+			olc::vi2d screen_mouse_pos = GetMousePos();
+			olc::vi2d world_pos = tv.ScreenToWorld(screen_mouse_pos);
+
+			std::cout << "Screen pos:" << screen_mouse_pos << std::endl;
+			std::cout << "World pos:" << world_pos << std::endl;
+
+			world_pos.x = std::clamp(world_pos.x, 0, levelSize.x);
+			world_pos.y = std::clamp(world_pos.y, 0, levelSize.y);
+
+			if (tiles)
+			{
+				tiles[world_pos.y * levelSize.x + world_pos.x] = Tile();
+			}
+		}
+
+		// Save level
+		if (GetKey(olc::S).bPressed)
+		{
+			for (int y = 0; y < levelSize.y; y++)
+			{
+				for (int x = 0; x < levelSize.x; x++)
+				{
+					if (tiles)
+					{
+						auto tile = tiles[y * levelSize.x + x];
+						if (tile.GetSprite())
+						{
+							TileInfo tinfo;
+							tinfo.flip = (olc::Sprite::Flip)tile.GetSpriteFlip();
+							tinfo.m_iColType =(TILE_COLLISION_TYPES)tile.GetCollisionType();
+							tinfo.m_spriteName = tile.GetSpriteName();
+							tinfo.m_viPos = tile.GetPosition();
+
+							ld->m_TilesInfo.push_back(tinfo);
+						}
+					}
+				}
+			}
+
+			lm.SaveLevelFile("content/levels/level1.map");
+		}
+	}
+}
+
+void App::CameraMovement(float fElapsedTime, bool bEditMode)
+{
+	if (!bEditMode)
+	{
+		camera.SetMode(olc::utils::Camera2D::Mode::LazyFollow);
+		bool bOnScreen = camera.Update(fElapsedTime);
+		tv.SetWorldOffset(camera.GetViewPosition());
+	}
+	else
+	{
+		tv.HandlePanAndZoom();
+	}
 }
 
 void App::HandleCollision(float fElapsedTime)

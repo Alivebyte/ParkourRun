@@ -31,8 +31,9 @@ void Level::Create()
 					//tiles->at(y* 24 + x).SetType(10);
 					tiles[y * m_levelSize.x + x].SetSprite(tinfo.m_spriteName, &g_RM);
 					tiles[y * m_levelSize.x + x].SetCollisionType(tinfo.m_iColType);
-					tiles[y * m_levelSize.x + x].SetPosition(tinfo.m_viPos);
+					//tiles[y * m_levelSize.x + x].SetPosition(tinfo.m_viPos);
 				}
+				tiles[y * m_levelSize.x + x].SetPosition(olc::vi2d(x,y));
 			}
 		}
 
