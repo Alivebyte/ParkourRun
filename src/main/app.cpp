@@ -165,17 +165,19 @@ void App::HandleEditMode(float fElapsedTime)
 		Tile* tiles = level->GetTiles();
 		LevelData *ld = level->GetLevelData();
 
+		olc::vi2d screen_mouse_pos = GetMousePos();
+		olc::vi2d world_pos = tv.ScreenToWorld(screen_mouse_pos);
+
+		std::cout << "Screen pos:" << screen_mouse_pos << std::endl;
+		std::cout << "World pos:" << world_pos << std::endl;
+
+		world_pos.x = std::clamp(world_pos.x, 0, levelSize.x);
+		world_pos.y = std::clamp(world_pos.y, 0, levelSize.y);
+
 		// Add tile at cursor position
 		if (GetMouse(0).bHeld)
 		{
-			olc::vi2d screen_mouse_pos = GetMousePos();
-			olc::vi2d world_pos = tv.ScreenToWorld(screen_mouse_pos);
-
-			std::cout << "Screen pos:" << screen_mouse_pos << std::endl;
-			std::cout << "World pos:" << world_pos << std::endl;
-
-			world_pos.x = std::clamp(world_pos.x, 0, levelSize.x);
-			world_pos.y = std::clamp(world_pos.y, 0, levelSize.y);
+		
 			//if ((world_pos.x > levelSize.x || world_pos.x < 0) || (world_pos.y > levelSize.y || world_pos.y < 0)) world_pos = world_pos;
 			if (tiles)
 			{
@@ -186,14 +188,7 @@ void App::HandleEditMode(float fElapsedTime)
 		// Remove tile at cursor position
 		if (GetMouse(1).bHeld)
 		{
-			olc::vi2d screen_mouse_pos = GetMousePos();
-			olc::vi2d world_pos = tv.ScreenToWorld(screen_mouse_pos);
-
-			std::cout << "Screen pos:" << screen_mouse_pos << std::endl;
-			std::cout << "World pos:" << world_pos << std::endl;
-
-			world_pos.x = std::clamp(world_pos.x, 0, levelSize.x);
-			world_pos.y = std::clamp(world_pos.y, 0, levelSize.y);
+			
 
 			if (tiles)
 			{
@@ -233,16 +228,20 @@ void App::HandleEditMode(float fElapsedTime)
 		// Set player spawn position
 		if(GetKey(olc::P).bPressed)
 		{
-			olc::vi2d screen_mouse_pos = GetMousePos();
-			olc::vi2d world_pos = tv.ScreenToWorld(screen_mouse_pos);
-
-			std::cout << "Screen pos:" << screen_mouse_pos << std::endl;
-			std::cout << "World pos:" << world_pos << std::endl;
-
-			world_pos.x = std::clamp(world_pos.x, 0, levelSize.x);
-			world_pos.y = std::clamp(world_pos.y, 0, levelSize.y);
-
 			ld->playerSpawnPoint = world_pos;
+		}
+
+		// Toggle collision state
+		if (GetKey(olc::C).bPressed)
+		{
+			
+
+			if (tiles)
+			{
+				tiles[world_pos.y * levelSize.x + world_pos.x].SetCollisionType(
+					tiles[world_pos.y * levelSize.x + world_pos.x].GetCollisionType() == TILE_NOCOLLIDE ? TILE_COLLIDE : TILE_NOCOLLIDE
+				);
+			}
 		}
 
 	}
