@@ -110,7 +110,24 @@ void App::Render(float fElapsedTime)
 					{
 						auto tile = tiles[y * levelSize.x + x];
 						if (tile.GetSprite())
-							tv.DrawDecal(tile.GetPosition(), tile.GetSprite());
+						{
+							if (!m_bEditMode)
+							{
+								tv.DrawDecal(tile.GetPosition(), tile.GetSprite());
+							}
+							else
+							{
+								// Draw non-collided types as tinted magenta 
+								if (tile.GetCollisionType() == TILE_NOCOLLIDE)
+								{
+									tv.DrawDecal(tile.GetPosition(), tile.GetSprite(), {1.0f, 1.0f}, olc::MAGENTA);
+								}
+								else
+								{
+									tv.DrawDecal(tile.GetPosition(), tile.GetSprite());
+								}
+							}
+						}
 					}
 				}
 			}
@@ -148,7 +165,8 @@ void App::HandleEditMode(float fElapsedTime)
 		Tile* tiles = level->GetTiles();
 		LevelData *ld = level->GetLevelData();
 
-		if (GetMouse(0).bPressed)
+		// Add tile at cursor position
+		if (GetMouse(0).bHeld)
 		{
 			olc::vi2d screen_mouse_pos = GetMousePos();
 			olc::vi2d world_pos = tv.ScreenToWorld(screen_mouse_pos);
@@ -165,7 +183,8 @@ void App::HandleEditMode(float fElapsedTime)
 			}
 		}
 
-		if (GetMouse(1).bPressed)
+		// Remove tile at cursor position
+		if (GetMouse(1).bHeld)
 		{
 			olc::vi2d screen_mouse_pos = GetMousePos();
 			olc::vi2d world_pos = tv.ScreenToWorld(screen_mouse_pos);
@@ -178,13 +197,15 @@ void App::HandleEditMode(float fElapsedTime)
 
 			if (tiles)
 			{
-				tiles[world_pos.y * levelSize.x + world_pos.x] = Tile();
+				tiles[world_pos.y * levelSize.x + world_pos.x].Reset();
 			}
 		}
 
 		// Save level
 		if (GetKey(olc::S).bPressed)
 		{
+			ld->m_TilesInfo.clear();
+
 			for (int y = 0; y < levelSize.y; y++)
 			{
 				for (int x = 0; x < levelSize.x; x++)
@@ -208,6 +229,22 @@ void App::HandleEditMode(float fElapsedTime)
 
 			lm.SaveLevelFile("content/levels/level1.map");
 		}
+
+		// Set player spawn position
+		if(GetKey(olc::P).bPressed)
+		{
+			olc::vi2d screen_mouse_pos = GetMousePos();
+			olc::vi2d world_pos = tv.ScreenToWorld(screen_mouse_pos);
+
+			std::cout << "Screen pos:" << screen_mouse_pos << std::endl;
+			std::cout << "World pos:" << world_pos << std::endl;
+
+			world_pos.x = std::clamp(world_pos.x, 0, levelSize.x);
+			world_pos.y = std::clamp(world_pos.y, 0, levelSize.y);
+
+			ld->playerSpawnPoint = world_pos;
+		}
+
 	}
 }
 

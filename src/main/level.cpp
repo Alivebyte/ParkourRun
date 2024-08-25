@@ -14,6 +14,16 @@ Level::~Level()
 void Level::Create()
 {
 	tiles = new Tile[m_levelSize.x * m_levelSize.y];
+
+	for (int y = 0; y < m_levelSize.y; y++)
+	{
+		for (int x = 0; x < m_levelSize.x; x++)
+		{
+			tiles[y * m_levelSize.x + x].SetPosition(olc::vi2d(x, y));
+		}
+	}
+
+
 	int nNumTiles = m_ld.m_TilesInfo.size();
 	for (int i = 0; i < nNumTiles; i++)
 	{
@@ -33,14 +43,9 @@ void Level::Create()
 					tiles[y * m_levelSize.x + x].SetCollisionType(tinfo.m_iColType);
 					//tiles[y * m_levelSize.x + x].SetPosition(tinfo.m_viPos);
 				}
-				tiles[y * m_levelSize.x + x].SetPosition(olc::vi2d(x,y));
 			}
 		}
-
-		//tiles.push_back(tile);
 	}
-	
-
 	OnLevelCreate();
 }
 

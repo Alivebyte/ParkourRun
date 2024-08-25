@@ -1,7 +1,7 @@
 #include "olcPixelGameEngine.h"
 #include "tiles.h"
 
-Tile::Tile() : m_pTileSprite(nullptr), m_iColType(TILE_NOCOLLIDE), m_pRM(nullptr)
+Tile::Tile() : m_pTileSprite(nullptr), m_iColType(TILE_NOCOLLIDE), m_pRM(nullptr), m_flip(olc::Sprite::Flip::NONE)
 {
 	//std::cout << "Tile created\n";
 }
@@ -53,6 +53,15 @@ int Tile::GetCollisionType()
 void Tile::SetCollisionType(TILE_COLLISION_TYPES type)
 {
 	m_iColType = type;
+}
+
+void Tile::Reset()
+{
+	m_flip = olc::Sprite::Flip::NONE;
+	m_pTileSprite = nullptr;
+	m_pRM = nullptr;
+	m_iColType = TILE_NOCOLLIDE;
+	m_sSprite_name = "";
 }
 
 Player::Player()

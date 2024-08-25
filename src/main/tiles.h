@@ -47,6 +47,9 @@ public:
 	int GetSpriteFlip() { return m_flip; };
 	void SetSpriteFlip(olc::Sprite::Flip flip) { m_flip = flip; };
 
+	// Reset so the level data can actually be saved on removing tiles
+	void Reset();
+
 	GameAnimator* GetAnimator() { return &m_Animator; };
 
 protected:
