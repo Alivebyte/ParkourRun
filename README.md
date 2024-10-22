@@ -2,7 +2,7 @@
 
 Simple tile-based platform-like game, where you play as a runner. Your task is to complete the level.
 
-Unfortunately, due to time restrictions and personal issues, a lot of features aren't, such as player animations, decal flipping, actual game timer, enemies, etc...
+Unfortunately, due to time restrictions and personal issues, a lot of features aren't implemented, such as player animations, decal flipping, actual game timer, enemies, etc...
 
 How to play:
 
